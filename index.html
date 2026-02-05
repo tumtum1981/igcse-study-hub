@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGCSE Study Hub</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <nav class="nav-main">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-brand">* IGCSE STUDY HUB</a>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+            <ul class="nav-links">
+                <li><a href="subjects/biology/index.html" class="nav-link" data-subject="biology">Biology</a></li>
+                <li><a href="subjects/chemistry/index.html" class="nav-link" data-subject="chemistry">Chemistry</a></li>
+                <li><a href="subjects/physics/index.html" class="nav-link" data-subject="physics">Physics</a></li>
+                <li><a href="subjects/separate-biology/index.html" class="nav-link" data-subject="separate-bio">Separate Bio</a></li>
+                <li><a href="tests/index.html" class="nav-link">Tests</a></li>
+                <li><a href="formulas.html" class="nav-link">Formulas</a></li>
+                <li class="theme-switcher">
+                    <label class="theme-switcher__label" for="theme-select">Theme:</label>
+                    <select class="theme-switcher__select" id="theme-select">
+                        <option value="undertale">Undertale</option>
+                        <option value="minecraft">Minecraft</option>
+                        <option value="bbc">BBC</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1 class="hero-title">* WELCOME TO THE IGCSE STUDY HUB</h1>
+            <p class="hero-subtitle">Your determination to learn fills you with DETERMINATION.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="subject-selection">
+            <h2>Choose Your Subject</h2>
+
+            <div class="subject-grid">
+                <a href="subjects/biology/index.html" class="subject-card subject-card--biology">
+                    <div class="subject-card__icon">&#129516;</div>
+                    <h3 class="subject-card__title">Biology</h3>
+                    <p class="subject-card__desc">Cells, organisms, and life processes</p>
+                    <span class="subject-card__blocks">3 Blocks</span>
+                </a>
+
+                <a href="subjects/chemistry/index.html" class="subject-card subject-card--chemistry">
+                    <div class="subject-card__icon">&#9879;</div>
+                    <h3 class="subject-card__title">Chemistry</h3>
+                    <p class="subject-card__desc">Atoms, elements, and bonding</p>
+                    <span class="subject-card__blocks">3 Blocks</span>
+                </a>
+
+                <a href="subjects/physics/index.html" class="subject-card subject-card--physics">
+                    <div class="subject-card__icon">&#9889;</div>
+                    <h3 class="subject-card__title">Physics</h3>
+                    <p class="subject-card__desc">Forces, motion, and energy</p>
+                    <span class="subject-card__blocks">3 Blocks</span>
+                </a>
+
+                <a href="subjects/separate-biology/index.html" class="subject-card subject-card--separate-bio">
+                    <div class="subject-card__icon">&#128300;</div>
+                    <h3 class="subject-card__title">Separate Biology</h3>
+                    <p class="subject-card__desc">Classification and advanced topics</p>
+                    <span class="subject-card__blocks">1 Block</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="quick-links-section">
+            <h2>Study Tools</h2>
+            <div class="quick-links-grid">
+                <a href="formulas.html" class="quick-link-card">
+                    <div class="quick-link-card__icon">&#128221;</div>
+                    <h3 class="quick-link-card__title">Formula Sheet</h3>
+                    <p class="quick-link-card__desc">All equations in one place</p>
+                </a>
+                <a href="tests/index.html" class="quick-link-card">
+                    <div class="quick-link-card__icon">&#9998;</div>
+                    <h3 class="quick-link-card__title">Quick Tests</h3>
+                    <p class="quick-link-card__desc">Multiple choice practice</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>* The end of studying is just the beginning of knowledge.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/search-index.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

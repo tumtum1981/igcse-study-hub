@@ -1,0 +1,109 @@
+:root {
+    /* =================================
+       BBC BITESIZE THEME - COLOR PALETTE
+       ================================= */
+
+    /* Background colors - Clean white/light grays */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f4f4f4;
+    --bg-card: #ffffff;
+    --bg-highlight: #e8f5e9;
+
+    /* Text colors */
+    --text-primary: #222222;
+    --text-secondary: #545454;
+    --text-accent: #00a651;
+    --text-link: #006dcc;
+
+    /* Subject colors */
+    --color-biology: #00a651;
+    --color-chemistry: #ff6900;
+    --color-physics: #0066cc;
+    --color-separate-bio: #9c27b0;
+
+    /* UI Element colors */
+    --border-color: #dddddd;
+    --border-pixel: 2px;
+    --button-bg: #00a651;
+    --button-hover: #008c44;
+    --button-text: #ffffff;
+
+    /* Formula box */
+    --formula-bg: #fff8e1;
+    --formula-border: #ffc107;
+    --formula-text: #222222;
+
+    /* Quiz/Answer reveal */
+    --answer-hidden-bg: #e0e0e0;
+    --answer-revealed-bg: #e8f5e9;
+    --answer-border: #00a651;
+
+    /* Key term highlighting */
+    --highlight-bg: #ffc107;
+    --highlight-text: #000000;
+
+    /* =================================
+       TYPOGRAPHY - Clean modern fonts
+       ================================= */
+    --font-primary: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    --font-display: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    --font-size-base: 17px;
+    --font-size-h1: 2rem;
+    --font-size-h2: 1.5rem;
+    --font-size-h3: 1.25rem;
+    --line-height: 1.7;
+
+    /* =================================
+       SPACING & LAYOUT
+       ================================= */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+
+    --container-max-width: 900px;
+    --border-radius: 8px;
+
+    /* =================================
+       MODERN EFFECTS
+       ================================= */
+    --shadow-pixel: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --glow-effect: none;
+}
+
+/* BBC Theme specific overrides */
+.theme-bbc .nav-main {
+    border-bottom: 3px solid #00a651;
+}
+
+.theme-bbc .nav-brand {
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.theme-bbc .topic-header {
+    border-radius: var(--border-radius);
+}
+
+.theme-bbc .block-link,
+.theme-bbc .card {
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-pixel);
+    border: 1px solid var(--border-color);
+}
+
+.theme-bbc .formula-box {
+    border-radius: var(--border-radius);
+}
+
+.theme-bbc .btn {
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.theme-bbc h1,
+.theme-bbc h2,
+.theme-bbc h3 {
+    font-weight: 700;
+}

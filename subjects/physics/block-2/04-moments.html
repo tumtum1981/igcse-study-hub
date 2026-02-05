@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2.4.1 Moments | Physics | IGCSE Study Hub</title>
+    <link rel="stylesheet" href="../../../css/main.css">
+</head>
+<body data-subject="physics">
+    <nav class="nav-main">
+        <div class="container nav-container">
+            <a href="../../../index.html" class="nav-brand">* IGCSE STUDY HUB</a>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+            <ul class="nav-links">
+                <li><a href="../../biology/index.html" class="nav-link" data-subject="biology">Biology</a></li>
+                <li><a href="../../chemistry/index.html" class="nav-link" data-subject="chemistry">Chemistry</a></li>
+                <li><a href="../../physics/index.html" class="nav-link active" data-subject="physics">Physics</a></li>
+                <li><a href="../../separate-biology/index.html" class="nav-link" data-subject="separate-bio">Separate Bio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="../../../index.html">Home</a> /
+            <a href="../index.html">Physics</a> /
+            <a href="index.html">Block 2</a> /
+            <span>Moments</span>
+        </div>
+    </div>
+
+    <header class="topic-header topic-header--physics">
+        <div class="container">
+            <span class="topic-code">P2.4.1</span>
+            <h1>Moments</h1>
+        </div>
+    </header>
+
+    <main class="container topic-content">
+
+        <section class="content-section">
+            <h2>Summary</h2>
+            <p>A <span class="key-term">moment</span> is the turning effect of a force. The moment of a force depends on both the size of the force and the distance from the <span class="key-term">pivot</span> (turning point). Moments are used to understand how levers, seesaws, and many everyday objects work.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>The Moment Formula</h2>
+
+            <div class="formula-box">
+                <div class="formula-box__equation">Moment = Force x Distance</div>
+                <div class="formula-box__description">M = F x d</div>
+            </div>
+
+            <p>Where:</p>
+            <ul class="content-list">
+                <li>M = moment (measured in Newton-metres, Nm)</li>
+                <li>F = force (measured in Newtons, N)</li>
+                <li>d = perpendicular distance from the pivot to the line of action of the force (measured in metres, m)</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Key Definitions</h2>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Term</th>
+                        <th>Definition</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Moment</td>
+                        <td>The turning effect of a force about a pivot</td>
+                    </tr>
+                    <tr>
+                        <td>Pivot</td>
+                        <td>The fixed point about which rotation occurs</td>
+                    </tr>
+                    <tr>
+                        <td>Clockwise moment</td>
+                        <td>A moment that causes rotation in the clockwise direction</td>
+                    </tr>
+                    <tr>
+                        <td>Anticlockwise moment</td>
+                        <td>A moment that causes rotation in the anticlockwise direction</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>The Principle of Moments</h2>
+            <p>For an object in <span class="key-term">equilibrium</span> (balanced and not rotating):</p>
+
+            <div class="formula-box">
+                <div class="formula-box__equation">Sum of clockwise moments = Sum of anticlockwise moments</div>
+                <div class="formula-box__description">The principle of moments</div>
+            </div>
+
+            <figure class="diagram">
+                <svg viewBox="0 0 450 200" class="diagram-svg" aria-labelledby="moments-title">
+                    <title id="moments-title">Moments and the Principle of Moments</title>
+                    <!-- Lever beam -->
+                    <rect x="50" y="100" width="350" height="10" fill="currentColor" opacity="0.3" stroke="currentColor" stroke-width="2"/>
+                    <!-- Pivot (triangle) -->
+                    <polygon points="225,110 210,145 240,145" fill="currentColor" opacity="0.4" stroke="currentColor" stroke-width="2"/>
+                    <text x="225" y="165" class="diagram-label" font-size="10" text-anchor="middle">Pivot</text>
+                    <!-- Left force (F1) - anticlockwise -->
+                    <line x1="100" y1="100" x2="100" y2="40" stroke="currentColor" stroke-width="3" marker-end="url(#arrowMoment)"/>
+                    <text x="100" y="30" class="diagram-label" font-size="11" text-anchor="middle">F₁</text>
+                    <rect x="85" y="100" width="30" height="20" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="1"/>
+                    <!-- Left distance (d1) -->
+                    <line x1="100" y1="135" x2="225" y2="135" stroke="currentColor" stroke-width="1"/>
+                    <line x1="100" y1="130" x2="100" y2="140" stroke="currentColor" stroke-width="1"/>
+                    <line x1="225" y1="130" x2="225" y2="140" stroke="currentColor" stroke-width="1"/>
+                    <text x="162" y="148" class="diagram-label" font-size="10" text-anchor="middle">d₁</text>
+                    <!-- Right force (F2) - clockwise -->
+                    <line x1="350" y1="100" x2="350" y2="40" stroke="currentColor" stroke-width="3" marker-end="url(#arrowMoment)"/>
+                    <text x="350" y="30" class="diagram-label" font-size="11" text-anchor="middle">F₂</text>
+                    <rect x="335" y="100" width="30" height="20" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="1"/>
+                    <!-- Right distance (d2) -->
+                    <line x1="225" y1="135" x2="350" y2="135" stroke="currentColor" stroke-width="1"/>
+                    <line x1="350" y1="130" x2="350" y2="140" stroke="currentColor" stroke-width="1"/>
+                    <text x="287" y="148" class="diagram-label" font-size="10" text-anchor="middle">d₂</text>
+                    <!-- Rotation arrows -->
+                    <path d="M 140 75 A 30 30 0 0 0 115 55" fill="none" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrowMoment)"/>
+                    <text x="150" y="60" class="diagram-label" font-size="8">Anticlockwise</text>
+                    <path d="M 310 75 A 30 30 0 0 1 335 55" fill="none" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrowMoment)"/>
+                    <text x="285" y="60" class="diagram-label" font-size="8">Clockwise</text>
+                    <!-- Arrow marker -->
+                    <defs>
+                        <marker id="arrowMoment" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+                            <path d="M 0 0 L 8 4 L 0 8 Z" fill="currentColor"/>
+                        </marker>
+                    </defs>
+                    <!-- Equilibrium equation -->
+                    <text x="225" y="190" class="diagram-label" font-size="10" text-anchor="middle">Balanced when: F₁ × d₁ = F₂ × d₂</text>
+                </svg>
+                <figcaption>Principle of moments: for balance, clockwise moments = anticlockwise moments</figcaption>
+            </figure>
+
+            <p>This principle is used to solve problems involving balanced beams, seesaws, and levers.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Increasing Moments</h2>
+            <p>To increase the moment (turning effect), you can:</p>
+            <ul class="content-list">
+                <li>Increase the force applied</li>
+                <li>Increase the distance from the pivot</li>
+                <li>Both of the above</li>
+            </ul>
+
+            <p><strong>Example:</strong> A door handle is placed far from the hinges because a greater distance from the pivot means a larger moment for the same force, making the door easier to open.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Levers</h2>
+            <p>A <span class="key-term">lever</span> is a simple machine that uses moments to multiply force or distance. Examples include:</p>
+            <ul class="content-list">
+                <li>Crowbar - multiplies force to lift heavy objects</li>
+                <li>Wheelbarrow - reduces effort needed to lift loads</li>
+                <li>Scissors - multiplies force for cutting</li>
+                <li>Seesaw - balances using the principle of moments</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Key Points to Remember</h2>
+            <ul class="content-list">
+                <li>Moment = Force x Distance (M = Fd)</li>
+                <li>Moments are measured in Newton-metres (Nm)</li>
+                <li>Distance must be perpendicular to the force</li>
+                <li>For balance: clockwise moments = anticlockwise moments</li>
+                <li>Increasing distance from pivot increases the moment</li>
+            </ul>
+        </section>
+        <div class="test-links">
+            <h3 class="test-links__title">Test Your Knowledge - Moments</h3>
+            <ul class="test-links__list">
+                <li class="test-links__item"><a href="../../../tests/physics/block-2/moments-test-1.html" class="test-links__link">Moments Test 1</a></li>
+                <li class="test-links__item"><a href="../../../tests/physics/block-2/moments-test-2.html" class="test-links__link">Moments Test 2</a></li>
+                <li class="test-links__item"><a href="../../../tests/physics/block-2/moments-test-3.html" class="test-links__link">Moments Test 3</a></li>
+                <li class="test-links__item"><a href="../../../tests/physics/block-2/index.html" class="test-links__link test-links__link--all">All Block 2 Tests</a></li>
+            </ul>
+        </div>
+
+
+
+        <section class="quiz-section">
+            <h2 class="quiz-section__title">* IGCSE Practice Questions</h2>
+
+            <article class="quiz-question">
+                <div class="quiz-question__header">
+                    <span class="quiz-question__number">Question 1</span>
+                    <span class="quiz-question__marks">[2 marks]</span>
+                </div>
+                <p class="quiz-question__text">A force of 20 N is applied to a spanner at a distance of 0.3 m from the nut. Calculate the moment.</p>
+                <div class="quiz-answer">
+                    <div class="quiz-answer__prompt">* CLICK TO REVEAL ANSWER</div>
+                    <div class="quiz-answer__content">
+                        <ul>
+                            <li>Moment = Force x Distance (1 mark)</li>
+                            <li>Moment = 20 x 0.3 = 6 Nm (1 mark)</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="quiz-question">
+                <div class="quiz-question__header">
+                    <span class="quiz-question__number">Question 2</span>
+                    <span class="quiz-question__marks">[3 marks]</span>
+                </div>
+                <p class="quiz-question__text">A seesaw is balanced with a child of weight 400 N sitting 2 m from the pivot. How far from the pivot must an adult of weight 800 N sit to balance the seesaw?</p>
+                <div class="quiz-answer">
+                    <div class="quiz-answer__prompt">* CLICK TO REVEAL ANSWER</div>
+                    <div class="quiz-answer__content">
+                        <ul>
+                            <li>Using principle of moments: clockwise moment = anticlockwise moment (1 mark)</li>
+                            <li>400 x 2 = 800 x d (1 mark)</li>
+                            <li>d = 800 / 800 = 1 m from the pivot (1 mark)</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="quiz-question">
+                <div class="quiz-question__header">
+                    <span class="quiz-question__number">Question 3</span>
+                    <span class="quiz-question__marks">[2 marks]</span>
+                </div>
+                <p class="quiz-question__text">Explain why door handles are placed far from the hinges.</p>
+                <div class="quiz-answer">
+                    <div class="quiz-answer__prompt">* CLICK TO REVEAL ANSWER</div>
+                    <div class="quiz-answer__content">
+                        <ul>
+                            <li>To increase the distance from the pivot (hinge) (1 mark)</li>
+                            <li>This increases the moment / turning effect for the same force, making the door easier to open (1 mark)</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="quiz-question">
+                <div class="quiz-question__header">
+                    <span class="quiz-question__number">Question 4</span>
+                    <span class="quiz-question__marks">[4 marks]</span>
+                </div>
+                <p class="quiz-question__text">A uniform plank of length 4 m and weight 200 N is balanced on a pivot at its centre. A 50 N weight is placed 1.5 m from the pivot on the left side. Calculate the force needed on the right side, placed 1 m from the pivot, to balance the plank.</p>
+                <div class="quiz-answer">
+                    <div class="quiz-answer__prompt">* CLICK TO REVEAL ANSWER</div>
+                    <div class="quiz-answer__content">
+                        <ul>
+                            <li>Weight of plank acts at centre, so creates no moment about the central pivot (1 mark)</li>
+                            <li>Anticlockwise moment = 50 x 1.5 = 75 Nm (1 mark)</li>
+                            <li>For balance: F x 1 = 75 (1 mark)</li>
+                            <li>F = 75 N (1 mark)</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <nav class="topic-navigation">
+            <a href="03-resultant-forces.html" class="topic-nav-link topic-nav-link--prev">
+                <span class="topic-nav-label">Previous</span>
+                <span class="topic-nav-title">P2.3.1 Resultant Forces</span>
+            </a>
+            <a href="05-newtons-second-law.html" class="topic-nav-link topic-nav-link--next">
+                <span class="topic-nav-label">Next</span>
+                <span class="topic-nav-title">P2.5.1 Newton's Second Law</span>
+            </a>
+        </nav>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>* Your DETERMINATION grows stronger...</p>
+        </div>
+    </footer>
+
+    <script src="../../../js/main.js"></script>
+    <script src="../../../js/quiz.js"></script>
+</body>
+</html>

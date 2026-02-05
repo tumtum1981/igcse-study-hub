@@ -1,0 +1,74 @@
+:root {
+    /* =================================
+       MINECRAFT THEME - COLOR PALETTE
+       Based on actual Minecraft UI colors
+       ================================= */
+
+    /* Background colors - Stone/Dirt inspired */
+    --bg-primary: #3b3b3b;
+    --bg-secondary: #484848;
+    --bg-card: #5a5a5a;
+    --bg-highlight: #6b6b6b;
+
+    /* Text colors - Minecraft chat colors */
+    --text-primary: #ffffff;
+    --text-secondary: #aaaaaa;
+    --text-accent: #55ff55;
+    --text-link: #5555ff;
+
+    /* Subject colors - Minecraft color codes */
+    --color-biology: #55ff55;
+    --color-chemistry: #ffaa00;
+    --color-physics: #55ffff;
+    --color-separate-bio: #ff55ff;
+
+    /* UI Element colors - Stone button style */
+    --border-color: #1e1e1e;
+    --border-pixel: 4px;
+    --button-bg: #8b8b8b;
+    --button-hover: #a0a0a0;
+    --button-text: #ffffff;
+
+    /* Formula box - Enchanting table style */
+    --formula-bg: #1a0a2e;
+    --formula-border: #9b59b6;
+    --formula-text: #55ff55;
+
+    /* Quiz/Answer reveal - Emerald style */
+    --answer-hidden-bg: #4a4a4a;
+    --answer-revealed-bg: #0d4d0d;
+    --answer-border: #55ff55;
+
+    /* Key term highlighting - Gold/XP style */
+    --highlight-bg: #ffaa00;
+    --highlight-text: #000000;
+
+    /* =================================
+       TYPOGRAPHY - Pixel style
+       ================================= */
+    --font-primary: 'VT323', 'Courier New', monospace;
+    --font-display: 'Press Start 2P', monospace;
+    --font-size-base: 18px;
+    --font-size-h1: 2rem;
+    --font-size-h2: 1.5rem;
+    --font-size-h3: 1.25rem;
+    --line-height: 1.6;
+
+    /* =================================
+       SPACING & LAYOUT
+       ================================= */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+
+    --container-max-width: 900px;
+    --border-radius: 0;
+
+    /* =================================
+       MINECRAFT STYLE EFFECTS
+       ================================= */
+    --shadow-pixel: 4px 4px 0 #1e1e1e;
+    --glow-effect: 0 0 8px #55ff55;
+}

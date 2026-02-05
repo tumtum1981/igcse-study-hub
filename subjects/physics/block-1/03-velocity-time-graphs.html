@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P1.3.1 Velocity-Time Graphs | Physics | IGCSE Study Hub</title>
+    <link rel="stylesheet" href="../../../css/main.css">
+</head>
+<body data-subject="physics">
+    <nav class="nav-main">
+        <div class="container nav-container">
+            <a href="../../../index.html" class="nav-brand">* IGCSE STUDY HUB</a>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+            <ul class="nav-links">
+                <li><a href="../../biology/index.html" class="nav-link" data-subject="biology">Biology</a></li>
+                <li><a href="../../chemistry/index.html" class="nav-link" data-subject="chemistry">Chemistry</a></li>
+                <li><a href="../../physics/index.html" class="nav-link active" data-subject="physics">Physics</a></li>
+                <li><a href="../../separate-biology/index.html" class="nav-link" data-subject="separate-bio">Separate Bio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="../../../index.html">Home</a> /
+            <a href="../index.html">Physics</a> /
+            <a href="index.html">Block 1</a> /
+            <span>Velocity-Time Graphs</span>
+        </div>
+    </div>
+
+    <header class="topic-header topic-header--physics">
+        <div class="container">
+            <span class="topic-code">P1.3.1</span>
+            <h1>Velocity-Time Graphs</h1>
+        </div>
+    </header>
+
+    <main class="container topic-content">
+
+        <section class="content-section">
+            <h2>Summary</h2>
+            <p><span class="key-term">Velocity-time graphs</span> show how the velocity of an object changes over time. Unlike distance-time graphs, the <span class="key-term">gradient</span> of a velocity-time graph represents <span class="key-term">acceleration</span>, and the <span class="key-term">area under the graph</span> represents the distance travelled.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Key Formulas</h2>
+
+            <div class="formula-box">
+                <div class="formula-box__equation">acceleration = change in velocity / time</div>
+                <div class="formula-box__description">a = (v - u) / t</div>
+            </div>
+
+            <div class="formula-box">
+                <div class="formula-box__equation">gradient of v-t graph = acceleration</div>
+                <div class="formula-box__description">Measured in m/s2</div>
+            </div>
+
+            <div class="formula-box">
+                <div class="formula-box__equation">area under v-t graph = distance</div>
+                <div class="formula-box__description">Measured in metres (m)</div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Interpreting Velocity-Time Graphs</h2>
+
+            <figure class="diagram">
+                <svg viewBox="0 0 500 220" class="diagram-svg" aria-labelledby="vt-graph-title">
+                    <title id="vt-graph-title">Velocity-Time Graph Example</title>
+                    <g transform="translate(50, 20)">
+                        <!-- Axes -->
+                        <line x1="0" y1="160" x2="400" y2="160" stroke="currentColor" stroke-width="2"/>
+                        <line x1="0" y1="160" x2="0" y2="0" stroke="currentColor" stroke-width="2"/>
+                        <!-- Axis labels -->
+                        <text x="200" y="185" class="diagram-label" font-size="11" text-anchor="middle">Time (s)</text>
+                        <text x="-25" y="80" class="diagram-label" font-size="11" text-anchor="middle" transform="rotate(-90, -25, 80)">Velocity (m/s)</text>
+                        <!-- Grid lines -->
+                        <line x1="0" y1="80" x2="400" y2="80" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+                        <line x1="0" y1="40" x2="400" y2="40" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+                        <line x1="100" y1="0" x2="100" y2="160" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+                        <line x1="200" y1="0" x2="200" y2="160" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+                        <line x1="300" y1="0" x2="300" y2="160" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+                        <!-- Area under graph (distance) - shaded -->
+                        <polygon points="0,160 100,40 200,40 300,160" fill="currentColor" opacity="0.15"/>
+                        <!-- The journey line -->
+                        <!-- Section A: Acceleration -->
+                        <line x1="0" y1="160" x2="100" y2="40" stroke="currentColor" stroke-width="3"/>
+                        <!-- Section B: Constant velocity -->
+                        <line x1="100" y1="40" x2="200" y2="40" stroke="currentColor" stroke-width="3"/>
+                        <!-- Section C: Deceleration -->
+                        <line x1="200" y1="40" x2="300" y2="160" stroke="currentColor" stroke-width="3"/>
+                        <!-- Labels for sections -->
+                        <text x="50" y="90" class="diagram-label" font-size="10" text-anchor="middle">A</text>
+                        <text x="150" y="30" class="diagram-label" font-size="10" text-anchor="middle">B</text>
+                        <text x="250" y="90" class="diagram-label" font-size="10" text-anchor="middle">C</text>
+                        <!-- Annotations -->
+                        <text x="50" y="195" class="diagram-label" font-size="9" text-anchor="middle">Accelerating</text>
+                        <text x="150" y="195" class="diagram-label" font-size="9" text-anchor="middle">Constant v</text>
+                        <text x="250" y="195" class="diagram-label" font-size="9" text-anchor="middle">Decelerating</text>
+                        <!-- Area label -->
+                        <text x="150" y="120" class="diagram-label" font-size="9" text-anchor="middle" opacity="0.7">Area = distance</text>
+                        <!-- Gradient label -->
+                        <line x1="320" y1="60" x2="380" y2="60" stroke="currentColor" stroke-width="1"/>
+                        <text x="350" y="50" class="diagram-label" font-size="9" text-anchor="middle">Gradient =</text>
+                        <text x="350" y="75" class="diagram-label" font-size="9" text-anchor="middle">acceleration</text>
+                    </g>
+                </svg>
+                <figcaption>Velocity-time graph: gradient = acceleration, area under graph = distance</figcaption>
+            </figure>
+
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Shape of Line</th>
+                        <th>What It Means</th>
+                        <th>Acceleration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Horizontal line above zero</td>
+                        <td>Constant velocity (moving at steady speed)</td>
+                        <td>Zero</td>
+                    </tr>
+                    <tr>
+                        <td>Horizontal line at zero</td>
+                        <td>Object is stationary</td>
+                        <td>Zero</td>
+                    </tr>
+                    <tr>
+                        <td>Straight line going up</td>
+                        <td>Constant acceleration (speeding up)</td>
+                        <td>Positive constant</td>
+                    </tr>
+                    <tr>
+                        <td>Straight line going down</td>
+                        <td>Constant deceleration (slowing down)</td>
+                        <td>Negative constant</td>
+                    </tr>
+                    <tr>
+                        <td>Curved line</td>
+                        <td>Changing acceleration</td>
+                        <td>Variable</td>
+                    </tr>
+                    <tr>
+                        <td>Line below zero</td>
+                        <td>Moving in the opposite direction</td>
+                        <td>Depends on gradient</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>Calculating Distance from Area</h2>
+            <p>The area under a velocity-time graph equals the distance travelled. Use these formulas depending on the shape:</p>
+
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Shape</th>
+                        <th>Area Formula</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rectangle</td>
+                        <td>Area = base x height = time x velocity</td>
+                    </tr>
+                    <tr>
+                        <td>Triangle</td>
+                        <td>Area = 1/2 x base x height = 1/2 x time x velocity</td>
+                    </tr>
+                    <tr>
+                        <td>Trapezium</td>
+                        <td>Area = 1/2 x (a + b) x height</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>Key Definitions</h2>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Term</th>
+                        <th>Definition</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Acceleration</td>
+                        <td>The rate of change of velocity (how quickly velocity changes)</td>
+                    </tr>
+                    <tr>
+                        <td>Deceleration</td>
+                        <td>Negative acceleration (slowing down)</td>
+                    </tr>
+                    <tr>
+                        <td>Uniform acceleration</td>
+                        <td>Constant rate of change of velocity</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>Key Points to Remember</h2>
+            <ul class="content-list">
+                <li>Gradient of v-t graph = acceleration</li>
+                <li>Area under v-t graph = distance travelled</li>
+                <li>A horizontal line means constant velocity (not stationary!)</li>
+                <li>Acceleration is measured in m/s2</li>
+                <li>Negative velocity means moving in the opposite direction</li>
+            </ul>
+        </section>
+        <div class="test-links">
+            <h3 class="test-links__title">Test Your Knowledge - Velocity-Time Graphs</h3>
+            <ul class="test-links__list">
+                <li class="test-links__item"><a href="../../../tests/physics/block-1/vt-graphs-test-1.html" class="test-links__link">Velocity-Time Graphs Test 1</a></li>
+                <li class="test-links__item"><a href="../../../tests/physics/block-1/vt-graphs-test-2.html" class="test-links__link">Velocity-Time Graphs Test 2</a></li>
+                <li class="test-links__item"><a href="../../../tests/physics/block-1/vt-graphs-test-3.html" class="test-links__link">Velocity-Time Graphs Test 3</a></li>
+                <li class="test-links__item"><a href="../../../tests/physics/block-1/index.html" class="test-links__link test-links__link--all">All Block 1 Tests</a></li>
+            </ul>
+        </div>
+
+
+
+        <section class="quiz-section">
+            <h2 class="quiz-section__title">* IGCSE Practice Questions</h2>
+
+            <article class="quiz-question">
+                <div class="quiz-question__header">
+                    <span class="quiz-question__number">Question 1</span>
+                    <span class="quiz-question__marks">[3 marks]</span>
+                </div>
+                <p class="quiz-question__text">A car accelerates uniformly from rest to 20 m/s in 5 seconds. Calculate: (a) the acceleration, (b) the distance travelled.</p>
+                <div class="quiz-answer">
+                    <div class="quiz-answer__prompt">* CLICK TO REVEAL ANSWER</div>
+                    <div class="quiz-answer__content">
+                        <ul>
+                            <li>(a) Acceleration = (v - u) / t = (20 - 0) / 5 = 4 m/s2 (1 mark)</li>
+                            <li>(b) Distance = area under graph = 1/2 x base x height (1 mark)</li>
+                            <li>Distance = 1/2 x 5 x 20 = 50 m (1 mark)</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="quiz-question">
+                <div class="quiz-question__header">
+                    <span class="quiz-question__number">Question 2</span>
+                    <span class="quiz-question__marks">[2 marks]</span>
+                </div>
+                <p class="quiz-question__text">A velocity-time graph shows a horizontal line at 15 m/s for 8 seconds. What does this tell us about the motion, and what distance was travelled?</p>
+                <div class="quiz-answer">
+                    <div class="quiz-answer__prompt">* CLICK TO REVEAL ANSWER</div>
+                    <div class="quiz-answer__content">
+                        <ul>
+                            <li>The object is moving at constant velocity / no acceleration (1 mark)</li>
+                            <li>Distance = velocity x time = 15 x 8 = 120 m (1 mark)</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="quiz-question">
+                <div class="quiz-question__header">
+                    <span class="quiz-question__number">Question 3</span>
+                    <span class="quiz-question__marks">[3 marks]</span>
+                </div>
+                <p class="quiz-question__text">A train travelling at 30 m/s applies its brakes and decelerates uniformly to rest in 15 seconds. Calculate: (a) the deceleration, (b) the braking distance.</p>
+                <div class="quiz-answer">
+                    <div class="quiz-answer__prompt">* CLICK TO REVEAL ANSWER</div>
+                    <div class="quiz-answer__content">
+                        <ul>
+                            <li>(a) Deceleration = (0 - 30) / 15 = -2 m/s2 (or 2 m/s2 deceleration) (1 mark)</li>
+                            <li>(b) Distance = area of triangle = 1/2 x 15 x 30 (1 mark)</li>
+                            <li>Distance = 225 m (1 mark)</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="quiz-question">
+                <div class="quiz-question__header">
+                    <span class="quiz-question__number">Question 4</span>
+                    <span class="quiz-question__marks">[4 marks]</span>
+                </div>
+                <p class="quiz-question__text">A car accelerates from 10 m/s to 25 m/s in 6 seconds, then travels at constant velocity for 10 seconds. Calculate: (a) the acceleration, (b) the total distance travelled.</p>
+                <div class="quiz-answer">
+                    <div class="quiz-answer__prompt">* CLICK TO REVEAL ANSWER</div>
+                    <div class="quiz-answer__content">
+                        <ul>
+                            <li>(a) Acceleration = (25 - 10) / 6 = 15/6 = 2.5 m/s2 (1 mark)</li>
+                            <li>(b) Distance during acceleration = area of trapezium = 1/2 x (10 + 25) x 6 = 105 m (1 mark)</li>
+                            <li>Distance at constant velocity = 25 x 10 = 250 m (1 mark)</li>
+                            <li>Total distance = 105 + 250 = 355 m (1 mark)</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <nav class="topic-navigation">
+            <a href="02-distance-time-graphs.html" class="topic-nav-link topic-nav-link--prev">
+                <span class="topic-nav-label">Previous</span>
+                <span class="topic-nav-title">P1.2.1 Distance-Time Graphs</span>
+            </a>
+            <a href="04-gravitational-force.html" class="topic-nav-link topic-nav-link--next">
+                <span class="topic-nav-label">Next</span>
+                <span class="topic-nav-title">P1.4.1 Gravitational Force</span>
+            </a>
+        </nav>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>* Your DETERMINATION grows stronger...</p>
+        </div>
+    </footer>
+
+    <script src="../../../js/main.js"></script>
+    <script src="../../../js/quiz.js"></script>
+</body>
+</html>
