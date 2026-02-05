@@ -7,13 +7,13 @@
 const SIGNUP_KEY = 'FEEDME';
 
 // Supabase client (initialized asynchronously)
-let supabase = null;
+let supabaseClient = null;
 let supabaseConfigured = false;
 
 async function initSupabase() {
     // Already initialized
-    if (supabase !== null) {
-        return supabase;
+    if (supabaseClient !== null) {
+        return supabaseClient;
     }
 
     try {
@@ -33,9 +33,9 @@ async function initSupabase() {
             return null;
         }
 
-        supabase = window.supabase.createClient(config.supabaseUrl, config.supabaseAnonKey);
+        supabaseClient = window.supabase.createClient(config.supabaseUrl, config.supabaseAnonKey);
         supabaseConfigured = true;
-        return supabase;
+        return supabaseClient;
 
     } catch (error) {
         console.warn('Failed to load Supabase config:', error.message);
