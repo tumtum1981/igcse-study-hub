@@ -76,12 +76,13 @@ class ThemeManager {
     getPathDepth() {
         // Calculate path depth based on current location
         const path = window.location.pathname;
-        const websiteIndex = path.indexOf('website');
-        if (websiteIndex === -1) return 0;
 
-        const relativePath = path.substring(websiteIndex + 8); // +8 for 'website/'
-        const depth = (relativePath.match(/\//g) || []).length;
-        return Math.max(0, depth);
+        // Remove leading slash and trailing filename
+        let cleanPath = path.replace(/^\//, '').replace(/[^\/]+\.[^\/]+$/, '');
+
+        // Count directory depth
+        const segments = cleanPath.split('/').filter(s => s.length > 0);
+        return segments.length;
     }
 }
 
