@@ -14,7 +14,7 @@ class AuthManager {
     async init() {
         if (this.initialized) return;
 
-        this.supabase = window.initSupabase();
+        this.supabase = await window.initSupabase();
         if (!this.supabase) {
             this.initialized = true;
             return;
