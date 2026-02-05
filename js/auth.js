@@ -9,10 +9,18 @@ class AuthManager {
         this.user = null;
         this.initialized = false;
         this.listeners = [];
+        this.initPromise = null;
     }
 
     async init() {
         if (this.initialized) return;
+        if (this.initPromise) return this.initPromise;
+
+        this.initPromise = this._doInit();
+        return this.initPromise;
+    }
+
+    async _doInit() {
 
         this.supabase = await window.initSupabase();
         if (!this.supabase) {
@@ -63,6 +71,9 @@ class AuthManager {
      * @returns {Object} { success: boolean, error?: string }
      */
     async signUp(email, password, username, signupKey) {
+        // Wait for initialization to complete
+        await this.init();
+
         if (!this.supabase) {
             return { success: false, error: 'Supabase not configured' };
         }
@@ -133,6 +144,9 @@ class AuthManager {
      * @returns {Object} { success: boolean, error?: string }
      */
     async signIn(email, password) {
+        // Wait for initialization to complete
+        await this.init();
+
         if (!this.supabase) {
             return { success: false, error: 'Supabase not configured' };
         }
