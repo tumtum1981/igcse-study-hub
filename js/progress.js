@@ -12,7 +12,7 @@ class ProgressManager {
     async init() {
         if (this.initialized) return;
 
-        this.supabase = window.initSupabase();
+        this.supabase = await window.initSupabase();
         this.initialized = true;
     }
 
