@@ -12,7 +12,7 @@ class ThemeManager {
         this.themes = {
             undertale: 'css/themes/undertale.css',
             minecraft: 'css/themes/minecraft.css',
-            bbc: 'css/themes/bbc.css'
+            clean: 'css/themes/clean.css'
         };
         this.currentTheme = localStorage.getItem('igcse-theme') || 'undertale';
         // Reset to undertale if user had an old/invalid theme selected
@@ -59,7 +59,7 @@ class ThemeManager {
         }
 
         // Update body class for theme-specific overrides
-        document.body.classList.remove('theme-undertale', 'theme-minecraft', 'theme-bbc');
+        document.body.classList.remove('theme-undertale', 'theme-minecraft', 'theme-clean');
         document.body.classList.add('theme-' + themeName);
 
         // Save preference
