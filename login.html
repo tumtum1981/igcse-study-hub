@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - IGCSE Study Hub</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/themes/undertale.css" data-theme="true">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <nav class="nav-main">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-brand">* IGCSE STUDY HUB</a>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+            <ul class="nav-links">
+                <li><a href="subjects/biology/index.html" class="nav-link" data-subject="biology">Biology</a></li>
+                <li><a href="subjects/chemistry/index.html" class="nav-link" data-subject="chemistry">Chemistry</a></li>
+                <li><a href="subjects/physics/index.html" class="nav-link" data-subject="physics">Physics</a></li>
+                <li><a href="subjects/separate-biology/index.html" class="nav-link" data-subject="separate-bio">Separate Bio</a></li>
+                <li><a href="tests/index.html" class="nav-link">Tests</a></li>
+                <li><a href="formulas.html" class="nav-link">Formulas</a></li>
+                <li class="theme-switcher">
+                    <label class="theme-switcher__label" for="theme-select">Theme:</label>
+                    <select class="theme-switcher__select" id="theme-select">
+                        <option value="undertale">Undertale</option>
+                        <option value="minecraft">Minecraft</option>
+                        <option value="clean">Clean</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="auth-container">
+            <div class="auth-box">
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-tab="login">* LOGIN</button>
+                    <button class="auth-tab" data-tab="signup">* SIGN UP</button>
+                </div>
+
+                <div class="auth-message" id="auth-message"></div>
+
+                <!-- Login Form -->
+                <form class="auth-form" id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" name="email" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" name="password" required autocomplete="current-password">
+                    </div>
+                    <button type="submit" class="auth-submit">ENTER</button>
+                </form>
+
+                <!-- Signup Form -->
+                <form class="auth-form" id="signup-form" style="display: none;">
+                    <div class="form-group">
+                        <label for="signup-username">Username</label>
+                        <input type="text" id="signup-username" name="username" required minlength="3" autocomplete="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" name="email" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" name="password" required minlength="6" autocomplete="new-password">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-key">Signup Key</label>
+                        <input type="text" id="signup-key" name="key" required placeholder="Enter the secret key">
+                        <span class="form-hint">* Ask the site admin for the signup key</span>
+                    </div>
+                    <button type="submit" class="auth-submit">CREATE ACCOUNT</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>* The end of studying is just the beginning of knowledge.</p>
+            <a href="about.html" class="footer-link">About</a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/supabase-config.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        // Login page functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.auth-tab');
+            const loginForm = document.getElementById('login-form');
+            const signupForm = document.getElementById('signup-form');
+            const message = document.getElementById('auth-message');
+
+            // Tab switching
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+
+                    if (tab.dataset.tab === 'login') {
+                        loginForm.style.display = '';
+                        signupForm.style.display = 'none';
+                    } else {
+                        loginForm.style.display = 'none';
+                        signupForm.style.display = '';
+                    }
+
+                    message.textContent = '';
+                    message.className = 'auth-message';
+                });
+            });
+
+            // Show message helper
+            function showMessage(text, isError = false) {
+                message.textContent = '* ' + text;
+                message.className = 'auth-message ' + (isError ? 'error' : 'success');
+            }
+
+            // Login form submission
+            loginForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                const email = document.getElementById('login-email').value;
+                const password = document.getElementById('login-password').value;
+
+                showMessage('Logging in...');
+
+                const result = await window.authManager.signIn(email, password);
+
+                if (result.success) {
+                    showMessage('Login successful! Redirecting...');
+                    setTimeout(() => {
+                        window.location.href = 'dashboard.html';
+                    }, 1000);
+                } else {
+                    showMessage(result.error || 'Login failed', true);
+                }
+            });
+
+            // Signup form submission
+            signupForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                const username = document.getElementById('signup-username').value;
+                const email = document.getElementById('signup-email').value;
+                const password = document.getElementById('signup-password').value;
+                const key = document.getElementById('signup-key').value;
+
+                showMessage('Creating account...');
+
+                const result = await window.authManager.signUp(email, password, username, key);
+
+                if (result.success) {
+                    showMessage('Account created! Redirecting...');
+                    setTimeout(() => {
+                        window.location.href = 'dashboard.html';
+                    }, 1000);
+                } else {
+                    showMessage(result.error || 'Signup failed', true);
+                }
+            });
+
+            // If already logged in, redirect to dashboard
+            window.authManager.onAuthChange((event, session) => {
+                if (session && window.location.pathname.includes('login')) {
+                    window.location.href = 'dashboard.html';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

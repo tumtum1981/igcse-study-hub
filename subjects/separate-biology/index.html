@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Separate Biology | IGCSE Study Hub</title>
     <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/themes/undertale.css" data-theme="true">
 </head>
 <body data-subject="separate-bio">
     <nav class="nav-main">
@@ -16,7 +17,11 @@
                 <li><a href="../chemistry/index.html" class="nav-link" data-subject="chemistry">Chemistry</a></li>
                 <li><a href="../physics/index.html" class="nav-link" data-subject="physics">Physics</a></li>
                 <li><a href="../separate-biology/index.html" class="nav-link active" data-subject="separate-bio">Separate Bio</a></li>
-                <li><a href="../../tests/index.html" class="nav-link">Tests</a></li>
+                <li><a href="../../tests/index.html" class="nav-link">Tests</a></li>                <li class="nav-auth">
+                    <a href="../../login.html" class="nav-link auth-login">Login</a>
+                    <a href="../../dashboard.html" class="nav-link auth-dashboard" style="display:none;">Dashboard</a>
+                </li>
+
                 <li class="theme-switcher">
                     <label class="theme-switcher__label" for="theme-select">Theme:</label>
                     <select class="theme-switcher__select" id="theme-select">
@@ -62,5 +67,8 @@
     </footer>
 
     <script src="../../js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../../js/supabase-config.js"></script>
+    <script src="../../js/auth.js"></script>
 </body>
 </html>

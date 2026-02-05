@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - IGCSE Study Hub</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/themes/undertale.css" data-theme="true">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <nav class="nav-main">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-brand">* IGCSE STUDY HUB</a>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+            <ul class="nav-links">
+                <li><a href="subjects/biology/index.html" class="nav-link" data-subject="biology">Biology</a></li>
+                <li><a href="subjects/chemistry/index.html" class="nav-link" data-subject="chemistry">Chemistry</a></li>
+                <li><a href="subjects/physics/index.html" class="nav-link" data-subject="physics">Physics</a></li>
+                <li><a href="subjects/separate-biology/index.html" class="nav-link" data-subject="separate-bio">Separate Bio</a></li>
+                <li><a href="tests/index.html" class="nav-link">Tests</a></li>
+                <li><a href="formulas.html" class="nav-link">Formulas</a></li>
+                <li class="theme-switcher">
+                    <label class="theme-switcher__label" for="theme-select">Theme:</label>
+                    <select class="theme-switcher__select" id="theme-select">
+                        <option value="undertale">Undertale</option>
+                        <option value="minecraft">Minecraft</option>
+                        <option value="clean">Clean</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="dashboard-header">
+        <div class="container">
+            <h1 class="dashboard-title">* YOUR PROGRESS</h1>
+            <p class="dashboard-subtitle">Welcome back, <span id="dashboard-username">Student</span>!</p>
+            <button class="logout-btn" id="logout-btn">LOGOUT</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Not logged in message -->
+        <div class="dashboard-login-prompt" id="login-prompt" style="display: none;">
+            <p>* You need to be logged in to view your progress.</p>
+            <a href="login.html" class="auth-submit">LOGIN</a>
+        </div>
+
+        <!-- Dashboard content -->
+        <div id="dashboard-content">
+            <!-- Progress Overview Cards -->
+            <section class="dashboard-section">
+                <h2>* OVERVIEW</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-card__icon">&#9998;</div>
+                        <div class="stat-card__value" id="stat-tests">0</div>
+                        <div class="stat-card__label">Tests Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__icon">&#9733;</div>
+                        <div class="stat-card__value" id="stat-average">0%</div>
+                        <div class="stat-card__label">Average Score</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__icon">&#10003;</div>
+                        <div class="stat-card__value" id="stat-confident">0</div>
+                        <div class="stat-card__label">Topics Confident</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Subject Breakdown -->
+            <section class="dashboard-section">
+                <h2>* BY SUBJECT</h2>
+                <div class="subject-progress-grid" id="subject-progress">
+                    <p class="loading-text">Loading subject data...</p>
+                </div>
+            </section>
+
+            <!-- Recent Tests -->
+            <section class="dashboard-section">
+                <h2>* RECENT TESTS</h2>
+                <div class="test-history" id="test-history">
+                    <p class="loading-text">Loading test history...</p>
+                </div>
+            </section>
+
+            <!-- Personal Bests -->
+            <section class="dashboard-section">
+                <h2>* PERSONAL BESTS</h2>
+                <div class="personal-bests" id="personal-bests">
+                    <p class="loading-text">Loading personal bests...</p>
+                </div>
+            </section>
+
+            <!-- Confidence Summary -->
+            <section class="dashboard-section">
+                <h2>* TOPIC CONFIDENCE</h2>
+                <div class="confidence-summary" id="confidence-summary">
+                    <p class="loading-text">Loading confidence data...</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>* The end of studying is just the beginning of knowledge.</p>
+            <a href="about.html" class="footer-link">About</a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/supabase-config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/progress.js"></script>
+    <script>
+        // Dashboard functionality
+        document.addEventListener('DOMContentLoaded', async () => {
+            const loginPrompt = document.getElementById('login-prompt');
+            const dashboardContent = document.getElementById('dashboard-content');
+            const logoutBtn = document.getElementById('logout-btn');
+            const usernameDisplay = document.getElementById('dashboard-username');
+
+            // Wait for auth to initialize
+            await waitForAuth();
+
+            // Check login status
+            if (!window.authManager.isLoggedIn()) {
+                loginPrompt.style.display = '';
+                dashboardContent.style.display = 'none';
+                return;
+            }
+
+            // Update username
+            const profile = window.authManager.getProfile();
+            if (profile) {
+                usernameDisplay.textContent = profile.username;
+            }
+
+            // Load dashboard data
+            await loadDashboard();
+
+            // Logout handler
+            logoutBtn.addEventListener('click', async () => {
+                await window.authManager.signOut();
+                window.location.href = 'index.html';
+            });
+        });
+
+        function waitForAuth() {
+            return new Promise(resolve => {
+                const check = () => {
+                    if (window.authManager && window.authManager.initialized) {
+                        resolve();
+                    } else {
+                        setTimeout(check, 50);
+                    }
+                };
+                check();
+            });
+        }
+
+        async function loadDashboard() {
+            // Load progress summary
+            const summary = await window.progressManager.getProgressSummary();
+
+            // Update stats cards
+            document.getElementById('stat-tests').textContent = summary.testsCompleted;
+            document.getElementById('stat-average').textContent = summary.averageScore + '%';
+            document.getElementById('stat-confident').textContent = summary.topicsConfident;
+
+            // Load subject progress
+            loadSubjectProgress(summary.bySubject);
+
+            // Load test history
+            const history = await window.progressManager.getTestHistory(10);
+            loadTestHistory(history);
+
+            // Load personal bests
+            const bests = await window.progressManager.getPersonalBests();
+            loadPersonalBests(bests);
+
+            // Load confidence summary
+            const confidence = await window.progressManager.getAllConfidence();
+            loadConfidenceSummary(confidence);
+        }
+
+        function loadSubjectProgress(bySubject) {
+            const container = document.getElementById('subject-progress');
+
+            const subjects = ['biology', 'chemistry', 'physics', 'separate-biology'];
+            const subjectNames = {
+                'biology': 'Biology',
+                'chemistry': 'Chemistry',
+                'physics': 'Physics',
+                'separate-biology': 'Separate Bio'
+            };
+
+            let html = '<div class="subject-progress-cards">';
+
+            subjects.forEach(subject => {
+                const data = bySubject[subject] || { tests: 0, average: 0 };
+                html += `
+                    <div class="subject-progress-card subject-progress-card--${subject}">
+                        <h3>${subjectNames[subject]}</h3>
+                        <div class="subject-progress-stat">
+                            <span class="subject-progress-value">${data.tests}</span>
+                            <span class="subject-progress-label">tests</span>
+                        </div>
+                        <div class="subject-progress-stat">
+                            <span class="subject-progress-value">${data.average || 0}%</span>
+                            <span class="subject-progress-label">average</span>
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += '</div>';
+            container.innerHTML = html;
+        }
+
+        function loadTestHistory(history) {
+            const container = document.getElementById('test-history');
+
+            if (history.length === 0) {
+                container.innerHTML = '<p class="no-data">* No tests completed yet. Take a test to see your progress!</p>';
+                return;
+            }
+
+            let html = '<table class="history-table"><thead><tr><th>Date</th><th>Test</th><th>Score</th></tr></thead><tbody>';
+
+            history.forEach(test => {
+                const date = new Date(test.completed_at).toLocaleDateString();
+                const testName = formatTestId(test.test_id);
+                const scoreClass = test.percentage >= 70 ? 'good' : test.percentage >= 50 ? 'okay' : 'poor';
+
+                html += `
+                    <tr>
+                        <td>${date}</td>
+                        <td>${testName}</td>
+                        <td class="score-${scoreClass}">${test.score}/${test.total} (${test.percentage}%)</td>
+                    </tr>
+                `;
+            });
+
+            html += '</tbody></table>';
+            container.innerHTML = html;
+        }
+
+        function loadPersonalBests(bests) {
+            const container = document.getElementById('personal-bests');
+
+            const testIds = Object.keys(bests);
+            if (testIds.length === 0) {
+                container.innerHTML = '<p class="no-data">* No personal bests yet. Keep practicing!</p>';
+                return;
+            }
+
+            let html = '<div class="bests-grid">';
+
+            testIds.forEach(testId => {
+                const percentage = bests[testId];
+                const scoreClass = percentage >= 90 ? 'excellent' : percentage >= 70 ? 'good' : percentage >= 50 ? 'okay' : 'poor';
+
+                html += `
+                    <div class="best-card best-card--${scoreClass}">
+                        <div class="best-card__test">${formatTestId(testId)}</div>
+                        <div class="best-card__score">${percentage}%</div>
+                    </div>
+                `;
+            });
+
+            html += '</div>';
+            container.innerHTML = html;
+        }
+
+        function loadConfidenceSummary(confidence) {
+            const container = document.getElementById('confidence-summary');
+
+            const topicIds = Object.keys(confidence);
+            if (topicIds.length === 0) {
+                container.innerHTML = '<p class="no-data">* No topics rated yet. Rate your confidence on topic pages!</p>';
+                return;
+            }
+
+            // Count by level
+            let counts = {
+                'confident': 0,
+                'learning': 0,
+                'need-practice': 0
+            };
+
+            topicIds.forEach(id => {
+                counts[confidence[id]]++;
+            });
+
+            let html = `
+                <div class="confidence-bars">
+                    <div class="confidence-bar">
+                        <span class="confidence-bar__label">Confident</span>
+                        <div class="confidence-bar__track">
+                            <div class="confidence-bar__fill confident" style="width: ${(counts.confident / topicIds.length) * 100}%"></div>
+                        </div>
+                        <span class="confidence-bar__count">${counts.confident}</span>
+                    </div>
+                    <div class="confidence-bar">
+                        <span class="confidence-bar__label">Learning</span>
+                        <div class="confidence-bar__track">
+                            <div class="confidence-bar__fill learning" style="width: ${(counts.learning / topicIds.length) * 100}%"></div>
+                        </div>
+                        <span class="confidence-bar__count">${counts.learning}</span>
+                    </div>
+                    <div class="confidence-bar">
+                        <span class="confidence-bar__label">Need Practice</span>
+                        <div class="confidence-bar__track">
+                            <div class="confidence-bar__fill need-practice" style="width: ${(counts['need-practice'] / topicIds.length) * 100}%"></div>
+                        </div>
+                        <span class="confidence-bar__count">${counts['need-practice']}</span>
+                    </div>
+                </div>
+            `;
+
+            container.innerHTML = html;
+        }
+
+        function formatTestId(testId) {
+            // Convert test-id like "biology-block-1-test-1" to "Biology Block 1 Test 1"
+            return testId
+                .split('-')
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(' ');
+        }
+    </script>
+</body>
+</html>

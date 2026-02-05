@@ -121,6 +121,48 @@ class QuickTest {
 
         // Scroll to results
         this.resultsSection.scrollIntoView({ behavior: 'smooth' });
+
+        // Save score to Supabase if logged in
+        this.saveScore(correct, total, percentage);
+    }
+
+    saveScore(correct, total, percentage) {
+        if (window.progressManager && window.progressManager.isLoggedIn()) {
+            const testId = this.getTestId();
+            const subject = this.getSubjectFromUrl();
+            const block = this.getBlockFromUrl();
+
+            window.progressManager.saveTestScore({
+                testId: testId,
+                subject: subject,
+                block: block,
+                score: correct,
+                total: total,
+                percentage: percentage
+            });
+        }
+    }
+
+    getTestId() {
+        // Generate test ID from URL path
+        const path = window.location.pathname;
+        const match = path.match(/tests\/([^/]+)\/([^/]+)\/([^.]+)/);
+        if (match) {
+            return `${match[1]}-${match[2]}-${match[3]}`;
+        }
+        return path.replace(/[^a-z0-9]/gi, '-');
+    }
+
+    getSubjectFromUrl() {
+        const path = window.location.pathname;
+        const match = path.match(/tests\/([^/]+)/);
+        return match ? match[1] : '';
+    }
+
+    getBlockFromUrl() {
+        const path = window.location.pathname;
+        const match = path.match(/block-(\d+)/);
+        return match ? `block-${match[1]}` : '';
     }
 
     retryTest() {

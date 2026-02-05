@@ -77,6 +77,19 @@ class ThemeManager {
         // Calculate path depth based on current location
         const path = window.location.pathname;
 
+        // For file:// protocol, find the 'website' folder as the root
+        // This handles paths like /C:/Users/jbenw/homeschool/website/subjects/biology/index.html
+        const websiteIndex = path.toLowerCase().indexOf('/website/');
+        if (websiteIndex !== -1) {
+            // Get the path after /website/
+            const relativePath = path.substring(websiteIndex + '/website/'.length);
+            // Remove filename, count remaining directory segments
+            const cleanPath = relativePath.replace(/[^\/]+\.[^\/]+$/, '');
+            const segments = cleanPath.split('/').filter(s => s.length > 0);
+            return segments.length;
+        }
+
+        // Fallback for http:// protocol or other cases
         // Remove leading slash and trailing filename
         let cleanPath = path.replace(/^\//, '').replace(/[^\/]+\.[^\/]+$/, '');
 

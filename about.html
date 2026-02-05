@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - IGCSE Study Hub</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/themes/undertale.css" data-theme="true">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <nav class="nav-main">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-brand">* IGCSE STUDY HUB</a>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+            <ul class="nav-links">
+                <li><a href="subjects/biology/index.html" class="nav-link" data-subject="biology">Biology</a></li>
+                <li><a href="subjects/chemistry/index.html" class="nav-link" data-subject="chemistry">Chemistry</a></li>
+                <li><a href="subjects/physics/index.html" class="nav-link" data-subject="physics">Physics</a></li>
+                <li><a href="subjects/separate-biology/index.html" class="nav-link" data-subject="separate-bio">Separate Bio</a></li>
+                <li><a href="tests/index.html" class="nav-link">Tests</a></li>
+                <li><a href="formulas.html" class="nav-link">Formulas</a></li>
+                <li class="nav-auth">
+                    <a href="login.html" class="nav-link auth-login">Login</a>
+                    <a href="dashboard.html" class="nav-link auth-dashboard" style="display:none;">Dashboard</a>
+                </li>
+                <li class="theme-switcher">
+                    <label class="theme-switcher__label" for="theme-select">Theme:</label>
+                    <select class="theme-switcher__select" id="theme-select">
+                        <option value="undertale">Undertale</option>
+                        <option value="minecraft">Minecraft</option>
+                        <option value="clean">Clean</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="about-header">
+        <div class="container">
+            <h1 class="about-title">* ABOUT THIS SITE</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="about-section">
+            <h2>* WHAT IS THIS?</h2>
+            <p>The IGCSE Study Hub is a free resource for students studying IGCSE Combined Science. It covers Biology, Chemistry, and Physics topics organized by blocks, with interactive quizzes and tests to help you prepare for exams.</p>
+        </section>
+
+        <section class="about-section">
+            <h2>* FEATURES</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-card__icon">&#128214;</div>
+                    <h3>Comprehensive Notes</h3>
+                    <p>Clear, organized study materials covering all IGCSE Combined Science topics with diagrams and key terms.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon">&#9998;</div>
+                    <h3>Practice Tests</h3>
+                    <p>Multiple choice quizzes styled like real IGCSE exam questions to test your knowledge.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon">&#128221;</div>
+                    <h3>Formula Sheet</h3>
+                    <p>All the equations you need in one place, organized by subject with clear explanations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon">&#128200;</div>
+                    <h3>Progress Tracking</h3>
+                    <p>Create an account to track your test scores and topic confidence over time.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon">&#127912;</div>
+                    <h3>Multiple Themes</h3>
+                    <p>Choose from Undertale, Minecraft, or Clean themes to personalize your study experience.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon">&#128241;</div>
+                    <h3>Mobile Friendly</h3>
+                    <p>Study anywhere on any device - the site works on phones, tablets, and computers.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <h2>* STATS</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-card__value">44</div>
+                    <div class="stat-card__label">Topic Pages</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card__value">4</div>
+                    <div class="stat-card__label">Subjects</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card__value">10</div>
+                    <div class="stat-card__label">Blocks</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card__value" id="user-count">-</div>
+                    <div class="stat-card__label">Registered Users</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <h2>* GET STARTED</h2>
+            <div class="cta-box">
+                <p>Ready to start studying?</p>
+                <div class="cta-buttons">
+                    <a href="index.html" class="cta-btn cta-btn--primary">Browse Topics</a>
+                    <a href="login.html" class="cta-btn cta-btn--secondary auth-login">Create Account</a>
+                    <a href="dashboard.html" class="cta-btn cta-btn--secondary auth-dashboard" style="display:none;">View Dashboard</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>* The end of studying is just the beginning of knowledge.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/supabase-config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/progress.js"></script>
+    <script>
+        // Load user count
+        document.addEventListener('DOMContentLoaded', async () => {
+            const userCountEl = document.getElementById('user-count');
+
+            // Wait for progress manager to initialize
+            await new Promise(resolve => setTimeout(resolve, 500));
+
+            if (window.progressManager) {
+                const count = await window.progressManager.getUserCount();
+                userCountEl.textContent = count;
+            }
+        });
+    </script>
+</body>
+</html>
