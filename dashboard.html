@@ -286,44 +286,111 @@
                 return;
             }
 
-            // Count by level
-            let counts = {
-                'confident': 0,
-                'learning': 0,
-                'need-practice': 0
+            // Group topics by level
+            let groups = {
+                'confident': [],
+                'learning': [],
+                'need-practice': []
             };
 
             topicIds.forEach(id => {
-                counts[confidence[id]]++;
+                groups[confidence[id]].push(id);
             });
+
+            function buildTopicList(topics, level) {
+                if (topics.length === 0) return '';
+                return `
+                    <div class="confidence-topics" id="topics-${level}" style="display: none;">
+                        <ul class="confidence-topics__list">
+                            ${topics.map(id => `<li><a href="${getTopicUrl(id)}">${formatTopicId(id)}</a></li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+            }
 
             let html = `
                 <div class="confidence-bars">
-                    <div class="confidence-bar">
+                    <div class="confidence-bar confidence-bar--clickable" data-level="confident" onclick="toggleTopicList('confident')">
                         <span class="confidence-bar__label">Confident</span>
                         <div class="confidence-bar__track">
-                            <div class="confidence-bar__fill confident" style="width: ${(counts.confident / topicIds.length) * 100}%"></div>
+                            <div class="confidence-bar__fill confident" style="width: ${(groups.confident.length / topicIds.length) * 100}%"></div>
                         </div>
-                        <span class="confidence-bar__count">${counts.confident}</span>
+                        <span class="confidence-bar__count">${groups.confident.length}</span>
+                        <span class="confidence-bar__toggle">&#9660;</span>
                     </div>
-                    <div class="confidence-bar">
+                    ${buildTopicList(groups.confident, 'confident')}
+
+                    <div class="confidence-bar confidence-bar--clickable" data-level="learning" onclick="toggleTopicList('learning')">
                         <span class="confidence-bar__label">Learning</span>
                         <div class="confidence-bar__track">
-                            <div class="confidence-bar__fill learning" style="width: ${(counts.learning / topicIds.length) * 100}%"></div>
+                            <div class="confidence-bar__fill learning" style="width: ${(groups.learning.length / topicIds.length) * 100}%"></div>
                         </div>
-                        <span class="confidence-bar__count">${counts.learning}</span>
+                        <span class="confidence-bar__count">${groups.learning.length}</span>
+                        <span class="confidence-bar__toggle">&#9660;</span>
                     </div>
-                    <div class="confidence-bar">
+                    ${buildTopicList(groups.learning, 'learning')}
+
+                    <div class="confidence-bar confidence-bar--clickable" data-level="need-practice" onclick="toggleTopicList('need-practice')">
                         <span class="confidence-bar__label">Need Practice</span>
                         <div class="confidence-bar__track">
-                            <div class="confidence-bar__fill need-practice" style="width: ${(counts['need-practice'] / topicIds.length) * 100}%"></div>
+                            <div class="confidence-bar__fill need-practice" style="width: ${(groups['need-practice'].length / topicIds.length) * 100}%"></div>
                         </div>
-                        <span class="confidence-bar__count">${counts['need-practice']}</span>
+                        <span class="confidence-bar__count">${groups['need-practice'].length}</span>
+                        <span class="confidence-bar__toggle">&#9660;</span>
                     </div>
+                    ${buildTopicList(groups['need-practice'], 'need-practice')}
                 </div>
             `;
 
             container.innerHTML = html;
+        }
+
+        function toggleTopicList(level) {
+            const topicList = document.getElementById('topics-' + level);
+            const bar = document.querySelector(`.confidence-bar[data-level="${level}"]`);
+
+            if (topicList) {
+                const isVisible = topicList.style.display !== 'none';
+                topicList.style.display = isVisible ? 'none' : 'block';
+                bar.classList.toggle('expanded', !isVisible);
+            }
+        }
+
+        function formatTopicId(topicId) {
+            // Convert topic-id like "biology-block-1-cells" to "Biology - Block 1 - Cells"
+            const parts = topicId.split('-');
+            let subject = parts[0];
+            let block = '';
+            let topic = '';
+
+            // Find block number
+            const blockIndex = parts.indexOf('block');
+            if (blockIndex !== -1 && parts[blockIndex + 1]) {
+                block = `Block ${parts[blockIndex + 1]}`;
+                topic = parts.slice(blockIndex + 2).join(' ');
+            } else {
+                topic = parts.slice(1).join(' ');
+            }
+
+            subject = subject.charAt(0).toUpperCase() + subject.slice(1);
+            topic = topic.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+
+            return block ? `${subject} - ${block} - ${topic}` : `${subject} - ${topic}`;
+        }
+
+        function getTopicUrl(topicId) {
+            // Convert topic-id to URL path
+            const parts = topicId.split('-');
+            const subject = parts[0];
+            const blockIndex = parts.indexOf('block');
+
+            if (blockIndex !== -1 && parts[blockIndex + 1]) {
+                const blockNum = parts[blockIndex + 1];
+                const topicSlug = parts.slice(blockIndex + 2).join('-');
+                return `subjects/${subject}/block-${blockNum}/${topicSlug}.html`;
+            }
+
+            return `subjects/${subject}/index.html`;
         }
 
         function formatTestId(testId) {

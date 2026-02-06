@@ -2162,6 +2162,58 @@ li {
     text-align: right;
 }
 
+.confidence-bar--clickable {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.confidence-bar--clickable:hover {
+    background-color: var(--bg-highlight);
+}
+
+.confidence-bar__toggle {
+    color: var(--text-secondary);
+    font-size: 0.8em;
+    transition: transform 0.2s ease;
+    margin-left: var(--spacing-sm);
+}
+
+.confidence-bar.expanded .confidence-bar__toggle {
+    transform: rotate(180deg);
+}
+
+.confidence-topics {
+    background-color: var(--bg-secondary);
+    border: var(--border-pixel) solid var(--border-color);
+    border-top: none;
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+.confidence-topics__list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--spacing-sm);
+}
+
+.confidence-topics__list li {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+}
+
+.confidence-topics__list a {
+    color: var(--text-link);
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.confidence-topics__list a:hover {
+    color: var(--text-accent);
+    text-decoration: underline;
+}
+
 /* No Data Message */
 .no-data {
     color: var(--text-secondary);
