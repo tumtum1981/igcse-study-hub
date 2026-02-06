@@ -1,7 +1,7 @@
 /**
  * Theme Preloader
  * This script runs immediately to prevent flash of wrong theme.
- * Must be loaded in <head> BEFORE the theme CSS link.
+ * Must be loaded in <head> AFTER the theme CSS link.
  */
 (function() {
     const savedTheme = localStorage.getItem('igcse-theme');
@@ -25,4 +25,7 @@
             themeLink.href = basePath + 'css/themes/' + savedTheme + '.css';
         }
     }
+    // Show page after theme is set
+    document.documentElement.style.visibility = 'visible';
+    document.documentElement.style.opacity = '1';
 })();
