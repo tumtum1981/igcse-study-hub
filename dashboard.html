@@ -356,41 +356,108 @@
             }
         }
 
+        // Topic lookup table: maps topic IDs to names and filenames
+        const TOPIC_DATA = {
+            // Biology Block 1
+            'b1-1-1': { name: 'Cells', file: '01-cells' },
+            'b1-2-1': { name: 'Specialised Cells', file: '02-specialised-cells' },
+            'b1-3-1': { name: 'Magnification', file: '03-magnification' },
+            'b1-4-1': { name: 'Living Organisms', file: '04-living-organisms' },
+            'b1-5-1': { name: 'Prokaryotic Cells', file: '05-prokaryotic-cells' },
+            // Biology Block 2
+            'b2-1-1': { name: 'Size of Cells', file: '01-size-of-cells' },
+            'b2-2-1': { name: 'Diffusion', file: '02-diffusion' },
+            'b2-3-1': { name: 'Osmosis', file: '03-osmosis' },
+            'b2-4-1': { name: 'Osmosis Practical', file: '04-osmosis-practical' },
+            'b2-5-1': { name: 'Active Transport', file: '05-active-transport' },
+            // Biology Block 3
+            'b3-1-1': { name: 'Biological Molecules', file: '01-biological-molecules' },
+            'b3-2-1': { name: 'Digestive System', file: '02-digestive-system' },
+            'b3-3-1': { name: 'Enzymes', file: '03-enzymes' },
+            // Chemistry Block 1
+            'c1-1-1': { name: 'Atoms, Elements & Compounds', file: '01-atoms-elements-compounds' },
+            'c1-2-1': { name: 'States of Matter', file: '02-states-of-matter' },
+            'c1-3-1': { name: 'Atomic Structure', file: '03-atomic-structure' },
+            'c1-4-1': { name: 'Electron Shells', file: '04-electron-shells' },
+            'c1-5-1': { name: 'Ions & Isotopes', file: '05-ions-isotopes' },
+            // Chemistry Block 2
+            'c2-1-1': { name: 'State Changes', file: '01-state-changes' },
+            'c2-2-1': { name: 'Ionic Bonding', file: '02-ionic-bonding' },
+            'c2-3-1': { name: 'Covalent Bonding', file: '03-covalent-bonding' },
+            'c2-4-1': { name: 'Metallic Bonding', file: '04-metallic-bonding' },
+            'c2-5-1': { name: 'Giant Covalent', file: '05-giant-covalent' },
+            // Chemistry Block 3
+            'c3-1-1': { name: 'Conservation of Mass', file: '01-conservation-of-mass' },
+            'c3-2-1': { name: 'Conservation Calculations', file: '02-conservation-calculations' },
+            'c3-3-1': { name: 'Representing Reactions', file: '03-representing-reactions' },
+            'c3-4-1': { name: 'Balancing Equations', file: '04-balancing-equations' },
+            // Physics Block 1
+            'p1-1-1': { name: 'Speed, Distance & Time', file: '01-speed-distance-time' },
+            'p1-2-1': { name: 'Distance-Time Graphs', file: '02-distance-time-graphs' },
+            'p1-3-1': { name: 'Velocity-Time Graphs', file: '03-velocity-time-graphs' },
+            'p1-4-1': { name: 'Gravitational Force', file: '04-gravitational-force' },
+            'p1-5-1': { name: 'Work Done', file: '05-work-done' },
+            // Physics Block 2
+            'p2-1-1': { name: 'Density', file: '01-density' },
+            'p2-2-1': { name: 'Forces', file: '02-forces' },
+            'p2-3-1': { name: 'Resultant Forces', file: '03-resultant-forces' },
+            'p2-4-1': { name: 'Moments', file: '04-moments' },
+            'p2-5-1': { name: 'Newton\'s Second Law', file: '05-newtons-second-law' },
+            // Physics Block 3
+            'p3-1-1': { name: 'Energy Stores', file: '01-energy-stores' },
+            'p3-2-1': { name: 'Energy Resources', file: '02-energy-resources' },
+            // Separate Biology Block 1
+            'sb1-1-1': { name: 'Features of Organisms', file: '01-features-of-organisms' },
+            'sb1-2-1': { name: 'Species & Binomial', file: '02-species-binomial' },
+            'sb1-3-1': { name: 'Evolutionary Trees', file: '03-evolutionary-trees' },
+            'sb1-4-1': { name: 'Dichotomous Keys', file: '04-dichotomous-keys' },
+            'sb1-5-1': { name: 'Plant Classification', file: '05-plant-classification' }
+        };
+
+        // Subject code to full name and folder
+        const SUBJECT_INFO = {
+            'b': { name: 'Biology', folder: 'biology' },
+            'c': { name: 'Chemistry', folder: 'chemistry' },
+            'p': { name: 'Physics', folder: 'physics' },
+            'sb': { name: 'Separate Biology', folder: 'separate-biology' }
+        };
+
+        function parseTopicId(topicId) {
+            // Parse topic ID like "b1-2-1" or "sb1-3-1"
+            const match = topicId.match(/^(sb|b|c|p)(\d+)-(\d+)-(\d+)$/);
+            if (!match) return null;
+            return {
+                subjectCode: match[1],
+                blockNum: match[2],
+                topicNum: match[3]
+            };
+        }
+
         function formatTopicId(topicId) {
-            // Convert topic-id like "biology-block-1-cells" to "Biology - Block 1 - Cells"
-            const parts = topicId.split('-');
-            let subject = parts[0];
-            let block = '';
-            let topic = '';
+            // Look up in topic data first
+            const topicData = TOPIC_DATA[topicId];
+            const parsed = parseTopicId(topicId);
 
-            // Find block number
-            const blockIndex = parts.indexOf('block');
-            if (blockIndex !== -1 && parts[blockIndex + 1]) {
-                block = `Block ${parts[blockIndex + 1]}`;
-                topic = parts.slice(blockIndex + 2).join(' ');
-            } else {
-                topic = parts.slice(1).join(' ');
-            }
+            if (!parsed) return topicId;
 
-            subject = subject.charAt(0).toUpperCase() + subject.slice(1);
-            topic = topic.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+            const subjectInfo = SUBJECT_INFO[parsed.subjectCode];
+            const subjectName = subjectInfo ? subjectInfo.name : parsed.subjectCode.toUpperCase();
+            const topicName = topicData ? topicData.name : `Topic ${parsed.topicNum}`;
 
-            return block ? `${subject} - ${block} - ${topic}` : `${subject} - ${topic}`;
+            return `${subjectName} - Block ${parsed.blockNum} - ${topicName}`;
         }
 
         function getTopicUrl(topicId) {
-            // Convert topic-id to URL path
-            const parts = topicId.split('-');
-            const subject = parts[0];
-            const blockIndex = parts.indexOf('block');
+            const topicData = TOPIC_DATA[topicId];
+            const parsed = parseTopicId(topicId);
 
-            if (blockIndex !== -1 && parts[blockIndex + 1]) {
-                const blockNum = parts[blockIndex + 1];
-                const topicSlug = parts.slice(blockIndex + 2).join('-');
-                return `subjects/${subject}/block-${blockNum}/${topicSlug}.html`;
-            }
+            if (!parsed) return 'index.html';
 
-            return `subjects/${subject}/index.html`;
+            const subjectInfo = SUBJECT_INFO[parsed.subjectCode];
+            const folder = subjectInfo ? subjectInfo.folder : parsed.subjectCode;
+            const filename = topicData ? topicData.file : `0${parsed.topicNum}-topic`;
+
+            return `subjects/${folder}/block-${parsed.blockNum}/${filename}.html`;
         }
 
         function formatTestId(testId) {
