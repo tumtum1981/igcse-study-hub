@@ -126,6 +126,15 @@ const SEARCH_INDEX = [
         keywords: ["enzyme", "catalyst", "active site", "substrate", "lock and key", "denaturation", "temperature", "pH", "optimum"],
         excerpt: "Enzymes are biological catalysts made of protein. They speed up reactions without being used up."
     },
+    {
+        title: "Enzymes Continued",
+        subject: "biology",
+        block: 3,
+        code: "B3.4.1",
+        url: "subjects/biology/block-3/04-enzymes-continued.html",
+        keywords: ["enzyme specificity", "lock and key", "carbohydrase", "protease", "lipase", "denaturation", "metabolism", "optimum temperature", "optimum pH"],
+        excerpt: "Enzyme specificity explained using the lock and key model. Carbohydrases, proteases, and lipases break down different substrates."
+    },
 
     // Chemistry Block 1
     {
@@ -257,6 +266,15 @@ const SEARCH_INDEX = [
         url: "subjects/chemistry/block-3/04-balancing-equations.html",
         keywords: ["balancing equations", "coefficients", "atoms", "balanced equation"],
         excerpt: "Symbol equations must be balanced so the same number of each atom appears on both sides."
+    },
+    {
+        title: "RAM and RFM",
+        subject: "chemistry",
+        block: 3,
+        code: "C3.5.1",
+        url: "subjects/chemistry/block-3/05-ram-rfm.html",
+        keywords: ["relative atomic mass", "relative formula mass", "Ar", "Mr", "RFM", "molar mass", "periodic table", "calculations"],
+        excerpt: "Relative atomic mass (Ar) and relative formula mass (Mr/RFM) calculations using the periodic table."
     },
 
     // Physics Block 1
