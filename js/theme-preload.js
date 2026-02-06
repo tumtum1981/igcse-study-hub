@@ -25,7 +25,4 @@
             themeLink.href = basePath + 'css/themes/' + savedTheme + '.css';
         }
     }
-    // Show page after theme is set
-    document.documentElement.style.visibility = 'visible';
-    document.documentElement.style.opacity = '1';
 })();
