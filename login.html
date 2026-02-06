@@ -57,6 +57,22 @@
                         <input type="password" id="login-password" name="password" required autocomplete="current-password">
                     </div>
                     <button type="submit" class="auth-submit">ENTER</button>
+                    <p class="forgot-password-link">
+                        <a href="#" id="forgot-password-btn">* Forgot password?</a>
+                    </p>
+                </form>
+
+                <!-- Forgot Password Form -->
+                <form class="auth-form" id="forgot-form" style="display: none;">
+                    <p class="form-hint" style="margin-bottom: var(--spacing-md);">Enter your email and we'll send you a link to reset your password.</p>
+                    <div class="form-group">
+                        <label for="forgot-email">Email</label>
+                        <input type="email" id="forgot-email" name="email" required autocomplete="email">
+                    </div>
+                    <button type="submit" class="auth-submit">SEND RESET LINK</button>
+                    <p class="forgot-password-link">
+                        <a href="#" id="back-to-login-btn">* Back to login</a>
+                    </p>
                 </form>
 
                 <!-- Signup Form -->
@@ -100,7 +116,10 @@
             const tabs = document.querySelectorAll('.auth-tab');
             const loginForm = document.getElementById('login-form');
             const signupForm = document.getElementById('signup-form');
+            const forgotForm = document.getElementById('forgot-form');
             const message = document.getElementById('auth-message');
+            const forgotPasswordBtn = document.getElementById('forgot-password-btn');
+            const backToLoginBtn = document.getElementById('back-to-login-btn');
 
             // Tab switching
             tabs.forEach(tab => {
@@ -111,14 +130,34 @@
                     if (tab.dataset.tab === 'login') {
                         loginForm.style.display = '';
                         signupForm.style.display = 'none';
+                        forgotForm.style.display = 'none';
                     } else {
                         loginForm.style.display = 'none';
                         signupForm.style.display = '';
+                        forgotForm.style.display = 'none';
                     }
 
                     message.textContent = '';
                     message.className = 'auth-message';
                 });
+            });
+
+            // Show forgot password form
+            forgotPasswordBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                loginForm.style.display = 'none';
+                forgotForm.style.display = '';
+                message.textContent = '';
+                message.className = 'auth-message';
+            });
+
+            // Back to login
+            backToLoginBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                forgotForm.style.display = 'none';
+                loginForm.style.display = '';
+                message.textContent = '';
+                message.className = 'auth-message';
             });
 
             // Show message helper
@@ -168,6 +207,23 @@
                     }, 1000);
                 } else {
                     showMessage(result.error || 'Signup failed', true);
+                }
+            });
+
+            // Forgot password form submission
+            forgotForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                const email = document.getElementById('forgot-email').value;
+
+                showMessage('Sending reset link...');
+
+                const result = await window.authManager.sendPasswordReset(email);
+
+                if (result.success) {
+                    showMessage('Check your email for the reset link!');
+                } else {
+                    showMessage(result.error || 'Failed to send reset email', true);
                 }
             });
 

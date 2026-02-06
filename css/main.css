@@ -1911,6 +1911,23 @@ li {
     align-items: center;
 }
 
+/* Forgot password link */
+.forgot-password-link {
+    text-align: center;
+    margin-top: var(--spacing-md);
+    font-size: 0.9rem;
+}
+
+.forgot-password-link a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.forgot-password-link a:hover {
+    color: var(--text-accent);
+}
+
 /* =================================
    DASHBOARD STYLES
    ================================= */

@@ -183,6 +183,68 @@ class AuthManager {
     }
 
     /**
+     * Send password reset email
+     * @param {string} email - User's email address
+     * @returns {Object} { success: boolean, error?: string }
+     */
+    async sendPasswordReset(email) {
+        await this.init();
+
+        if (!this.supabase) {
+            return { success: false, error: 'Supabase not configured' };
+        }
+
+        if (!email) {
+            return { success: false, error: 'Email is required' };
+        }
+
+        try {
+            const { error } = await this.supabase.auth.resetPasswordForEmail(email, {
+                redirectTo: window.location.origin + '/reset-password.html'
+            });
+
+            if (error) {
+                return { success: false, error: error.message };
+            }
+
+            return { success: true };
+        } catch (err) {
+            return { success: false, error: 'An unexpected error occurred' };
+        }
+    }
+
+    /**
+     * Update user's password (used after clicking reset link)
+     * @param {string} newPassword - The new password
+     * @returns {Object} { success: boolean, error?: string }
+     */
+    async updatePassword(newPassword) {
+        await this.init();
+
+        if (!this.supabase) {
+            return { success: false, error: 'Supabase not configured' };
+        }
+
+        if (!newPassword || newPassword.length < 6) {
+            return { success: false, error: 'Password must be at least 6 characters' };
+        }
+
+        try {
+            const { error } = await this.supabase.auth.updateUser({
+                password: newPassword
+            });
+
+            if (error) {
+                return { success: false, error: error.message };
+            }
+
+            return { success: true };
+        } catch (err) {
+            return { success: false, error: 'An unexpected error occurred' };
+        }
+    }
+
+    /**
      * Check if user is logged in
      */
     isLoggedIn() {
