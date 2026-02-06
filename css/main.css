@@ -2492,12 +2492,3 @@ li {
         text-align: center;
     }
 }
-
-/* =================================
-   FOUC FIX - Reveal page when CSS loads
-   This MUST be at the end of the file
-   ================================= */
-html {
-    visibility: visible;
-    opacity: 1;
-}

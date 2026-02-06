@@ -72,3 +72,9 @@
     --shadow-pixel: 4px 4px 0 #1e1e1e;
     --glow-effect: 0 0 8px #55ff55;
 }
+
+/* FOUC Fix - Reveal page when theme CSS loads */
+html {
+    visibility: visible;
+    opacity: 1;
+}

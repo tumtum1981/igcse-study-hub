@@ -107,3 +107,9 @@
 .theme-bbc h3 {
     font-weight: 700;
 }
+
+/* FOUC Fix - Reveal page when theme CSS loads */
+html {
+    visibility: visible;
+    opacity: 1;
+}
