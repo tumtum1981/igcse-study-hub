@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>html{visibility:hidden;opacity:0}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P3.2.1 Calculating Efficiency | Physics | IGCSE Study Hub</title>
+    <link rel="preload" href="../../../css/main.css" as="style">
+    <link rel="preload" href="../../../css/themes/undertale.css" as="style">
+<link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/themes/undertale.css" data-theme="true">
+    <script src="../../../js/theme-preload.js"></script>
+</head>
+<body data-subject="physics">
+    <nav class="nav-main">
+        <div class="container nav-container">
+            <a href="../../../index.html" class="nav-brand">* IGCSE STUDY HUB</a>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+            <ul class="nav-links">
+                <li><a href="../../biology/index.html" class="nav-link" data-subject="biology">Biology</a></li>
+                <li><a href="../../chemistry/index.html" class="nav-link" data-subject="chemistry">Chemistry</a></li>
+                <li><a href="../../physics/index.html" class="nav-link active" data-subject="physics">Physics</a></li>
+                <li><a href="../../separate-biology/index.html" class="nav-link" data-subject="separate-bio">Separate Bio</a></li>
+                <li><a href="../../../tests/index.html" class="nav-link">Tests</a></li>
+                <li><a href="../../../formulas.html" class="nav-link">Formulas</a></li>                <li class="nav-auth">
+                    <a href="../../../login.html" class="nav-link auth-login">Login</a>
+                    <a href="../../../dashboard.html" class="nav-link auth-dashboard" style="display:none;">Dashboard</a>
+                </li>
+
+                <li class="theme-switcher">
+                    <label class="theme-switcher__label" for="theme-select">Theme:</label>
+                    <select class="theme-switcher__select" id="theme-select">
+                        <option value="undertale">Undertale</option>
+                        <option value="minecraft">Minecraft</option>
+                        <option value="clean">Clean</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="../../../index.html">Home</a> /
+            <a href="../index.html">Physics</a> /
+            <a href="index.html">Block 3</a> /
+            <span>Calculating Efficiency</span>
+        </div>
+    </div>
+
+    <header class="topic-header topic-header--physics">
+        <div class="container">
+            <span class="topic-code">P3.2.1</span>
+            <h1>Calculating Efficiency</h1>
+        </div>
+    </header>
+
+    <main class="container topic-content">
+
+        <section class="content-section">
+            <h2>Summary</h2>
+            <p><span class="key-term">Efficiency</span> measures how much of the energy put into a device or system is usefully transferred. No device is 100% efficient - some energy is always <span class="key-term">dissipated</span> (wasted) as thermal energy to the surroundings.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Closed Energy Systems</h2>
+            <p>In a <span class="key-term">closed energy system</span>, energy can be transferred but mass cannot enter or leave. The total energy in the system stays the same - this is the <span class="key-term">law of conservation of energy</span>.</p>
+            <p>Energy can be:</p>
+            <ul class="content-list">
+                <li><strong>Stored</strong> - in one of the 8 energy stores</li>
+                <li><strong>Transferred</strong> - moved from one store to another</li>
+                <li><strong>Dissipated</strong> - spread out to the surroundings (usually as thermal energy)</li>
+            </ul>
+            <p>Energy can <strong>never</strong> be created or destroyed.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Useful vs Wasted Energy</h2>
+            <p>When energy is transferred by a device:</p>
+            <ul class="content-list">
+                <li><span class="key-term">Useful energy</span> - the energy that does the job we want</li>
+                <li><span class="key-term">Wasted energy</span> - energy that is not useful (usually thermal energy dissipated to surroundings)</li>
+            </ul>
+
+            <figure class="diagram">
+                <svg viewBox="0 0 400 180" class="diagram-svg" aria-labelledby="light-bulb-title">
+                    <title id="light-bulb-title">Energy Transfer in a Light Bulb</title>
+                    <!-- Input arrow -->
+                    <rect x="20" y="70" width="80" height="40" rx="5" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="2"/>
+                    <text x="60" y="85" class="diagram-label" font-size="9" text-anchor="middle">Electrical</text>
+                    <text x="60" y="98" class="diagram-label" font-size="9" text-anchor="middle">energy</text>
+                    <text x="60" y="125" class="diagram-label" font-size="10" text-anchor="middle" font-weight="bold">100%</text>
+                    <!-- Arrow to bulb -->
+                    <line x1="105" y1="90" x2="145" y2="90" stroke="currentColor" stroke-width="2" marker-end="url(#arrowEff)"/>
+                    <!-- Light bulb circle -->
+                    <circle cx="190" cy="90" r="40" fill="currentColor" opacity="0.15" stroke="currentColor" stroke-width="2"/>
+                    <text x="190" y="85" class="diagram-label" font-size="10" text-anchor="middle">LIGHT</text>
+                    <text x="190" y="98" class="diagram-label" font-size="10" text-anchor="middle">BULB</text>
+                    <!-- Useful output (light) -->
+                    <line x1="235" y1="70" x2="280" y2="50" stroke="currentColor" stroke-width="2" marker-end="url(#arrowEff)"/>
+                    <rect x="285" y="30" width="80" height="40" rx="5" fill="currentColor" opacity="0.3" stroke="currentColor" stroke-width="2"/>
+                    <text x="325" y="45" class="diagram-label" font-size="9" text-anchor="middle">Light energy</text>
+                    <text x="325" y="58" class="diagram-label" font-size="9" text-anchor="middle">(USEFUL)</text>
+                    <text x="325" y="85" class="diagram-label" font-size="10" text-anchor="middle" font-weight="bold">10%</text>
+                    <!-- Wasted output (thermal) -->
+                    <line x1="235" y1="110" x2="280" y2="130" stroke="currentColor" stroke-width="2" marker-end="url(#arrowEff)"/>
+                    <rect x="285" y="110" width="80" height="40" rx="5" fill="currentColor" opacity="0.1" stroke="currentColor" stroke-width="2" stroke-dasharray="4,2"/>
+                    <text x="325" y="125" class="diagram-label" font-size="9" text-anchor="middle">Thermal energy</text>
+                    <text x="325" y="138" class="diagram-label" font-size="9" text-anchor="middle">(WASTED)</text>
+                    <text x="325" y="165" class="diagram-label" font-size="10" text-anchor="middle" font-weight="bold">90%</text>
+                    <!-- Arrow marker -->
+                    <defs>
+                        <marker id="arrowEff" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+                            <path d="M 0 0 L 8 4 L 0 8 Z" fill="currentColor"/>
+                        </marker>
+                    </defs>
+                </svg>
+                <figcaption>A typical light bulb: 10% of energy is useful (light), 90% is wasted (thermal)</figcaption>
+            </figure>
+
+            <p>In this example, only 10% of the electrical energy is transferred to light - the rest heats up the bulb and surroundings. This means the bulb has an efficiency of 0.1 (or 10%).</p>
+        </section>
+
+        <section class="content-section">
+            <h2>The Efficiency Formula</h2>
+            <div class="formula-box">
+                <span class="formula-label">FORMULA</span>
+                <p>Efficiency = useful output energy transfer / total input energy transfer</p>
+            </div>
+            <p>This gives a <span class="key-term">decimal value</span> between 0 and 1.</p>
+            <p>To convert to a <span class="key-term">percentage</span>, multiply by 100:</p>
+            <div class="formula-box">
+                <span class="formula-label">FORMULA</span>
+                <p>Efficiency (%) = (useful output / total input) x 100</p>
+            </div>
+            <p><strong>Key points:</strong></p>
+            <ul class="content-list">
+                <li>Efficiency can never be greater than 1 (or 100%)</li>
+                <li>Higher efficiency = less energy wasted</li>
+                <li>Efficiency has <strong>no units</strong> (see below)</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Worked Examples</h2>
+
+            <p><strong>Example 1: Wind Turbine</strong></p>
+            <p>A wind turbine produces 120 MW of electrical energy for every 500 MW of kinetic energy provided by the wind.</p>
+            <div class="formula-box">
+                <span class="formula-label">CALCULATION</span>
+                <p>Efficiency = useful output / total input</p>
+                <p>Efficiency = 120 / 500 = <strong>0.24</strong></p>
+                <p>Or: 0.24 x 100 = <strong>24%</strong> efficient</p>
+            </div>
+
+            <p><strong>Example 2: Cycling Up a Hill</strong></p>
+            <p>Aisha does 12,000 J of work cycling up a hill. At the top, she has transferred 9,000 J into the gravitational store.</p>
+            <div class="formula-box">
+                <span class="formula-label">CALCULATION</span>
+                <p>Efficiency = useful output / total input</p>
+                <p>Efficiency = 9,000 / 12,000 = <strong>0.75</strong></p>
+                <p>Or: 0.75 x 100 = <strong>75%</strong> efficient</p>
+            </div>
+
+            <p><strong>Example 3: Lifting Boxes</strong></p>
+            <p>Lucas lifts a box of books onto a shelf and does 400 J of useful work. In total, he uses 1,000 J of energy.</p>
+            <div class="formula-box">
+                <span class="formula-label">CALCULATION</span>
+                <p>Efficiency = useful output / total input</p>
+                <p>Efficiency = 400 / 1,000 = <strong>0.40</strong></p>
+                <p>Or: 0.40 x 100 = <strong>40%</strong> efficient</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Why Efficiency Has No Units</h2>
+            <p>When calculating efficiency, you divide energy by energy:</p>
+            <p style="text-align: center; font-size: 1.2em;"><strong>Joules / Joules = no units</strong></p>
+            <p>The units cancel out! For example:</p>
+            <p style="text-align: center;"><code>400 J / 1000 J = 0.4</code> (the joules cancel)</p>
+            <p>This is why efficiency is just a number (a ratio) with no unit. It can also be expressed as a percentage.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Key Points to Remember</h2>
+            <ul class="content-list">
+                <li>Efficiency = useful output / total input</li>
+                <li>Multiply by 100 to get percentage efficiency</li>
+                <li>Efficiency is always between 0 and 1 (or 0% and 100%)</li>
+                <li>Efficiency has no units because joules / joules = dimensionless</li>
+                <li>No device is 100% efficient - some energy is always wasted</li>
+                <li>Wasted energy is usually dissipated as thermal energy</li>
+            </ul>
+        </section>
+
+        <section class="quiz-section">
+            <h2 class="quiz-section__title">* IGCSE Practice Questions</h2>
+
+            <article class="quiz-question">
+                <div class="quiz-question__header">
+                    <span class="quiz-question__number">Question 1</span>
+                    <span class="quiz-question__marks">[2 marks]</span>
+                </div>
+                <p class="quiz-question__text">An electric motor uses 50 kJ of energy to lift a load of bricks, transferring 32 kJ of energy to the gravitational store. Calculate the efficiency of the motor.</p>
+                <div class="quiz-answer">
+                    <div class="quiz-answer__prompt">* CLICK TO REVEAL ANSWER</div>
+                    <div class="quiz-answer__content">
+                        <ul>
+                            <li>Efficiency = useful output / total input (1 mark)</li>
+                            <li>Efficiency = 32 / 50 = 0.64 (or 64%) (1 mark)</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="quiz-question">
+                <div class="quiz-question__header">
+                    <span class="quiz-question__number">Question 2</span>
+                    <span class="quiz-question__marks">[2 marks]</span>
+                </div>
+                <p class="quiz-question__text">Izzy did 1,200 J of useful work putting books onto a high shelf and used 4,000 J of energy in total. Calculate her efficiency.</p>
+                <div class="quiz-answer">
+                    <div class="quiz-answer__prompt">* CLICK TO REVEAL ANSWER</div>
+                    <div class="quiz-answer__content">
+                        <ul>
+                            <li>Efficiency = useful output / total input (1 mark)</li>
+                            <li>Efficiency = 1200 / 4000 = 0.3 (or 30%) (1 mark)</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="quiz-question">
+                <div class="quiz-question__header">
+                    <span class="quiz-question__number">Question 3</span>
+                    <span class="quiz-question__marks">[3 marks]</span>
+                </div>
+                <p class="quiz-question__text">Climbing a high mountain, Andeep transferred 500 kJ of energy to the gravitational store and did 1,750 kJ of work. Calculate his efficiency to 2 significant figures.</p>
+                <div class="quiz-answer">
+                    <div class="quiz-answer__prompt">* CLICK TO REVEAL ANSWER</div>
+                    <div class="quiz-answer__content">
+                        <ul>
+                            <li>Efficiency = useful output / total input (1 mark)</li>
+                            <li>Efficiency = 500 / 1750 = 0.2857... (1 mark)</li>
+                            <li>= 0.29 (to 2 s.f.) (1 mark)</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="quiz-question">
+                <div class="quiz-question__header">
+                    <span class="quiz-question__number">Question 4</span>
+                    <span class="quiz-question__marks">[2 marks]</span>
+                </div>
+                <p class="quiz-question__text">Explain why efficiency has no unit.</p>
+                <div class="quiz-answer">
+                    <div class="quiz-answer__prompt">* CLICK TO REVEAL ANSWER</div>
+                    <div class="quiz-answer__content">
+                        <ul>
+                            <li>Efficiency is calculated by dividing energy by energy (joules by joules) (1 mark)</li>
+                            <li>The units cancel out, leaving no unit / a dimensionless ratio (1 mark)</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+                <div class="confidence-rating" data-topic-id="p3-2-1">
+            <p>How confident are you with this topic?</p>
+            <div class="confidence-btns">
+                <button class="confidence-btn" data-level="need-practice">Need Practice</button>
+                <button class="confidence-btn" data-level="learning">Learning</button>
+                <button class="confidence-btn" data-level="confident">Confident</button>
+            </div>
+        </div>
+
+<nav class="topic-navigation">
+            <a href="01-energy-stores.html" class="topic-nav-link topic-nav-link--prev">
+                <span class="topic-nav-label">Previous</span>
+                <span class="topic-nav-title">P3.1.1 Energy Stores</span>
+            </a>
+            <a href="03-energy-resources.html" class="topic-nav-link topic-nav-link--next">
+                <span class="topic-nav-label">Next</span>
+                <span class="topic-nav-title">P3.3.1 Energy Resources</span>
+            </a>
+        </nav>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>* Your DETERMINATION grows stronger...</p>
+        </div>
+    </footer>
+
+    <script src="../../../js/main.js"></script>
+    <script src="../../../js/quiz.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../../../js/supabase-config.js"></script>
+    <script src="../../../js/auth.js"></script>
+    <script src="../../../js/progress.js"></script>
+</body>
+</html>

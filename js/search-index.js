@@ -382,11 +382,20 @@ const SEARCH_INDEX = [
         excerpt: "Energy is stored in different stores: kinetic, gravitational potential, elastic, chemical, thermal, and more."
     },
     {
-        title: "Energy Resources",
+        title: "Calculating Efficiency",
         subject: "physics",
         block: 3,
         code: "P3.2.1",
-        url: "subjects/physics/block-3/02-energy-resources.html",
+        url: "subjects/physics/block-3/02-calculating-efficiency.html",
+        keywords: ["efficiency", "useful output", "total input", "wasted energy", "dissipated", "percentage", "joules", "closed system"],
+        excerpt: "Efficiency measures how much energy is usefully transferred compared to total input. Calculated as useful output / total input."
+    },
+    {
+        title: "Energy Resources",
+        subject: "physics",
+        block: 3,
+        code: "P3.3.1",
+        url: "subjects/physics/block-3/03-energy-resources.html",
         keywords: ["renewable", "non-renewable", "fossil fuels", "solar", "wind", "nuclear", "hydroelectric", "geothermal"],
         excerpt: "Energy resources are renewable (won't run out) or non-renewable (will run out)."
     },
