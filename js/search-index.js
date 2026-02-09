@@ -396,8 +396,8 @@ const SEARCH_INDEX = [
         block: 3,
         code: "P3.3.1",
         url: "subjects/physics/block-3/03-energy-resources.html",
-        keywords: ["renewable", "non-renewable", "fossil fuels", "solar", "wind", "nuclear", "hydroelectric", "geothermal"],
-        excerpt: "Energy resources are renewable (won't run out) or non-renewable (will run out)."
+        keywords: ["renewable", "non-renewable", "fossil fuels", "solar", "wind", "nuclear", "hydroelectric", "geothermal", "tidal", "wave", "biofuel", "carbon neutral", "generator", "turbine", "barrage", "dam"],
+        excerpt: "Energy resources are renewable (won't run out) or non-renewable (will run out). About 30% of UK electricity comes from wind."
     },
 
     // Separate Biology Block 1
