@@ -135,6 +135,15 @@ const SEARCH_INDEX = [
         keywords: ["enzyme specificity", "lock and key", "carbohydrase", "protease", "lipase", "denaturation", "metabolism", "optimum temperature", "optimum pH"],
         excerpt: "Enzyme specificity explained using the lock and key model. Carbohydrases, proteases, and lipases break down different substrates."
     },
+    {
+        title: "Balanced Diet",
+        subject: "biology",
+        block: 3,
+        code: "B3.5.1",
+        url: "subjects/biology/block-3/05-balanced-diet.html",
+        keywords: ["balanced diet", "food groups", "carbohydrates", "proteins", "lipids", "fats", "vitamins", "minerals", "fibre", "water", "iron", "calcium", "vitamin C", "vitamin D", "eatwell guide", "saturated", "unsaturated", "nutrition", "nutrients"],
+        excerpt: "A balanced diet contains the right proportions of carbohydrates, proteins, lipids, vitamins, minerals, fibre, and water. Nutritional needs vary with age and activity level."
+    },
 
     // Chemistry Block 1
     {
