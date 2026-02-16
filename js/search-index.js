@@ -408,6 +408,15 @@ const SEARCH_INDEX = [
         keywords: ["renewable", "non-renewable", "fossil fuels", "solar", "wind", "nuclear", "hydroelectric", "geothermal", "tidal", "wave", "biofuel", "carbon neutral", "generator", "turbine", "barrage", "dam"],
         excerpt: "Energy resources are renewable (won't run out) or non-renewable (will run out). About 30% of UK electricity comes from wind."
     },
+    {
+        title: "Conservation of Energy Calculations",
+        subject: "physics",
+        block: 3,
+        code: "P3.4.1",
+        url: "subjects/physics/block-3/04-energy-calculations.html",
+        keywords: ["conservation", "energy", "GPE", "KE", "kinetic", "gravitational potential", "calculation", "height", "speed", "velocity", "efficiency"],
+        excerpt: "Using conservation of energy to calculate speed from height and height from speed by equating GPE and KE."
+    },
 
     // Separate Biology Block 1
     {
