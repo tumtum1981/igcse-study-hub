@@ -1,0 +1,211 @@
+IGCSE STUDY HUB - CURRENT WORKFLOW DOCUMENTATION
+==================================================
+Last updated: February 2026 (Session 18, v1.15)
+
+
+1. PROJECT OVERVIEW
+-------------------
+A static HTML/CSS/JS website for IGCSE homeschool revision, hosted on
+GitHub and deployed via Vercel. Currently contains 49 content pages and
+191 multiple-choice tests across 4 subjects (Biology, Chemistry, Physics,
+Separate Biology).
+
+Key locations:
+  Website:    C:\Users\jbenw\homeschool\igcse-study-hub\
+  Resources:  C:\Users\jbenw\homeschool\website-resources\
+  Docs:       C:\Users\jbenw\homeschool\igcse-study-hub\docs\
+  Claude:     C:\Users\jbenw\homeschool\igcse-study-hub\CLAUDE.md
+
+
+2. ADDING NEW CONTENT PAGES
+----------------------------
+Trigger: New PowerPoint or PDF files appear in website-resources/
+Command: Say "refresh website block" to Claude
+
+Step-by-step process:
+
+  a) SCAN - Claude scans website-resources/ for .pptx, .ppt, .pdf files
+     and compares against existing HTML pages in subjects/. Only NEW
+     (unmapped) source documents are processed.
+
+  b) CREATE PAGE - For each new source document:
+     - Create HTML file in subjects/[subject]/block-[n]/
+     - Use naming: [nn]-[topic-slug].html (e.g. 04-energy-calculations.html)
+     - Assign topic code: [S][Block].[Topic].1 (e.g. P3.4.1)
+     - Follow existing page template: nav, breadcrumb, header, content
+       sections, quiz questions, confidence rating, test links, nav footer
+     - Required scripts: main.js, quiz.js, supabase CDN, supabase-config.js,
+       auth.js, progress.js
+     - FOUC prevention: <style>html{visibility:hidden;opacity:0}</style>
+       plus theme-preload.js
+
+  c) UPDATE BLOCK INDEX - Add <li class="block-item"> entry to the
+     block's index.html (subjects/[subject]/block-[n]/index.html)
+
+  d) UPDATE NAVIGATION - Fix prev/next links:
+     - Previous page's "next" link now points to the new page
+     - New page's "next" points to either the next page or block index
+
+  e) UPDATE SEARCH INDEX - Add entry to js/search-index.js:
+     { title, subject, block, code, url, keywords: [], excerpt }
+
+  f) CHECK FORMULAS - If new formulas are introduced, add them to
+     formulas.html with equation, variables, units, and link to topic
+
+  g) CHECK HOMEPAGE - If a new block was created (not just a new page
+     in an existing block), update block counts on index.html
+
+  h) UPDATE PASSOVER - Add session entry to docs/passover.md:
+     - Version bump
+     - Page count update
+     - Session log entry with details
+     - Update structure diagram and content page listing
+
+  i) UPDATE CLAUDE.MD - Update page counts in Current Content section
+
+  j) COMMIT & PUSH - Stage all changes, commit with descriptive message,
+     push to GitHub (auto-deploys to Vercel)
+
+
+3. ADDING NEW TESTS
+--------------------
+Tests are created after content pages exist for a block.
+
+Standard allocation per block:
+  - 2-3 topic tests per content page
+  - 3-5 summary tests covering all topics in the block
+  - Optional exam-style tests (exam-[topic].html)
+
+Step-by-step process:
+
+  a) CREATE DIRECTORY (if needed) - tests/[subject]/block-[n]/
+
+  b) CREATE TEST FILES - Each test file:
+     - 20 multiple-choice questions
+     - Balanced answers: 5A, 5B, 5C, 5D correct
+     - Naming: [topic]-test-[n].html or summary-test-[n].html
+     - Uses test template: nav, breadcrumb, test-header, test-form with
+       20 test-question divs, submit/results section, nav footer
+     - Required scripts: main.js, test.js, supabase CDN, supabase-config.js,
+       progress.js, auth.js
+     - data-correct="X" attribute on each question div
+     - data-subject="[subject]" on body tag
+
+  c) SET UP NAVIGATION CHAIN - Each test has prev/next links:
+     First test: prev = index.html, next = [next test]
+     Middle tests: prev = [previous test], next = [next test]
+     Last test: prev = [previous test], next = index.html
+     Chain order: topic1-test-1 -> topic1-test-2 -> topic2-test-1 -> ...
+                  -> summary-test-1 -> summary-test-2 -> ... -> index
+
+  d) CREATE BLOCK TEST INDEX - tests/[subject]/block-[n]/index.html
+     Lists all tests organised by topic with test-category sections.
+     Match existing style (test-list with links or test-grid with cards).
+
+  e) UPDATE TESTS HUB - Add card to tests/index.html with:
+     <span class="test-card__meta">[N] tests available</span>
+
+  f) ADD TEST LINKS TO CONTENT PAGES - On each relevant content page,
+     add a <div class="test-links"> section between the confidence
+     rating and topic navigation.
+
+  g) UPDATE DOCUMENTATION - Update passover and CLAUDE.md with:
+     - New test counts
+     - Test listings
+     - Structure diagram
+     - Session log entry
+
+  h) VERIFY - Check:
+     - All files have exactly 20 questions
+     - Answer balance is 5A/5B/5C/5D per test
+     - Nav chain is unbroken (every prev/next matches)
+     - Block index lists every test file
+     - Hub card count matches actual file count
+
+  i) COMMIT & PUSH
+
+
+4. CONTENT PAGE STRUCTURE (mandatory order)
+--------------------------------------------
+Every content page follows this bottom-section order:
+
+  1. IGCSE Practice Questions   <section class="quiz-section">
+  2. Confidence Rating          <div class="confidence-rating">
+  3. Test Your Knowledge        <div class="test-links"> (if tests exist)
+  4. Topic Navigation           <nav class="topic-navigation">
+
+
+5. CSS CLASS REFERENCE
+-----------------------
+Navigation links on content and test pages:
+  - topic-nav-link topic-nav-link--prev  (NOT topic-nav__link)
+  - topic-nav-link topic-nav-link--next  (NOT topic-nav__prev)
+  Child spans: topic-nav-label, topic-nav-title
+
+Test question structure:
+  - test-question (with data-correct="A/B/C/D")
+  - test-question__number, test-question__text
+  - test-options > test-option (with data-value="A/B/C/D", tabindex="0")
+  - test-option__letter, then <span> for text
+
+Block index list items:
+  - block-list > block-item > block-link > block-link__number
+
+
+6. STALE DATA CHECKLIST
+-------------------------
+After ANY content or test changes, check these locations:
+
+  Content changes:
+    [ ] igcse-study-hub/index.html - block counts
+    [ ] subjects/[subject]/index.html - block list
+    [ ] js/search-index.js - new page entries
+    [ ] formulas.html - any new formulas
+    [ ] Content page test-links section
+
+  Test changes:
+    [ ] tests/[subject]/block-[n]/index.html - all tests listed
+    [ ] tests/index.html - card count matches file count
+    [ ] Navigation chain complete and correct
+    [ ] CSS classes correct (topic-nav-link not topic-nav__link)
+    [ ] Content pages - test-links added/updated
+
+  Always:
+    [ ] docs/passover.md updated
+    [ ] CLAUDE.md counts updated
+    [ ] Git commit and push
+
+
+7. NAMING CONVENTIONS
+----------------------
+Content pages:  [nn]-[topic-slug].html     (e.g. 01-cells.html)
+Topic tests:    [topic]-test-[n].html      (e.g. cells-test-1.html)
+Summary tests:  summary-test-[n].html
+Exam tests:     exam-[topic].html          (e.g. exam-cells.html)
+Topic codes:    [S][Block].[Topic].1       (e.g. B1.1.1, P3.4.1)
+
+Subject slugs: biology, chemistry, physics, separate-biology
+
+
+8. COMMANDS REFERENCE
+----------------------
+"refresh website block" - Scan for new source materials and create pages
+"update passover"       - Log development changes to passover document
+
+
+9. CURRENT STATE SUMMARY
+--------------------------
+Content: 49 pages across 10 blocks
+  Biology:          Block 1 (5), Block 2 (5), Block 3 (5)
+  Chemistry:        Block 1 (5), Block 2 (5), Block 3 (5)
+  Physics:          Block 1 (5), Block 2 (5), Block 3 (4)
+  Separate Biology: Block 1 (5)
+
+Tests: 191 across 10 blocks
+  Biology:          Block 1 (23), Block 2 (17), Block 3 (18)
+  Chemistry:        Block 1 (19), Block 2 (17), Block 3 (20)
+  Physics:          Block 1 (21), Block 2 (20), Block 3 (11)
+  Separate Biology: Block 1 (25)
+
+Features: 3 themes, search, formulas page, Supabase auth & progress
+          tracking, confidence ratings, print-friendly formulas

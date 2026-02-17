@@ -1,0 +1,217 @@
+IGCSE STUDY HUB - RECOMMENDATIONS REPORT
+==========================================
+February 2026 | Based on review of CLAUDE.md and passover documentation
+
+
+PART A: WORKFLOW IMPROVEMENTS
+==============================
+
+1. INCONSISTENT TEST COUNTS PER BLOCK
+--------------------------------------
+Problem: Test counts vary significantly across blocks with no clear
+standard. Some topics have 3 tests, others have 1 or 2. Some blocks
+have 5 summary tests, the newest has 3. Some blocks have exam-style
+tests, most don't.
+
+Current state:
+  Biology Block 1:  23 tests (3 per topic + 3 exam + 5 summary)
+  Biology Block 2:  17 tests (3 per topic + 5 summary, no exam)
+  Biology Block 3:  18 tests (3 per topic except diet=1 + 5 summary)
+  Chemistry Block 1: 19 tests (3 per topic except ions=2 + 5 summary)
+  Chemistry Block 2: 17 tests (3/3/3/1/2 per topic + 5 summary)
+  Chemistry Block 3: 20 tests (3 per topic + 5 summary)
+  Physics Block 1:  21 tests (3 per topic except work=1 + 3 exam + 5 summary)
+  Physics Block 2:  20 tests (3 per topic + 5 summary)
+  Physics Block 3:  11 tests (2 per topic + 3 summary)
+  Sep Bio Block 1:  25 tests (3 per topic + 5 exam + 5 summary)
+
+Recommendation: Standardise going forward. Suggested standard:
+  - 2 topic tests per content page (sufficient for revision)
+  - 3 summary tests per block
+  - Exam-style tests optional (add when time allows)
+  This gives a predictable 2T+3 per block (e.g. 5 topics = 13 tests).
+  Update CLAUDE.md to reflect the chosen standard.
+
+
+2. PASSOVER DOCUMENT STRUCTURE
+-------------------------------
+Problem: The passover document mixes reference material with a
+development log. Session entries appear both within and after the
+"Maintenance Notes" section, breaking the document flow. Some session
+entries are grouped under --- dividers inconsistently.
+
+Recommendation: Reorganise the passover document:
+  - Move ALL session entries to a single "Development Log" section at
+    the end, in chronological order
+  - Keep reference sections (Structure, Features, Maintenance Notes)
+    together at the top
+  - Remove duplicate information (maintenance notes partially repeat
+    what's in CLAUDE.md)
+
+
+3. CLAUDE.MD HAS SOME OUTDATED REFERENCES
+-------------------------------------------
+Problem: The "refresh website block" command in CLAUDE.md mentions
+checking if the homepage needs block count updates, but it also says
+to check tests/index.html - however, tests are added separately, not
+as part of "refresh website block". The passover description in
+line 137 still says "Each block has topic tests (3 per topic)" which
+no longer matches the newer blocks (Physics Block 3 uses 2 per topic).
+
+Recommendation:
+  - Clarify that "refresh website block" is content-only; tests are a
+    separate step
+  - Update the Quick Tests description to reflect variable test counts
+  - Consider adding an "add tests" command to CLAUDE.md as a formal
+    step, parallel to "refresh website block"
+
+
+4. NO AUTOMATED VERIFICATION
+------------------------------
+Problem: Every time content or tests are added, multiple files must be
+manually checked for consistency (nav chains, file counts, index
+listings). Session 14 was entirely dedicated to fixing accumulated
+inconsistencies from earlier sessions.
+
+Recommendation: Create a simple verification script (e.g. verify.js
+or verify.py) that checks:
+  - Every test directory: file count matches hub card count
+  - Every test file: has exactly 20 questions, has 5A/5B/5C/5D
+  - Nav chain integrity: every "next" has a matching "prev"
+  - Block indexes list every HTML file in their directory
+  - Search index has entries for every content page
+  Run this after each session to catch drift before it accumulates.
+
+
+5. GIT REPOSITORY SCOPE
+-------------------------
+Problem: The git repo is igcse-study-hub/ but CLAUDE.md and the
+passover document live outside it (in the parent homeschool/ folder).
+This means documentation changes aren't version-controlled alongside
+the code they describe.
+
+Recommendation: Either:
+  a) Move CLAUDE.md and passover/ into the igcse-study-hub/ repo, or
+  b) Create a separate repo for the parent homeschool/ directory, or
+  c) Accept the current setup but be aware that documentation history
+     isn't tracked in git
+
+
+PART B: WEBSITE FEATURE IMPROVEMENTS
+======================================
+
+1. SPACED REPETITION / SMART REVIEW
+-------------------------------------
+The dashboard tracks test scores and confidence ratings, but doesn't
+use them to guide study. A "What to study next" feature could:
+  - Highlight topics rated "Need Practice"
+  - Suggest retaking tests where scores were below 70%
+  - Prioritise topics not visited recently
+  - Show a simple daily study plan on the dashboard
+This would make the existing Supabase data more actionable.
+
+
+2. QUESTION BANK WITH RANDOMISATION
+-------------------------------------
+Currently each test has fixed questions in a fixed order. Students who
+retake a test may memorise the answers. Options:
+  - Add a "Random Test" mode that pulls 20 random questions from a
+    topic's question pool
+  - Store questions in a JSON file per block, select randomly at runtime
+  - This would also make it easier to add questions without creating
+    whole new test files
+
+
+3. TIMED TEST MODE
+--------------------
+IGCSE exams are timed. Adding an optional timer to tests would help
+with exam preparation:
+  - Countdown timer (e.g. 20 minutes for 20 questions)
+  - Auto-submit when time runs out
+  - Show time taken in results
+  - Track average time per question on dashboard
+
+
+4. EXPLANATION FOR WRONG ANSWERS
+----------------------------------
+Currently tests show correct/incorrect but don't explain why. Adding a
+brief explanation for each question (shown after submission) would turn
+tests into a learning tool, not just an assessment tool.
+
+
+5. TOPIC PROGRESS VISUALISATION
+---------------------------------
+The dashboard has subject breakdowns but no visual map of coverage.
+A topic grid or progress heatmap showing:
+  - Green: confident + high test scores
+  - Amber: learning or mixed scores
+  - Red: need practice or untested
+  - Grey: no data yet
+This gives an at-a-glance view of revision gaps.
+
+
+6. PRINT-FRIENDLY REVISION SHEETS
+------------------------------------
+The formula sheet is already print-friendly. Extending this to content
+pages would let students print topic summaries for offline revision:
+  - Add print CSS that hides nav, footer, quiz answers, and test links
+  - Keep key terms, tables, formulas, and diagrams
+  - One clean page per topic
+
+
+7. FLASHCARD MODE
+-------------------
+Reuse the existing key terms and quiz questions as interactive
+flashcards:
+  - Show term/question on front, definition/answer on back
+  - Click/tap to flip
+  - Mark as "know it" or "study again"
+  - Could be generated from existing page content without new data entry
+
+
+8. OFFLINE / PWA SUPPORT
+--------------------------
+As a static site, this is a good candidate for a Progressive Web App:
+  - Service worker for offline access
+  - "Add to Home Screen" on mobile
+  - Cache content pages and tests for study without internet
+  - Sync scores when back online
+
+
+9. MORE SVG DIAGRAMS
+----------------------
+Only 11 pages currently have SVG diagrams (from Session 8). Priority
+candidates for diagrams:
+  - Chemistry: states of matter particle model, ionic/covalent structure
+  - Biology: osmosis/diffusion through membrane, cell division
+  - Physics: energy Sankey diagrams, force diagrams, moment calculations
+  Diagrams significantly aid visual learners and are common in IGCSE
+  marking schemes.
+
+
+10. INTER-SUBJECT TOPIC LINKS
+-------------------------------
+Some topics connect across subjects (e.g. energy in physics and biology,
+particles in chemistry and physics). Adding "Related Topics" links at
+the bottom of content pages would help students make connections and
+support the integrated science approach of IGCSE.
+
+
+PRIORITY RANKING (suggested order of implementation)
+-----------------------------------------------------
+High impact, low effort:
+  1. Verification script (prevents accumulated bugs)
+  2. Print-friendly content pages (CSS-only change)
+  3. Standardise test counts in CLAUDE.md
+
+Medium impact, medium effort:
+  4. Explanations for test answers
+  5. "What to study next" on dashboard
+  6. Topic progress heatmap
+  7. More SVG diagrams
+
+High impact, high effort:
+  8. Question bank with randomisation
+  9. Timed test mode
+  10. Flashcard mode
+  11. PWA / offline support
