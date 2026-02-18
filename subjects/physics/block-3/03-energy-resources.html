@@ -207,6 +207,50 @@
                 <li>Almost <span class="key-term">carbon neutral</span> because the next crops absorb CO<sub>2</sub> as they grow</li>
                 <li>Uses land that could otherwise grow food</li>
             </ul>
+
+            <p>In any energy transfer, some energy is always <span class="key-term">wasted</span> (usually as heat). A <span class="key-term">Sankey diagram</span> shows how energy is transferred, with the width of each arrow proportional to the amount of energy:</p>
+
+            <figure class="diagram">
+                <svg viewBox="0 0 500 250" class="diagram-svg" aria-labelledby="sankey-energy-title">
+                    <title id="sankey-energy-title">Sankey diagram showing energy transfer in a light bulb</title>
+                    <defs>
+                        <marker id="arrowSankey" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+                            <path d="M 0 0 L 8 4 L 0 8 Z" fill="currentColor"/>
+                        </marker>
+                    </defs>
+
+                    <!-- Title label -->
+                    <text x="250" y="18" class="diagram-label" font-size="11" text-anchor="middle" font-weight="bold">Energy Transfer: Light Bulb (100J input)</text>
+
+                    <!-- Input band (full width = 100J) -->
+                    <path d="M 30,70 L 180,70 L 180,180 L 30,180 Z" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="1.5"/>
+                    <text x="105" y="130" class="diagram-label" font-size="10" text-anchor="middle">Total input</text>
+                    <text x="105" y="145" class="diagram-label" font-size="9" text-anchor="middle">100J</text>
+                    <text x="105" y="160" class="diagram-label" font-size="8" text-anchor="middle">(Electrical)</text>
+
+                    <!-- Useful energy band (10% = light, narrow going right) -->
+                    <path d="M 180,70 L 380,70 L 380,114 L 180,114 Z" fill="currentColor" opacity="0.15" stroke="currentColor" stroke-width="1.5"/>
+                    <!-- Arrow at end of useful band -->
+                    <line x1="380" y1="92" x2="410" y2="92" stroke="currentColor" stroke-width="2" marker-end="url(#arrowSankey)"/>
+                    <text x="280" y="98" class="diagram-label" font-size="10" text-anchor="middle">Useful output: Light</text>
+                    <text x="445" y="96" class="diagram-label" font-size="10" text-anchor="middle">10J</text>
+
+                    <!-- Connecting shape from input to split -->
+                    <path d="M 180,114 L 250,114 L 250,130 L 180,130 Z" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="0"/>
+
+                    <!-- Wasted energy band (90% = heat, wider going down-right) -->
+                    <path d="M 180,114 L 180,180 L 250,180 L 250,130 Z" fill="currentColor" opacity="0.1" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M 250,130 L 400,130 L 400,220 L 250,180 Z" fill="currentColor" opacity="0.1" stroke="currentColor" stroke-width="1.5"/>
+                    <!-- Arrow at end of wasted band -->
+                    <line x1="400" y1="175" x2="430" y2="175" stroke="currentColor" stroke-width="2" marker-end="url(#arrowSankey)"/>
+                    <text x="340" y="185" class="diagram-label" font-size="10" text-anchor="middle">Wasted: Heat</text>
+                    <text x="465" y="179" class="diagram-label" font-size="10" text-anchor="middle">90J</text>
+
+                    <!-- Efficiency note -->
+                    <text x="250" y="242" class="diagram-label" font-size="9" text-anchor="middle">Efficiency = 10 / 100 = 10%</text>
+                </svg>
+                <figcaption>Sankey diagram for a light bulb: the width of each band is proportional to the energy transferred. Most energy is wasted as heat.</figcaption>
+            </figure>
         </section>
 
         <section class="content-section">

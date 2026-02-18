@@ -294,6 +294,24 @@ Open in browser: C:\Users\jbenw\homeschool\igcse-study-hub\index.html
 - Graceful degradation: older tests without explanations continue to work unchanged
 - Version bump: v1.16
 
+### Session 20 (SVG Diagrams Expansion)
+- Added inline SVG diagrams to 10 high-priority content pages (was 14, now 24 pages with diagrams)
+- Chemistry (4 pages):
+  - `block-1/02-states-of-matter.html` - Particle arrangement in solid, liquid, gas (3 boxes)
+  - `block-2/01-state-changes.html` - State change cycle with particle models and labeled arrows
+  - `block-2/04-metallic-bonding.html` - Sea of electrons model with cation grid
+  - `block-2/05-giant-covalent.html` - Diamond vs graphite structure comparison
+- Biology (3 pages):
+  - `block-2/02-diffusion.html` - Particles moving through membrane (high to low concentration)
+  - `block-2/03-osmosis.html` - Water molecules through semi-permeable membrane
+  - `block-2/05-active-transport.html` - Carrier protein with ATP, 3-stage transport process
+- Physics (3 pages):
+  - `block-2/01-density.html` - Particle packing comparison (high vs low density)
+  - `block-2/03-resultant-forces.html` - Balanced vs unbalanced forces side by side
+  - `block-3/03-energy-resources.html` - Sankey diagram (energy transfer in light bulb)
+- All diagrams follow existing pattern: `currentColor`, `diagram-label`, `aria-labelledby` accessibility
+- No test or navigation changes; verify.js passes with no new issues
+
 ---
 
-*Last updated: February 2026 - Session 19*
+*Last updated: February 2026 - Session 20*

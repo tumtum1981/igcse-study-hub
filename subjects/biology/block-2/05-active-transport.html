@@ -148,6 +148,90 @@
                 <li>The molecule is released on the other side of the membrane</li>
                 <li>The process requires mitochondria to provide energy</li>
             </ul>
+
+            <figure class="diagram">
+                <svg viewBox="0 0 500 300" class="diagram-svg" aria-labelledby="active-transport-diagram">
+                    <title id="active-transport-diagram">Diagram showing active transport of a particle against the concentration gradient using a carrier protein and ATP energy</title>
+
+                    <defs>
+                        <marker id="atArrowHead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+                            <polygon points="0 0, 8 3, 0 6" fill="currentColor"/>
+                        </marker>
+                        <marker id="atArrowHeadLarge" markerWidth="10" markerHeight="8" refX="10" refY="4" orient="auto">
+                            <polygon points="0 0, 10 4, 0 8" fill="currentColor"/>
+                        </marker>
+                    </defs>
+
+                    <!-- Region labels at top and bottom -->
+                    <rect x="10" y="10" width="480" height="100" rx="6" fill="currentColor" opacity="0.04" stroke="currentColor" stroke-width="1" stroke-dasharray="4,3"/>
+                    <rect x="10" y="190" width="480" height="100" rx="6" fill="currentColor" opacity="0.1" stroke="currentColor" stroke-width="1" stroke-dasharray="4,3"/>
+
+                    <!-- Cell membrane (thick horizontal band) -->
+                    <rect x="10" y="120" width="480" height="60" rx="4" fill="currentColor" opacity="0.15" stroke="currentColor" stroke-width="1.5"/>
+
+                    <!-- Membrane label -->
+                    <text x="80" y="155" text-anchor="middle" fill="currentColor" class="diagram-label" font-size="9" font-weight="bold">Cell membrane</text>
+
+                    <!-- Carrier protein - Stage 1: particle binds (left side) -->
+                    <!-- Protein channel shape -->
+                    <path d="M 190 120 L 180 135 L 180 165 L 190 180 L 210 180 L 220 165 L 220 135 L 210 120 Z" fill="currentColor" opacity="0.25" stroke="currentColor" stroke-width="1.5"/>
+                    <text x="200" y="155" text-anchor="middle" fill="var(--bg-primary)" class="diagram-label" font-size="7" font-weight="bold">Carrier</text>
+                    <text x="200" y="165" text-anchor="middle" fill="var(--bg-primary)" class="diagram-label" font-size="7" font-weight="bold">protein</text>
+
+                    <!-- Particle approaching from bottom (high conc side) -->
+                    <circle cx="200" cy="215" r="8" fill="currentColor" opacity="0.3" stroke="currentColor" stroke-width="1.5"/>
+                    <line x1="200" y1="205" x2="200" y2="185" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3,2" marker-end="url(#atArrowHead)"/>
+
+                    <!-- Carrier protein - Stage 2: shape change + ATP (middle) -->
+                    <path d="M 300 120 L 295 140 Q 310 150 310 150 Q 310 150 295 160 L 300 180 L 330 180 L 335 160 Q 320 150 320 150 Q 320 150 335 140 L 330 120 Z" fill="currentColor" opacity="0.25" stroke="currentColor" stroke-width="1.5"/>
+                    <circle cx="315" cy="150" r="8" fill="currentColor" opacity="0.3" stroke="currentColor" stroke-width="1.5"/>
+
+                    <!-- ATP arrow pointing at protein -->
+                    <rect x="340" y="140" width="40" height="20" rx="4" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="1"/>
+                    <text x="360" y="154" text-anchor="middle" fill="currentColor" class="diagram-label" font-size="8" font-weight="bold">ATP</text>
+                    <line x1="340" y1="150" x2="328" y2="150" stroke="currentColor" stroke-width="1.5" marker-end="url(#atArrowHead)"/>
+
+                    <!-- Carrier protein - Stage 3: particle released (right side) -->
+                    <path d="M 420 120 L 410 135 L 410 165 L 420 180 L 440 180 L 450 165 L 450 135 L 440 120 Z" fill="currentColor" opacity="0.25" stroke="currentColor" stroke-width="1.5"/>
+
+                    <!-- Particle released upward (to low conc side) -->
+                    <circle cx="430" cy="85" r="8" fill="currentColor" opacity="0.3" stroke="currentColor" stroke-width="1.5"/>
+                    <line x1="430" y1="115" x2="430" y2="97" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3,2" marker-end="url(#atArrowHead)"/>
+
+                    <!-- ADP label near stage 3 -->
+                    <text x="465" y="155" text-anchor="middle" fill="currentColor" class="diagram-label" font-size="7" opacity="0.7">ADP</text>
+
+                    <!-- Stage labels -->
+                    <text x="200" y="118" text-anchor="middle" fill="currentColor" class="diagram-label" font-size="8" opacity="0.7">1. Particle binds</text>
+                    <text x="315" y="118" text-anchor="middle" fill="currentColor" class="diagram-label" font-size="8" opacity="0.7">2. ATP changes shape</text>
+                    <text x="430" y="118" text-anchor="middle" fill="currentColor" class="diagram-label" font-size="8" opacity="0.7">3. Released</text>
+
+                    <!-- Concentration labels -->
+                    <text x="55" y="32" text-anchor="middle" fill="currentColor" class="diagram-label" font-size="10" font-weight="bold">LOW concentration</text>
+                    <text x="55" y="44" text-anchor="middle" fill="currentColor" class="diagram-label" font-size="8">(outside cell)</text>
+
+                    <!-- Scattered particles - few on top (low conc) -->
+                    <circle cx="140" cy="55" r="6" fill="currentColor" opacity="0.15" stroke="currentColor" stroke-width="1"/>
+                    <circle cx="350" cy="40" r="6" fill="currentColor" opacity="0.15" stroke="currentColor" stroke-width="1"/>
+
+                    <text x="55" y="210" text-anchor="middle" fill="currentColor" class="diagram-label" font-size="10" font-weight="bold">HIGH concentration</text>
+                    <text x="55" y="222" text-anchor="middle" fill="currentColor" class="diagram-label" font-size="8">(inside cell)</text>
+
+                    <!-- Scattered particles - many on bottom (high conc) -->
+                    <circle cx="120" cy="240" r="6" fill="currentColor" opacity="0.3" stroke="currentColor" stroke-width="1"/>
+                    <circle cx="155" cy="260" r="6" fill="currentColor" opacity="0.3" stroke="currentColor" stroke-width="1"/>
+                    <circle cx="270" cy="235" r="6" fill="currentColor" opacity="0.3" stroke="currentColor" stroke-width="1"/>
+                    <circle cx="310" cy="260" r="6" fill="currentColor" opacity="0.3" stroke="currentColor" stroke-width="1"/>
+                    <circle cx="370" cy="245" r="6" fill="currentColor" opacity="0.3" stroke="currentColor" stroke-width="1"/>
+                    <circle cx="420" cy="265" r="6" fill="currentColor" opacity="0.3" stroke="currentColor" stroke-width="1"/>
+                    <circle cx="455" cy="240" r="6" fill="currentColor" opacity="0.3" stroke="currentColor" stroke-width="1"/>
+
+                    <!-- Direction of transport arrow (big, against gradient) -->
+                    <line x1="490" y1="240" x2="490" y2="60" stroke="currentColor" stroke-width="3" marker-end="url(#atArrowHeadLarge)"/>
+                    <text x="485" y="150" text-anchor="end" fill="currentColor" class="diagram-label" font-size="8" font-weight="bold" transform="rotate(-90,485,150)">Against gradient</text>
+                </svg>
+                <figcaption>Active transport: a carrier protein uses energy from ATP to move particles from high concentration to low concentration, against the concentration gradient. The three stages show the particle binding, protein shape change, and release.</figcaption>
+            </figure>
         </section>
 
         <section class="content-section">
