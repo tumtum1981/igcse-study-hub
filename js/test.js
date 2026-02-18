@@ -87,6 +87,15 @@ class QuickTest {
                 question.classList.add('answered-incorrect');
             }
 
+            // Show explanation for wrong answers
+            const explanation = question.dataset.explanation;
+            if (!isCorrect && explanation) {
+                const explDiv = document.createElement('div');
+                explDiv.className = 'test-explanation';
+                explDiv.innerHTML = `<strong>Explanation:</strong> ${explanation}`;
+                question.appendChild(explDiv);
+            }
+
             // Build answers display
             const correctOptionText = question.querySelector(`[data-value="${correctAnswer}"]`).textContent;
             answersHtml += `
@@ -94,6 +103,7 @@ class QuickTest {
                     <span class="answer-num">Q${index + 1}.</span>
                     <span class="answer-status">${isCorrect ? '✓' : '✗'}</span>
                     <span class="answer-text">Correct: ${correctOptionText}</span>
+                    ${!isCorrect && explanation ? `<p class="answer-explanation">${explanation}</p>` : ''}
                 </div>
             `;
         });
@@ -175,6 +185,10 @@ class QuickTest {
             options.forEach(opt => {
                 opt.classList.remove('selected', 'correct', 'incorrect');
             });
+
+            // Remove explanation divs
+            const expl = question.querySelector('.test-explanation');
+            if (expl) expl.remove();
         });
 
         // Hide results

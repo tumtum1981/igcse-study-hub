@@ -903,6 +903,22 @@ li {
     color: #e63946;
 }
 
+.test-explanation {
+    margin-top: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-left: 3px solid var(--color-biology);
+    background: rgba(0, 255, 0, 0.05);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.answer-explanation {
+    margin-top: 0.25rem;
+    font-size: 0.85rem;
+    opacity: 0.85;
+    padding-left: 1.5rem;
+}
+
 .answer-num {
     font-weight: bold;
     min-width: 40px;

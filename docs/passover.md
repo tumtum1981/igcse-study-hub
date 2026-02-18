@@ -3,8 +3,8 @@
 ## Project Overview
 A static HTML/CSS/JavaScript website for IGCSE homeschool study materials with theme switching (Undertale/Minecraft/Clean), hosted on GitHub and deployed via Vercel.
 
-**Current Status: v1.15 - Physics Block 3 Tests**
-49 content pages, 191 quick tests, 3 themes, search, formula reference, SVG diagrams, user authentication with progress tracking via Supabase, and password reset.
+**Current Status: v1.16 - Answer Explanations**
+49 content pages, 191 quick tests, 3 themes, search, formula reference, SVG diagrams, user authentication with progress tracking via Supabase, password reset, and answer explanations (Physics Block 3 pilot).
 
 ## Location
 ```
@@ -284,6 +284,16 @@ Open in browser: C:\Users\jbenw\homeschool\igcse-study-hub\index.html
 - Full nav chain verified, all tests balanced 5A/5B/5C/5D
 - Total tests: 191
 
+### Session 19 (Answer Explanations Feature)
+- New feature: answer explanations shown inline under wrong answers after test submission
+- Modified `js/test.js` to read `data-explanation` attributes and display explanations
+- Added `.test-explanation` and `.answer-explanation` CSS styles to `css/main.css`
+- Explanations also appear in the answers summary section at the bottom
+- Retry button correctly removes explanation divs when resetting
+- Pilot: added `data-explanation` attributes to all 220 questions across 11 Physics Block 3 tests
+- Graceful degradation: older tests without explanations continue to work unchanged
+- Version bump: v1.16
+
 ---
 
-*Last updated: February 2026 - Session 18*
+*Last updated: February 2026 - Session 19*
