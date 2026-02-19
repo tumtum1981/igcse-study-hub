@@ -1,0 +1,363 @@
+IGCSE Study Hub - Content Audit Report
+Source Slides vs Website Pages
+Generated: February 2026
+=======================================
+
+EXECUTIVE SUMMARY
+-----------------
+A systematic comparison of all 49 content pages against their original source
+PowerPoint/PDF slides revealed several categories of issues:
+
+- 1 CRITICAL MISMATCH: Wrong topic entirely (Biology Block 2, Page 5)
+- 1 page with NO source slide (Biology Block 2, Page 3)
+- 5 Separate Biology pages with significant content deviations
+- Several pages with minor supplementary content added beyond source slides
+- 1 AI generation artifact (Chemistry Block 3, Page 2)
+
+Clean blocks (all pages MATCH their sources):
+- Biology Block 1, Biology Block 3
+- Chemistry Block 1, Chemistry Block 3
+- Physics Block 1, Physics Block 3
+
+
+=======================================================================
+BIOLOGY
+=======================================================================
+
+BLOCK 1 (5 slides -> 5 pages)
+------------------------------
+01-cells.html              <- B1.1.1 cells                    MATCH
+02-specialised-cells.html  <- B1.2.1 specialised cells        MATCH
+03-magnification.html      <- B1.3.1 Magnification            MATCH
+04-living-organisms.html   <- B1.4.1 living organisms         MATCH
+05-prokaryotic-cells.html  <- B1.5.1 Prokaryotic cells        MATCH
+
+BLOCK 2 (4 slides -> 5 pages) *** PROBLEMS ***
+------------------------------------------------
+01-size-of-cells.html      <- Session 1 size of cells         PARTIAL
+  - Core SA:V content matches
+  - Added: Villi/microvilli, alveoli, root hair cells section (possibly supplementary)
+
+02-diffusion.html          <- Session 2 Diffusion             MATCH
+
+03-osmosis.html            <- NO SOURCE SLIDE EXISTS           PARTIAL
+  - There are only 4 PPTX files for Block 2 (sessions 1,2,4,5) - no session 3
+  - Week 3 was "Osmosis investigation" per course objectives (practical-based, no slides)
+  - Page content is accurate IGCSE osmosis material but entirely generated from
+    curriculum knowledge, not from specific tutor slides
+  - SVG diagram REVERTED (pending resolution)
+
+04-osmosis-practical.html  <- Session 4 osmosis practical     PARTIAL
+  - Data analysis section matches the "Analysing data" focus of the slide
+  - Detailed method section may overlap with unrecorded week 3
+
+05-active-transport.html   <- Session 5 diffusion investigation   *** MISMATCH ***
+  - CRITICAL: Page topic is "Active Transport" but source slide is
+    "Investigating factors that affect diffusion"
+  - Source slide covers: jelly cube experiments, temperature effects on diffusion,
+    scientific variables (independent/dependent/control), predictions, methodology
+  - Page instead covers: active transport definition, carrier proteins, ATP,
+    comparison table (diffusion vs osmosis vs active transport)
+  - The ENTIRE page content is fabricated from IGCSE curriculum, not from the source
+  - The actual Session 5 content (diffusion investigation practical) is MISSING
+    from the website entirely
+  - Active transport IS in the Block 2 course objectives, but has no dedicated slide
+  - SVG diagram REVERTED (pending resolution)
+
+  ACTION NEEDED:
+  - Replace page content with actual Session 5 material (diffusion investigation)
+  - Decide what to do with Active Transport content (see suggestions below)
+
+BLOCK 3 (5 slides -> 5 pages)
+------------------------------
+01-biological-molecules.html  <- Session 1 Biological molecules   MATCH
+02-digestive-system.html      <- Session 2 digestive system       MATCH
+03-enzymes.html               <- Session 3 Enzymes intro          MATCH
+04-enzymes-continued.html     <- Session 4 Enzymes continued      PARTIAL
+  - Heavy content overlap with page 3 (lock and key, factors, denaturation repeated)
+  - New content for this page: enzyme naming (-ase suffix), metabolism definition
+
+05-balanced-diet.html         <- Session 5 Balanced diet          MATCH
+
+
+=======================================================================
+CHEMISTRY
+=======================================================================
+
+BLOCK 1 (5 slides -> 5 pages)
+------------------------------
+01-atoms-elements-compounds.html  <- C1.1.1 atoms elements compounds   MATCH
+02-states-of-matter.html          <- C1.2.1 states of matter           MATCH
+03-atomic-structure.html          <- C1.3.1 atomic structure           MATCH
+04-electron-shells.html           <- C1.4.1 Electron shells            MATCH
+05-ions-isotopes.html             <- C1.5.1 ions and isotopes          MATCH
+
+BLOCK 2 (5 slides -> 5 pages)
+------------------------------
+01-state-changes.html     <- Session 1 State changes              PARTIAL
+  - Page content matches state changes topic
+  - MISSING: Diffusion (listed in course objectives: "Describe changes of state
+    and diffusion in terms of kinetic theory")
+  - SVG diagram REVERTED (pending content review)
+
+02-ionic-bonding.html     <- Sessions 2+3 combined                MATCH
+  - Sessions 2 (Forming ions) and 3 (Ionic bonding) intentionally combined
+  - Course objectives confirm: "Describe ion and draw ionic bonding - 2 lessons"
+
+03-covalent-bonding.html  <- Session 4 Covalent bonding           MATCH
+
+04-metallic-bonding.html  <- Session 5 Metallic bonding part      MATCH
+
+05-giant-covalent.html    <- Session 5 Bonding summary part       PARTIAL
+  - Topic IS in course objectives ("Describe covalent structures - simple
+    molecular and giant") -- not fabricated
+  - No dedicated source slide; content comes from "bonding summary" portion
+    of Session 5 + standard IGCSE specification content
+  - Level of detail (full sections on diamond, graphite, SiO2, allotropes)
+    likely exceeds what was in the source slide
+  - SVG diagram REVERTED (pending content review)
+
+BLOCK 3 (5 slides -> 5 pages)
+------------------------------
+01-conservation-of-mass.html      <- Session 1 Conservation of mass       MATCH
+02-conservation-calculations.html <- Session 2 Conservation of mass       PARTIAL
+  - Contains a visible AI generation artifact in Worked Example 3
+    ("Wait, this doesn't work!") - needs cleanup
+
+03-representing-reactions.html    <- Session 3 Representing reactions     MATCH
+04-balancing-equations.html       <- Session 4 Balancing equations        MATCH
+05-ram-rfm.html                   <- Session 5 RAM and RFM               MATCH
+
+
+=======================================================================
+PHYSICS
+=======================================================================
+
+BLOCK 1 (5 slides -> 5 pages)
+------------------------------
+01-speed-distance-time.html    <- P1.1.1 speed distance time          MATCH
+02-distance-time-graphs.html   <- P1.2.1 (split from combined PPTX)   MATCH
+03-velocity-time-graphs.html   <- P1.3.1 Velocity-time graphs         MATCH
+04-gravitational-force.html    <- P1.4.1 gravitational force           MATCH
+05-work-done.html              <- P1.5.1 Work Done                     MATCH
+
+BLOCK 2 (5 slides -> 5 pages)
+------------------------------
+01-density.html              <- Session 1 Density                     MATCH
+02-forces.html               <- Session 2 "balanced Forces"           PARTIAL
+  - Source was specifically "balanced Forces" but page covers broader
+    forces/friction topic
+  - Contact vs non-contact table, friction advantages/disadvantages
+    may be expanded beyond source
+
+03-resultant-forces.html     <- Session 3 Resultant Forces            MATCH
+04-moments.html              <- Session 4 Moments                     MATCH
+05-newtons-second-law.html   <- Session 5 F=ma                        PARTIAL
+  - Core F=ma matches perfectly
+  - Added: Newton's 1st and 3rd Law summary, practical applications section
+
+BLOCK 3 (5 slides -> 4 pages)
+------------------------------
+01-energy-stores.html          <- Session 1 Energy stores              MATCH
+02-calculating-efficiency.html <- Session 2 PDF                        MATCH (exact)
+  - Line-by-line verified: every example traces to source with exact numbers
+
+03-energy-resources.html       <- Sessions 3+4 combined                MATCH
+  - Page explicitly notes "covers Sessions 3 and 4"
+  - Renewable content verified against Session 4 PDF
+
+04-energy-calculations.html    <- Session 5 PDF                        MATCH (exact)
+  - Outstanding match: every calculation traceable to source
+
+
+=======================================================================
+SEPARATE BIOLOGY
+=======================================================================
+
+BLOCK 1 (5 slides + 2 whiteboard PDFs -> 5 pages) *** SYSTEMIC ISSUES ***
+--------------------------------------------------------------------------
+ALL 5 pages show the same pattern of issues:
+
+01-features-of-organisms.html  <- Session 1 features of organisms     PARTIAL
+  - OMITS: Vertebrate/invertebrate classification and arthropod groups
+    (the bulk of Session 1, Slides 7-29)
+  - ADDS: Detailed kingdom feature tables with specifics not in slides
+    (saprophytic nutrition, DNA free in cytoplasm, cellulose cell wall)
+
+02-species-binomial.html       <- Session 2 Species and binomial      PARTIAL (best)
+  - Core concepts well-sourced (species definition, binomial system, Panthera example)
+  - ADDS: "Advantages of the Binomial System" section, extra species examples
+    (Canis, Felis), specific mnemonic
+  - OMITS: Hybrid examples (geep, zorse, liger, tigon)
+
+03-evolutionary-trees.html     <- Session 3 evolutionary trees        PARTIAL (worst)
+  - FABRICATES 4 of 5 evidence types: morphology, protein sequences,
+    fossil record, embryo development. Source slides ONLY teach DNA/gene sequences
+  - OMITS: The entire gene sequencing practical (whale/cow/hippo DNA comparison)
+    which forms ~2/3 of Session 3
+  - Uses "phylogenetic tree" terminology (slides only say "evolutionary tree")
+
+04-dichotomous-keys.html       <- Session 4 Dichotomous keys          PARTIAL
+  - Uses FABRICATED invertebrate example key (slides use vertebrate classification)
+  - ADDS: Etymology, formal guidelines, "Features to Avoid" table
+  - OMITS: All practical exercises from slides and whiteboard PDF
+    (penguin/bat/whale key, crab classification, marsupial identification)
+
+05-plant-classification.html   <- Session 5 plant classification      PARTIAL
+  - SUBSTITUTES conifers/gymnosperms for algae (slides teach algae as a plant
+    group; the page replaces it with conifers -- this is a factual change)
+  - ADDS: Xylem/phloem terminology, vascular bundle arrangement, root types
+    (fibrous vs taproot) -- none in source slides
+  - OMITS: Algae, all whiteboard PDF exam exercises
+
+SYSTEMIC PATTERNS IN SEPARATE BIOLOGY:
+1. Textbook supplementation: Every page adds formal definitions and structured
+   tables not in the slides. Pages read like textbook summaries rather than
+   reflections of lesson content.
+2. Practical exercise omission: Every session's hands-on activities are absent.
+3. Example substitution: Pages use different examples than the source slides.
+
+
+=======================================================================
+DIAGRAMS STATUS
+=======================================================================
+
+SVG diagrams were added to 10 pages in Session 20. After this audit:
+
+KEPT (6 diagrams - pages with MATCH verdict):
+- chemistry/block-1/02-states-of-matter.html   (particle arrangement)
+- chemistry/block-2/04-metallic-bonding.html    (sea of electrons)
+- biology/block-2/02-diffusion.html             (diffusion through membrane)
+- physics/block-2/01-density.html               (particle packing comparison)
+- physics/block-2/03-resultant-forces.html      (balanced vs unbalanced forces)
+- physics/block-3/03-energy-resources.html      (Sankey diagram)
+
+REVERTED (4 diagrams - pages with content issues):
+- biology/block-2/03-osmosis.html               (no source slide)
+- biology/block-2/05-active-transport.html      (wrong topic)
+- chemistry/block-2/01-state-changes.html       (missing diffusion topic)
+- chemistry/block-2/05-giant-covalent.html      (expanded beyond source)
+
+
+=======================================================================
+SUGGESTIONS FOR REMEDIATION
+=======================================================================
+
+1. "EXTRA LEARNING" PAGES
+   When content has been added beyond what the source slides cover, rather than
+   deleting it (since it may be valid IGCSE syllabus content), move it to a new
+   "Extra Learning" page within the block. This preserves useful revision material
+   while keeping the main lesson pages faithful to the actual slides taught.
+
+   For example:
+   - Biology Block 2: Active transport content -> extra-learning.html
+   - Sep Bio Block 1: Fabricated evidence types, detailed kingdom tables,
+     conifer content -> extra-learning.html per block
+   - Chemistry Block 2: Giant covalent expanded detail could stay but be
+     clearly marked as supplementary
+
+   This approach:
+   - Keeps slide-sourced pages accurate to what was taught
+   - Retains IGCSE syllabus details that are useful for exam prep
+   - Clearly separates "taught in lessons" from "extra revision material"
+
+2. RAW SLIDES LINKS
+   Add a link to the raw source slide (PPTX/PDF) next to each lesson link on the
+   block index pages. This lets the student refer back to the original teaching
+   material alongside the website summary.
+
+   Implementation options:
+   - Host slides in a /resources/ folder on the site (increases repo size)
+   - Link to a shared drive/cloud folder containing the originals
+   - Add a small icon/link next to each lesson in the block index.html
+
+3. PRIORITY FIX LIST (ordered by severity):
+   a. Biology Block 2 Page 5: Replace active transport with diffusion investigation
+   b. Sep Bio Page 3: Fix fabricated evidence types (remove 4, keep DNA only)
+   c. Sep Bio Page 5: Replace conifers with algae (matches source slides)
+   d. Sep Bio Pages 1,4: Add missing vertebrate/invertebrate and practical content
+   e. Chemistry Block 3 Page 2: Clean up AI artifact ("Wait, this doesn't work!")
+   f. Chemistry Block 2 Page 1: Add missing diffusion content
+   g. Review all Sep Bio pages for example substitutions
+
+4. CONTENT ACCURACY NOTE
+   Despite the structural issues, ALL page content across all 49 pages is
+   factually accurate IGCSE material. No scientific errors were found. The
+   issues are about sourcing (whether content came from the specific slides)
+   rather than accuracy. Physics Block 3 in particular showed outstanding
+   source fidelity with exact matching of worked examples and calculations.
+
+
+=======================================================================
+SOURCE FILE MAPPING REFERENCE
+=======================================================================
+
+BIOLOGY BLOCK 1:
+  B1.1.1 cells -> 01-cells.html
+  B1.2.1 specialised cells -> 02-specialised-cells.html
+  B1.3.1 Magnification -> 03-magnification.html
+  B1.4.1 living organisms -> 04-living-organisms.html
+  B1.5.1 Prokaryotic cells -> 05-prokaryotic-cells.html
+
+BIOLOGY BLOCK 2:
+  Session 1: Size of cells -> 01-size-of-cells.html
+  Session 2: Diffusion -> 02-diffusion.html
+  (No Session 3 PPTX) -> 03-osmosis.html [no source]
+  Session 4: Osmosis practical -> 04-osmosis-practical.html
+  Session 5: Diffusion investigation -> 05-active-transport.html [WRONG TOPIC]
+
+BIOLOGY BLOCK 3:
+  Session 1: Biological molecules -> 01-biological-molecules.html
+  Session 2: Digestive system -> 02-digestive-system.html
+  Session 3: Enzymes introduction -> 03-enzymes.html
+  Session 4: Enzymes continued -> 04-enzymes-continued.html
+  Session 5: Balanced diet -> 05-balanced-diet.html
+
+CHEMISTRY BLOCK 1:
+  C1.1.1 atoms elements compounds -> 01-atoms-elements-compounds.html
+  C1.2.1 states of matter -> 02-states-of-matter.html
+  C1.3.1 atomic structure -> 03-atomic-structure.html
+  C1.4.1 Electron shells -> 04-electron-shells.html
+  C1.5.1 ions and isotopes -> 05-ions-isotopes.html
+
+CHEMISTRY BLOCK 2:
+  Session 1: State changes -> 01-state-changes.html
+  Sessions 2+3: Ions + Ionic bonding -> 02-ionic-bonding.html [combined]
+  Session 4: Covalent bonding -> 03-covalent-bonding.html
+  Session 5: Bonding summary + metallic -> 04-metallic-bonding.html + 05-giant-covalent.html
+
+CHEMISTRY BLOCK 3:
+  Session 1: Conservation of mass -> 01-conservation-of-mass.html
+  Session 2: Conservation of mass (cont) -> 02-conservation-calculations.html
+  Session 3: Representing reactions -> 03-representing-reactions.html
+  Session 4: Balancing equations -> 04-balancing-equations.html
+  Session 5: RAM and RFM -> 05-ram-rfm.html
+
+PHYSICS BLOCK 1:
+  P1.1.1 speed distance time -> 01-speed-distance-time.html
+  P1.2.1 Distance-time + velocity-time graphs -> 02-distance-time-graphs.html + 03-velocity-time-graphs.html [split]
+  P1.3.1 Velocity-time graphs + acceleration -> 03-velocity-time-graphs.html
+  P1.4.1 Gravitational force -> 04-gravitational-force.html
+  P1.5.1 Work Done -> 05-work-done.html
+
+PHYSICS BLOCK 2:
+  Session 1: Density -> 01-density.html
+  Session 2: Balanced Forces -> 02-forces.html
+  Session 3: Resultant Forces -> 03-resultant-forces.html
+  Session 4: Moments -> 04-moments.html
+  Session 5: F=ma -> 05-newtons-second-law.html
+
+PHYSICS BLOCK 3:
+  Session 1: Energy stores -> 01-energy-stores.html
+  Session 2: Calculating efficiency -> 02-calculating-efficiency.html
+  Sessions 3+4: Energy resources + Renewable -> 03-energy-resources.html [combined]
+  Session 5: Energy summary -> 04-energy-calculations.html
+
+SEPARATE BIOLOGY BLOCK 1:
+  Session 1: Features of organisms -> 01-features-of-organisms.html
+  Session 2: Species and binomial names -> 02-species-binomial.html
+  Session 3: Evolutionary trees + gene sequencing -> 03-evolutionary-trees.html
+  Session 4: Dichotomous keys -> 04-dichotomous-keys.html
+  Session 5: Plant classification -> 05-plant-classification.html
+
+--- END OF REPORT ---
