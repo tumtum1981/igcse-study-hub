@@ -3,8 +3,8 @@
 ## Project Overview
 A static HTML/CSS/JavaScript website for IGCSE homeschool study materials with theme switching (Undertale/Minecraft/Clean), hosted on GitHub and deployed via Vercel.
 
-**Current Status: v1.16 - Answer Explanations**
-49 content pages, 191 quick tests, 3 themes, search, formula reference, SVG diagrams, user authentication with progress tracking via Supabase, password reset, and answer explanations (Physics Block 3 pilot).
+**Current Status: v1.17 - Extra Learning Pages**
+51 content pages, 191 quick tests, 3 themes, search, formula reference, SVG diagrams, user authentication with progress tracking via Supabase, password reset, and answer explanations (Physics Block 3 pilot).
 
 ## Location
 ```
@@ -312,6 +312,22 @@ Open in browser: C:\Users\jbenw\homeschool\igcse-study-hub\index.html
 - All diagrams follow existing pattern: `currentColor`, `diagram-label`, `aria-labelledby` accessibility
 - No test or navigation changes; verify.js passes with no new issues
 
+### Session 21 (Extra Learning Pages)
+- Created 2 "Extra Learning" pages to preserve supplementary IGCSE content before main page rewrites
+- `subjects/biology/block-2/extra-learning.html` (B2.EL):
+  - Active transport definition, comparing transport methods table, examples table, how it works
+  - Adaptations to increase surface area table (from size-of-cells page)
+- `subjects/separate-biology/block-1/extra-learning.html` (SB1.EL):
+  - Kingdom features detail table, features used for classification, why classification is important
+  - Binomial system advantages (5 points), "King Philip Came Over For Good Soup" mnemonic
+  - Phylogenetic tree definitions, reading evolutionary trees table, non-DNA evidence types
+  - Invertebrate dichotomous key example, creating keys guidelines, features to use table
+  - Conifers/gymnosperms section, mosses vs ferns comparison, flowering vs non-flowering table, vascular tissue detail
+- Updated block indexes: biology/block-2 and separate-biology/block-1 now list extra learning pages
+- Updated nav chains: 05-active-transport.html → extra-learning.html → index; 05-plant-classification.html → extra-learning.html → index
+- Updated search index with 2 new entries
+- Total content pages: 49 → 51
+
 ---
 
-*Last updated: February 2026 - Session 20*
+*Last updated: February 2026 - Session 21*

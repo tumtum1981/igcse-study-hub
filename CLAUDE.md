@@ -135,11 +135,11 @@ When the user says "add tests for block":
 - Passover & docs: `C:\Users\jbenw\homeschool\igcse-study-hub\docs\`
 
 ## Current Content (as of February 2026)
-- Biology: Block 1 (5 pages), Block 2 (5 pages), Block 3 (5 pages)
+- Biology: Block 1 (5 pages), Block 2 (6 pages), Block 3 (5 pages)
 - Chemistry: Block 1 (5 pages), Block 2 (5 pages), Block 3 (5 pages)
 - Physics: Block 1 (5 pages), Block 2 (5 pages), Block 3 (4 pages)
-- Separate Biology: Block 1 (5 pages)
-- Total: 49 content pages
+- Separate Biology: Block 1 (6 pages)
+- Total: 51 content pages
 
 **Quick Tests: 191 total**
 - Biology: Block 1 (23), Block 2 (17), Block 3 (18)

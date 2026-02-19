@@ -463,5 +463,24 @@ const SEARCH_INDEX = [
         url: "subjects/separate-biology/block-1/05-plant-classification.html",
         keywords: ["plant classification", "flowering", "non-flowering", "ferns", "mosses", "conifers"],
         excerpt: "Plants are classified into groups including flowering plants, conifers, ferns, and mosses."
+    },
+    // Extra Learning pages
+    {
+        title: "Extra Learning - Transport",
+        subject: "biology",
+        block: 2,
+        code: "B2.EL",
+        url: "subjects/biology/block-2/extra-learning.html",
+        keywords: ["active transport", "carrier proteins", "ATP", "diffusion", "osmosis", "comparison", "surface area", "villi", "alveoli", "root hair cells"],
+        excerpt: "Additional content beyond the slides: active transport, comparing transport methods, and adaptations to increase surface area."
+    },
+    {
+        title: "Extra Learning - Classification",
+        subject: "separate-biology",
+        block: 1,
+        code: "SB1.EL",
+        url: "subjects/separate-biology/block-1/extra-learning.html",
+        keywords: ["kingdom features", "binomial advantages", "phylogenetic tree", "dichotomous key example", "conifers", "gymnosperms", "vascular tissue", "monocot", "dicot"],
+        excerpt: "Additional content beyond the slides: kingdom details, binomial system advantages, evolutionary tree reading, dichotomous key examples, and plant classification detail."
     }
 ];
