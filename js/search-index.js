@@ -194,13 +194,13 @@ const SEARCH_INDEX = [
 
     // Chemistry Block 2
     {
-        title: "State Changes",
+        title: "State Changes and Diffusion",
         subject: "chemistry",
         block: 2,
         code: "C2.1.1",
         url: "subjects/chemistry/block-2/01-state-changes.html",
-        keywords: ["melting", "freezing", "boiling", "condensation", "evaporation", "sublimation", "state change"],
-        excerpt: "State changes occur when substances gain or lose energy, changing between solid, liquid, and gas."
+        keywords: ["melting", "freezing", "boiling", "condensation", "evaporation", "sublimation", "state change", "diffusion", "kinetic theory", "concentration", "melting point", "boiling point", "gallium", "bromine"],
+        excerpt: "State changes and diffusion explained using kinetic theory. Includes melting/boiling point data for common substances."
     },
     {
         title: "Ionic Bonding",
@@ -425,8 +425,8 @@ const SEARCH_INDEX = [
         block: 1,
         code: "SB1.1.1",
         url: "subjects/separate-biology/block-1/01-features-of-organisms.html",
-        keywords: ["features", "organisms", "classification", "characteristics", "kingdoms"],
-        excerpt: "Organisms are classified based on their features and characteristics into different groups."
+        keywords: ["features", "organisms", "classification", "kingdoms", "vertebrates", "invertebrates", "arthropods", "insects", "arachnids", "crustaceans", "mammals", "birds", "reptiles", "amphibians", "fish", "exoskeleton"],
+        excerpt: "Living organisms are classified into five kingdoms. Animals are vertebrates or invertebrates. Vertebrate classes and arthropod groups."
     },
     {
         title: "Species and Binomial Names",
@@ -434,8 +434,8 @@ const SEARCH_INDEX = [
         block: 1,
         code: "SB1.2.1",
         url: "subjects/separate-biology/block-1/02-species-binomial.html",
-        keywords: ["species", "binomial", "nomenclature", "genus", "Linnaeus", "Latin names"],
-        excerpt: "Species are named using binomial nomenclature with genus and species names."
+        keywords: ["species", "binomial", "nomenclature", "genus", "Linnaeus", "Latin names", "hybrid", "liger", "tigon", "zorse", "geep", "fertile offspring", "Panthera", "classification hierarchy"],
+        excerpt: "Species are named using binomial nomenclature. Hybrids like ligers and zorses prove parents are different species."
     },
     {
         title: "Evolutionary Trees and Gene Sequencing",
@@ -452,8 +452,8 @@ const SEARCH_INDEX = [
         block: 1,
         code: "SB1.4.1",
         url: "subjects/separate-biology/block-1/04-dichotomous-keys.html",
-        keywords: ["dichotomous key", "identification", "yes/no", "branching", "organism identification"],
-        excerpt: "Dichotomous keys use yes/no questions to identify organisms based on their features."
+        keywords: ["dichotomous key", "identification", "classification key", "vertebrate", "penguin", "bat", "whale", "crab", "crustacean", "arthropod", "observable features"],
+        excerpt: "Dichotomous keys use paired questions to classify organisms. Includes vertebrate classification and crab identification exercises."
     },
     {
         title: "Plant Classification",

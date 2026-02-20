@@ -3,7 +3,7 @@
 ## Project Overview
 A static HTML/CSS/JavaScript website for IGCSE homeschool study materials with theme switching (Undertale/Minecraft/Clean), hosted on GitHub and deployed via Vercel.
 
-**Current Status: v1.17 - Extra Learning Pages**
+**Current Status: v1.18 - Content Audit Remediation Complete**
 51 content pages, 191 quick tests, 3 themes, search, formula reference, SVG diagrams, user authentication with progress tracking via Supabase, password reset, and answer explanations (Physics Block 3 pilot).
 
 ## Location
@@ -347,6 +347,33 @@ Open in browser: C:\Users\jbenw\homeschool\igcse-study-hub\index.html
 - Search index updated for both pages
 - Audit fix progress: #1 done, #2 done, #3 skipped, #4 pending, #5 done (earlier), #6 pending, #7 pending
 
+### Session 23 (Content Audit Fixes - Pages 1, 4, 6, 7)
+- **Separate Biology Block 1 Page 1** (`01-features-of-organisms.html`): REWRITTEN
+  - Was: Only kingdoms table with extra details not in slides, missing vertebrate/invertebrate content
+  - Now: Kingdoms table matching slide format, vertebrate classes table (5 classes with 4 features),
+    invertebrate groups, arthropods table (4 classes), key definitions from slides
+  - Quiz questions updated to cover vertebrate/invertebrate/arthropod content
+- **Separate Biology Block 1 Page 4** (`04-dichotomous-keys.html`): REWRITTEN
+  - Was: Fabricated invertebrate example key, added guidelines not in slides
+  - Now: Penguin/bat/whale vertebrate classification key, armadillo/ostrich/dolphin/turtle
+    key-building exercise, crab classification (crustacean/arthropod) from whiteboard PDF
+- **Separate Biology Block 1 Page 2** (`02-species-binomial.html`): UPDATED
+  - Added missing hybrid examples from slides: liger, tigon, zorse, geep (with parent species table)
+  - Connected hybrid section to Panthera example for exam relevance
+- **Chemistry Block 2 Page 1** (`01-state-changes.html`): UPDATED
+  - Added diffusion section (kinetic theory explanation, factors affecting rate, examples)
+  - Added melting/boiling points table from source slides (water, ethanol, bromine, oxygen, gallium)
+  - Added 2 quiz questions (diffusion at higher temperatures, gallium state at 25°C)
+  - Title updated to "State Changes and Diffusion"
+  - Block index updated to match new title
+- **Sep Bio example substitution review** (audit fix #7): All 5 pages reviewed
+  - Pages 1, 3, 4 now rewritten from source slides - examples match
+  - Page 2 updated with missing hybrid examples
+  - Page 5 skipped per user request
+- Search index updated for SB1.1.1, SB1.2.1, SB1.4.1, and C2.1.1
+- Audit fix progress: #1 done, #2 done, #3 skipped, #4 done, #5 done, #6 done, #7 done
+- **All content audit fixes complete.** Version bump: v1.18
+
 ---
 
-*Last updated: February 2026 - Session 22*
+*Last updated: February 2026 - Session 23*
