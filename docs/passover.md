@@ -328,6 +328,25 @@ Open in browser: C:\Users\jbenw\homeschool\igcse-study-hub\index.html
 - Updated search index with 2 new entries
 - Total content pages: 49 → 51
 
+### Session 22 (Content Audit Fixes - Pages 5 & 3)
+- **Biology Block 2 Page 5** (`05-active-transport.html`): REWRITTEN
+  - Was: Active transport (wrong topic - entirely fabricated from IGCSE curriculum)
+  - Now: "Investigating Factors that Affect Diffusion" (matches source Session 5 slides)
+  - Content: jelly cube diffusion experiment, scientific variables (independent/dependent/control),
+    scientific predictions, temperature and cube size experiments
+  - Active transport content preserved in extra-learning.html (Session 21)
+  - Block index updated: "Active Transport" → "Investigating Diffusion"
+  - Test links updated to point to diffusion and summary tests (not active-transport tests)
+- **Separate Biology Block 1 Page 3** (`03-evolutionary-trees.html`): REWRITTEN
+  - Was: 4 fabricated evidence types (morphology, protein, fossil, embryo), missing gene sequencing practical
+  - Now: Matches source Session 3 slides - evolutionary trees + gene sequencing
+  - Added: Tortoise classification table, hominidae family example, DNA sequence comparison
+    (whale/cow/hippo/tapir/zebra practical with full DNA tables and difference counts)
+  - Removed fabricated evidence types (preserved in extra-learning.html)
+  - Title updated to "Evolutionary Trees and Gene Sequencing"
+- Search index updated for both pages
+- Audit fix progress: #1 done, #2 done, #3 skipped, #4 pending, #5 done (earlier), #6 pending, #7 pending
+
 ---
 
-*Last updated: February 2026 - Session 21*
+*Last updated: February 2026 - Session 22*

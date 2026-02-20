@@ -89,13 +89,13 @@ const SEARCH_INDEX = [
         excerpt: "Investigating osmosis using potato cylinders in different concentrations of sucrose solution."
     },
     {
-        title: "Active Transport",
+        title: "Investigating Diffusion",
         subject: "biology",
         block: 2,
         code: "B2.5.1",
         url: "subjects/biology/block-2/05-active-transport.html",
-        keywords: ["active transport", "energy", "ATP", "against concentration gradient", "carrier proteins", "root hair"],
-        excerpt: "Active transport moves substances against the concentration gradient, requiring energy from respiration."
+        keywords: ["diffusion", "investigation", "jelly cube", "variables", "independent variable", "dependent variable", "control variable", "prediction", "temperature", "concentration gradient", "permeable"],
+        excerpt: "Investigating factors that affect diffusion using jelly cubes in acid, including scientific variables and predictions."
     },
 
     // Biology Block 3
@@ -438,13 +438,13 @@ const SEARCH_INDEX = [
         excerpt: "Species are named using binomial nomenclature with genus and species names."
     },
     {
-        title: "Evolutionary Trees",
+        title: "Evolutionary Trees and Gene Sequencing",
         subject: "separate-biology",
         block: 1,
         code: "SB1.3.1",
         url: "subjects/separate-biology/block-1/03-evolutionary-trees.html",
-        keywords: ["evolutionary tree", "phylogenetic", "common ancestor", "branching", "evolution"],
-        excerpt: "Evolutionary trees show how species are related through common ancestors."
+        keywords: ["evolutionary tree", "common ancestor", "gene sequencing", "DNA comparison", "hominidae", "whale", "hippo", "classification"],
+        excerpt: "Evolutionary trees show how species are related through common ancestors. Gene sequencing compares DNA to determine relationships."
     },
     {
         title: "Dichotomous Keys",
