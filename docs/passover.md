@@ -46,10 +46,10 @@ igcse-study-hub/
 ├── assets/
 │   └── images/                    # (empty - add images if needed)
 ├── subjects/
-│   ├── biology/                   # 15 topic pages (Block 1-3)
+│   ├── biology/                   # 16 topic pages (Block 1-3 + extra learning)
 │   ├── chemistry/                 # 15 topic pages (Block 1-3)
 │   ├── physics/                   # 13 topic pages (Block 1-3)
-│   └── separate-biology/          # 5 topic pages
+│   └── separate-biology/          # 6 topic pages (5 + extra learning)
 └── tests/
     ├── index.html                 # Tests hub page
     ├── biology/block-1/           # 23 tests + index
@@ -64,10 +64,10 @@ igcse-study-hub/
     └── separate-biology/block-1/  # 25 tests + index
 ```
 
-### Content Pages (49 total)
+### Content Pages (51 total)
 
 **Biology Block 1:** 01-cells, 02-specialised-cells, 03-magnification, 04-living-organisms, 05-prokaryotic-cells
-**Biology Block 2:** 01-size-of-cells, 02-diffusion, 03-osmosis, 04-osmosis-practical, 05-active-transport
+**Biology Block 2:** 01-size-of-cells, 02-diffusion, 03-osmosis, 04-osmosis-practical, 05-active-transport, extra-learning
 **Biology Block 3:** 01-biological-molecules, 02-digestive-system, 03-enzymes, 04-enzymes-continued, 05-balanced-diet
 **Chemistry Block 1:** 01-atoms-elements-compounds, 02-states-of-matter, 03-atomic-structure, 04-electron-shells, 05-ions-isotopes
 **Chemistry Block 2:** 01-state-changes, 02-ionic-bonding, 03-covalent-bonding, 04-metallic-bonding, 05-giant-covalent
@@ -75,7 +75,7 @@ igcse-study-hub/
 **Physics Block 1:** 01-speed-distance-time, 02-distance-time-graphs, 03-velocity-time-graphs, 04-gravitational-force, 05-work-done
 **Physics Block 2:** 01-density, 02-forces, 03-resultant-forces, 04-moments, 05-newtons-second-law
 **Physics Block 3:** 01-energy-stores, 02-calculating-efficiency, 03-energy-resources, 04-energy-calculations
-**Separate Biology Block 1:** 01-features-of-organisms, 02-species-binomial, 03-evolutionary-trees, 04-dichotomous-keys, 05-plant-classification
+**Separate Biology Block 1:** 01-features-of-organisms, 02-species-binomial, 03-evolutionary-trees, 04-dichotomous-keys, 05-plant-classification, extra-learning
 
 ### Quick Tests (191 total)
 
@@ -152,8 +152,6 @@ Note: .txt files in these folders are ignored per user request.
 
 ## Maintenance
 
-See `CLAUDE.md` for the full Stale Data Checklist and workflow commands.
-
 ### Supabase Configuration
 For password reset to work:
 1. Go to Supabase Dashboard > Authentication > URL Configuration
@@ -175,9 +173,9 @@ Open in browser: C:\Users\jbenw\homeschool\igcse-study-hub\index.html
 - [ ] More IGCSE practice questions
 - [ ] Audio/sound effects (8-bit style)
 - [ ] More subjects/blocks as curriculum expands
-- [ ] Verification script for automated consistency checks
+- [x] Verification script for automated consistency checks (verify.js, runs as pre-commit hook)
 - [ ] Print-friendly content pages
-- [ ] Test answer explanations
+- [x] Test answer explanations (Physics Block 3 pilot complete; mandatory for all new tests)
 - [ ] Question bank with randomisation
 - [ ] Timed test mode
 

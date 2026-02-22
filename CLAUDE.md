@@ -37,19 +37,44 @@ When the user says "refresh website block":
 3. **IMPORTANT: Update the main homepage** (`igcse-study-hub/index.html`) - update block counts for each subject
 
 > Note: This command is for content pages only. Tests are added separately using the "add tests for block" command.
+> Each new content page must include **5 IGCSE practice questions** (click-to-reveal). Most older pages have 3-4; new pages must have 5.
 
 **Step 4: Update study tools**
 1. **Update Search Index** (`igcse-study-hub/js/search-index.js`):
    - Add entries for each new page
    - Format: `{ title, subject, block, code, url, keywords: [], excerpt }`
    - Include relevant keywords for searchability
-2. **Update Formula Reference** (`igcse-study-hub/formulas.html`):
+2. **Update Formula Reference** (`igcse-study-hub/formulas.html`) - **MANDATORY** for any new formulas:
    - Add any new formulas introduced in the new content
    - Include equation, variable definitions, units, and link to topic page
+   - This is not optional - every formula in new content must appear in the formula sheet
 
 **Step 5: Update documentation**
 1. Update the passover document with what was added
 2. Include: new page count, list of new pages, version bump
+
+**Step 6: Prompt for tests**
+- After creating each new content page, ask: "Do you want me to create MCQ tests for [page name]? (2 topic tests minimum)"
+- When tests are created, also add "Test Your Knowledge" links on the content page, update the block test index, and update the tests hub card count
+- Only prompt for summary tests when lesson 5 (the final lesson in a block) is being added: "This completes the block. Do you want me to create summary tests? (3 summary MCQ tests + 1 exam-style summary test minimum)"
+- The exam-style summary test (`exam-summary.html` or `exam-block.html`) should use exam-style questions covering the whole block - harder, more application-based questions
+- Ensure each new content page has 5 IGCSE practice questions (click-to-reveal) as part of the page creation itself
+
+**Step 7: Prompt for syllabus gap check** (only when lesson 5 completes a block)
+- After summary tests are generated, ask: "Should we check for additional content from the IGCSE syllabus that may be missing from the lesson material?"
+- If yes: review the syllabus objectives for that block, identify any topics not covered by the 5 lessons, and create an Extra Learning page (like `extra-learning.html` / B2.EL pattern) for the missing content
+
+**Step 8: Offer audit**
+- After all pages are created and committed, ask: "Would you like me to run an audit?"
+- The audit checks (always performed):
+  - All internal links are valid (nav chains, test links, block indexes, breadcrumbs)
+  - Formula page includes all formulas referenced in new content
+  - Test hub card counts match actual file counts
+  - Search index covers all content pages
+  - `verify.js` passes
+- Optional (prompted separately): "Would you also like me to cross-reference the new pages against their source slides?"
+  - If yes: extract source PPTX/PDF content and compare against the generated HTML
+  - Check for: missing content from slides, fabricated content, example substitutions
 
 ### "add tests for block"
 When the user says "add tests for block":
@@ -60,9 +85,9 @@ When the user says "add tests for block":
 3. Check if `tests/[subject]/block-[n]/` already exists and what tests are there
 
 **Step 2: Determine test allocation**
-- Default: 2 topic tests per content page + 3 summary tests
-- User may request different counts (e.g. 3 per topic, 5 summary, exam-style tests)
-- Test counts vary across blocks - there is no single fixed standard
+- Minimum per content page: 2 topic MCQ tests (20 questions each)
+- Minimum 3 summary tests per block
+- These are minimums - user may request more (e.g. 3 per topic, 5 summary)
 
 **Step 3: Create test files**
 1. Create directory `tests/[subject]/block-[n]/` if needed
@@ -122,10 +147,16 @@ When the user says "add tests for block":
 - Naming: `[topic]-test-[n].html` for topic tests, `summary-test-[n].html` for summary, `exam-[topic].html` for exam-style
 - Path: `tests/[subject]/block-[n]/` (CSS/JS paths use `../../../`)
 - Nav chain order: topic1-test-1 → ... → topic1-test-N → topic2-test-1 → ... → summary-test-N → back to index.html
-- Test counts vary per block (2-3 topic tests, 3-5 summary tests) - check existing blocks or ask user
+- Minimum: 2 topic MCQ tests per content page. When block is complete: 3 summary MCQ tests + 1 exam-style summary test per block
+- The exam-style summary test uses harder, application-based questions covering the whole block
+- Note: existing per-topic `exam-*.html` files in some blocks are legacy; going forward exam-style tests are block-level only
 - Required scripts: `main.js`, `test.js`, `supabase-config.js`, `progress.js`, `auth.js`
 - FOUC prevention: `<style>html{visibility:hidden;opacity:0}</style>` + `theme-preload.js`
 - Two index styles exist: `test-grid` with cards (newer) and `test-list` with simple links (older) - match the existing style for that block
+- All new tests MUST include `data-explanation` attributes on every question `<div>`
+- Explanations appear inline under wrong answers after submission
+- Format: `data-explanation="Brief explanation of why the correct answer is right"`
+- Existing tests without explanations continue to work (graceful degradation)
 
 ---
 
@@ -134,22 +165,11 @@ When the user says "add tests for block":
 - Source materials: `C:\Users\jbenw\homeschool\website-resources\`
 - Passover & docs: `C:\Users\jbenw\homeschool\igcse-study-hub\docs\`
 
-## Current Content (as of February 2026)
-- Biology: Block 1 (5 pages), Block 2 (6 pages), Block 3 (5 pages)
-- Chemistry: Block 1 (5 pages), Block 2 (5 pages), Block 3 (5 pages)
-- Physics: Block 1 (5 pages), Block 2 (5 pages), Block 3 (4 pages)
-- Separate Biology: Block 1 (6 pages)
-- Total: 51 content pages
+> Note: This file is kept both at the repo root (`igcse-study-hub/CLAUDE.md`) for version control
+> and at the parent directory (`homeschool/CLAUDE.md`) for Claude Code to find. Keep both in sync.
 
-**Quick Tests: 191 total**
-- Biology: Block 1 (23), Block 2 (17), Block 3 (18)
-- Chemistry: Block 1 (19), Block 2 (17), Block 3 (20)
-- Physics: Block 1 (21), Block 2 (20), Block 3 (11)
-- Separate Biology: Block 1 (25)
-
-**Additional Features:**
-- Formula Reference: `igcse-study-hub/formulas.html`
-- Search Function: `igcse-study-hub/js/search.js` + `search-index.js`
+## Current Content
+See `docs/passover.md` for current page counts, test counts, and content listings. That file is the source of truth for what exists.
 
 ## User Preferences
 - Ignore .txt files in website-resources
