@@ -77,6 +77,101 @@ igcse-study-hub/
 **Physics Block 3:** 01-energy-stores, 02-calculating-efficiency, 03-energy-resources, 04-energy-calculations
 **Separate Biology Block 1:** 01-features-of-organisms, 02-species-binomial, 03-evolutionary-trees, 04-dichotomous-keys, 05-plant-classification, extra-learning
 
+### Source-to-Page Mapping
+
+Each content page's source file in `website-resources/`. Use this to verify content accuracy and trace fabrication.
+
+**Biology Block 1:**
+| Page | Source File |
+|------|------------|
+| 01-cells | `B1.1.1 cells for students 2027.pptx` |
+| 02-specialised-cells | `B1.2.1 specialised cells 2027.pptx` |
+| 03-magnification | `B1.3.1 Magnification 2027 (1).pptx` |
+| 04-living-organisms | `B1.4.1 living organisms processes 2027.pptx` |
+| 05-prokaryotic-cells | `B1.5.1 Prokaryotic _ bacterial cells 2027.pptx` |
+
+**Biology Block 2:**
+| Page | Source File |
+|------|------------|
+| 01-size-of-cells | `session 1 size of cells block 2.pptx` |
+| 02-diffusion | `session 2 Diffusion block 2.pptx` (10_11_25) |
+| 03-osmosis | *Source file not in folder* - content from session 3 |
+| 04-osmosis-practical | `session 4 Analysing data osmosis practical block 2.pptx` |
+| 05-active-transport | `session 5 Investigating factors that affect diffusion block 2.pptx` |
+| extra-learning | Supplementary content preserved from page rewrites (Session 21) |
+
+**Biology Block 3:**
+| Page | Source File |
+|------|------------|
+| 01-biological-molecules | `session 1 Biological molecules block 3.pptx` |
+| 02-digestive-system | `session 2 digestive system block 3.pptx` |
+| 03-enzymes | `session 3 Enzymes introduction block 9.pptx` |
+| 04-enzymes-continued | `session 4 Enzymes continued block 3.pptx` |
+| 05-balanced-diet | `session 5 Balanced diet block 3.pdf` |
+
+**Chemistry Block 1:**
+| Page | Source File |
+|------|------------|
+| 01-atoms-elements-compounds | `C1.1.1 atoms elements compounds 2027.pptx` |
+| 02-states-of-matter | `C1.2.1 states of matter 2027.pptx` |
+| 03-atomic-structure | `C1.3.1 atomic structure 2027.pptx` |
+| 04-electron-shells | `C1.4.1 Electron shells 2027 students.pptx` |
+| 05-ions-isotopes | `C1.5.1 ions and isotopes 2027.pptx` |
+
+**Chemistry Block 2:**
+| Page | Source File |
+|------|------------|
+| 01-state-changes | `session 1 (State changes block 2 students).pptx` |
+| 02-ionic-bonding | `session 2 Forming positive and negative ions.pptx` + `session 3 Ionic bonding.pptx` |
+| 03-covalent-bonding | `session 4 Covalent bonding block 2.pptx` |
+| 04-metallic-bonding | `session 5 Bonding summary_ metallic bonding block 2.pptx` |
+| 05-giant-covalent | `session 5 Bonding summary_ metallic bonding block 2.pptx` (second topic) |
+
+**Chemistry Block 3:**
+| Page | Source File |
+|------|------------|
+| 01-conservation-of-mass | `session 1 Conservation of mass block 3.pptx` |
+| 02-conservation-calculations | `session 2 Conservation of mass block 3.pptx` |
+| 03-representing-reactions | `session 3 Representing reactions block 3.pptx` |
+| 04-balancing-equations | `session 4 Balancing symbol equations block 3.pptx` |
+| 05-ram-rfm | `session 5 RAM and RFM block 3.pptx` |
+
+**Physics Block 1:**
+| Page | Source File |
+|------|------------|
+| 01-speed-distance-time | `P1.1.1 speed_ distance_ time 2027.pptx` |
+| 02-distance-time-graphs | `P1.2.1 Distance time graphs and velocity time graphs 2027.pptx` |
+| 03-velocity-time-graphs | `P1.3.1 Velocity-time graphs and acceleration 2027.pptx` |
+| 04-gravitational-force | `P1.4.1 gravitational force and weight 2027.pptx` |
+| 05-work-done | `P1.5.1 Work Done 2027.pptx` |
+
+**Physics Block 2:**
+| Page | Source File |
+|------|------------|
+| 01-density | `session 1 Calculating density and volume block 2.pptx` |
+| 02-forces | `session 2 balanced Forces block 2.pptx` |
+| 03-resultant-forces | `session 3 Resultant Forces block 2.pptx` |
+| 04-moments | `session 4 Moments block 2.pptx` |
+| 05-newtons-second-law | `session 5 F=ma block 2.pptx` |
+
+**Physics Block 3:**
+| Page | Source File |
+|------|------------|
+| 01-energy-stores | `session 1 Energy stores students block 3.pptx` |
+| 02-calculating-efficiency | `session 2 Calculating efficiency.pptx.pdf` |
+| 03-energy-resources | `session 3 energy resources block 3.pptx` + `session 4 renewable energy block 3.pdf` |
+| 04-energy-calculations | `session 5 energy summary block 3.pdf` |
+
+**Separate Biology Block 1:**
+| Page | Source File |
+|------|------------|
+| 01-features-of-organisms | `separate session 1 features of organisms block 2.pptx` |
+| 02-species-binomial | `separate session 2 Species and binomial names block 2.pptx` |
+| 03-evolutionary-trees | `separate session 3 evolutionary tree and gene sequencing block 2.pptx` |
+| 04-dichotomous-keys | `separate session 4 Dichotomous keys block 2.pptx` + `Whiteboard.fi 2025-11-27.pdf` |
+| 05-plant-classification | `separate session 5 plant classification block 2.pptx` + `whiteboard IGCSE Biology plant classification.pdf` |
+| extra-learning | Supplementary content preserved from page rewrites (Session 21) |
+
 ### Quick Tests (191 total)
 
 **Biology Block 1 (23):** cells-1/2/3, specialised-1/2/3, magnification-1/2/3, organisms-1/2/3, prokaryotic-1/2/3, exam-cells, exam-magnification, exam-specialised, summary-1/2/3/4/5
@@ -183,75 +278,7 @@ Open in browser: C:\Users\jbenw\homeschool\igcse-study-hub\index.html
 
 ## Development Log
 
-### Session 1 (Initial Build)
-- Created full website structure with Undertale theme
-- Built CSS styling, JavaScript for quiz interactions
-- Homepage, all index pages, all Biology content pages (10), Chemistry Block 1 (5)
-
-### Session 2 (Completion)
-- Completed remaining Chemistry Block 2 pages
-- All 35 content pages complete and functional
-
-### Session 3 (Quick Tests Started)
-- Added Quick Test system with auto-marking (test.js, test styles)
-- Created tests folder structure, index pages, sample test (cells-test-1)
-
-### Session 4 (Theme Switcher + Tests Complete)
-- Added theme switcher (Undertale + Minecraft)
-- Fixed key-term highlighting readability
-- Added quick test links to all block and topic pages
-- Created ALL 98 test files (14 per block x 7 blocks)
-
-### Session 5 (Theme Switching Fix + Clean Theme)
-- Fixed theme switching bug (JS inserts theme link AFTER main.css)
-- Added Clean theme (BBC Bitesize inspired)
-- Updated all 6 navigation dropdowns
-
-### Session 6 (Block 3 Content)
-- Added 9 new pages: Biology Block 3 (3), Chemistry Block 3 (4), Physics Block 3 (2)
-- Total content pages: 44
-
-### Session 7 (Study Tools)
-- Added Formula Reference Sheet (formulas.html) with print-friendly CSS
-- Added Search Function (search.js + search-index.js)
-- Added Quick Links to homepage, Formulas nav link
-
-### Session 8 (SVG Diagrams)
-- Added inline SVG diagrams to 11 content pages:
-  - Biology: cells (2), specialised cells (3), digestive system, enzymes
-  - Chemistry: electron shells (2), ionic bonding, covalent bonding (3)
-  - Physics: D-T graphs, V-T graphs, moments, energy stores
-
-### Session 9 (Progress Tracking with Supabase)
-- Login/signup system (login.html), user dashboard (dashboard.html), about page
-- Test score saving, topic confidence ratings on all 44 pages
-- New JS: supabase-config.js, auth.js, progress.js
-- Updated all 208 HTML files with auth nav links and scripts
-- Database: profiles, test_scores, topic_confidence tables
-
-### Session 10 (FOUC Fix & Password Reset)
-- Fixed Flash of Unstyled Content across all 211 HTML files
-- Created theme-preload.js for instant theme application
-- Added password reset: forgot password form, reset-password.html, email flow
-
-### Session 11 (Block 3 Content Expansion)
-- Added 2 pages: Biology `04-enzymes-continued`, Chemistry `05-ram-rfm`
-- Added RFM formula to formulas.html
-- Total content pages: 47
-
-### Session 12 (Physics Block 3 Expansion)
-- Added `02-calculating-efficiency.html` to Physics Block 3
-- Renamed energy-resources from 02 to 03, updated topic code P3.2.1 to P3.3.1
-- Added efficiency formula to formulas.html
-
-### Session 12b (Energy Resources Enhancement)
-- Enhanced `03-energy-resources.html` with session 4 materials
-- Added UK electricity stats, detailed renewable resource explanations, 3 new practice questions
-
-### Session 13 (Block 3 Quick Tests)
-- Added Biology Block 3 topic tests (12 tests, summary deferred)
-- Added Chemistry Block 3 tests (20 tests including 5 summary)
-- Total tests: 130
+*Sessions 1-13 archived in `docs/changelog.md`*
 
 ### Session 14 (Test Consistency Audit & Fixes)
 - Comprehensive audit of all test pages, indexes, and navigation

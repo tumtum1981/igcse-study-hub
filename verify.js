@@ -9,6 +9,7 @@
  * 4. Block test indexes list every test file in their directory
  * 5. Search index has entries for every content page
  * 6. CSS nav classes are correct (topic-nav-link not topic-nav__link)
+ * 7. CLAUDE.md copies are in sync (repo vs parent directory)
  */
 
 const fs = require('fs');
@@ -305,6 +306,26 @@ for (const dir of testBlockDirs) {
     }
 }
 ok(`Checked ${cssChecked} test files for CSS classes`);
+
+// ============================================================
+// CHECK 7: CLAUDE.md copies in sync
+// ============================================================
+console.log('\n=== CHECK 7: CLAUDE.md Sync ===');
+
+const repoClaudeMd = path.join(ROOT, 'CLAUDE.md');
+const parentClaudeMd = path.join(ROOT, '..', 'CLAUDE.md');
+
+if (fs.existsSync(parentClaudeMd)) {
+    const repoContent = readFile(repoClaudeMd);
+    const parentContent = readFile(parentClaudeMd);
+    if (repoContent === parentContent) {
+        ok('CLAUDE.md copies are identical');
+    } else {
+        error('CLAUDE.md copies are out of sync (repo vs parent directory)');
+    }
+} else {
+    warn('Parent CLAUDE.md not found at ' + parentClaudeMd);
+}
 
 // ============================================================
 // SUMMARY
