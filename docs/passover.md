@@ -3,7 +3,7 @@
 ## Project Overview
 A static HTML/CSS/JavaScript website for IGCSE homeschool study materials with theme switching (Undertale/Minecraft/Clean), hosted on GitHub and deployed via Vercel.
 
-**Current Status: v1.18 - Content Audit Remediation Complete**
+**Current Status: v1.19 - Workflow Overhaul & Test Balance Fix**
 51 content pages, 191 quick tests, 3 themes, search, formula reference, SVG diagrams, user authentication with progress tracking via Supabase, password reset, and answer explanations (Physics Block 3 pilot).
 
 ## Location
@@ -399,6 +399,25 @@ Open in browser: C:\Users\jbenw\homeschool\igcse-study-hub\index.html
 - Audit fix progress: #1 done, #2 done, #3 skipped, #4 done, #5 done, #6 done, #7 done
 - **All content audit fixes complete.** Version bump: v1.18
 
+### Session 24 (Workflow Overhaul & Test Balance Fix)
+- **CLAUDE.md major update** - restructured workflow commands and added new ones:
+  - `rewrite page from source` - new command for rewriting existing pages from source slides
+  - `add explanations for block` - new command to backfill `data-explanation` on existing tests
+  - `fix test balance` - new command to fix answer balance warnings
+  - `refresh website block` now has 8 steps with flow summary (Steps 1-5 always, 6-8 conditional)
+  - Added Content Page Standards section (SVG patterns, accessibility rules)
+  - Added version bump convention and dev log archiving rules
+  - Stale Data Checklist reframed as post-task verification; commands cross-reference it
+  - Session start reminder condensed to single line
+- **Source-to-page mapping table** added to passover.md - all 51 content pages mapped to their source PPTX/PDF files
+- **verify.js Check 7** added - checks both CLAUDE.md copies are identical (repo vs parent directory)
+- **Dev log archiving** - sessions 1-13 moved to `docs/changelog.md`, passover keeps last 10
+- **Eliminated CLAUDE.md/passover duplication** - page/test counts removed from CLAUDE.md, passover is source of truth
+- **Fixed answer balance on 21 test files** - all now exactly 5A/5B/5C/5D, verify.js reports ALL CHECKS PASSED (0 errors, 0 warnings)
+- Formula updates marked as MANDATORY in refresh command
+- Answer explanations marked as mandatory for all new tests in Test File Standards
+- Version bump: v1.19
+
 ---
 
-*Last updated: February 2026 - Session 23*
+*Last updated: February 2026 - Session 24*
