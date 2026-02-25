@@ -3,7 +3,7 @@
 ## Project Overview
 A static HTML/CSS/JavaScript website for IGCSE homeschool study materials with theme switching (Undertale/Minecraft/Clean), hosted on GitHub and deployed via Vercel.
 
-**Current Status: v1.19 - Workflow Overhaul & Test Balance Fix**
+**Current Status: v1.20 - Comprehensive Audit & Fixes**
 51 content pages, 191 quick tests, 3 themes, search, formula reference, SVG diagrams, user authentication with progress tracking via Supabase, password reset, and answer explanations (Physics Block 3 pilot).
 
 ## Location
@@ -418,6 +418,20 @@ Open in browser: C:\Users\jbenw\homeschool\igcse-study-hub\index.html
 - Answer explanations marked as mandatory for all new tests in Test File Standards
 - Version bump: v1.19
 
+### Session 25 (Comprehensive Audit & Fixes)
+- **Full website audit** covering structural integrity, formula completeness, practice question counts, test coverage, and CSS consistency
+- **verify.js: ALL 7 CHECKS PASSED** (0 errors, 0 warnings) - confirmed before and after fixes
+- **Fix A: Added SA:V Ratio formula** to `formulas.html` Biology section
+  - SA:V Ratio = Surface Area / Volume, linked to `biology/block-2/01-size-of-cells.html`
+- **Fix B: Standardized Physics Block 3 test-links CSS** (4 pages)
+  - `01-energy-stores.html`, `02-calculating-efficiency.html`, `03-energy-resources.html`, `04-energy-calculations.html`
+  - Added `test-links__title`, `test-links__list`, `test-links__item`, `test-links__link` classes
+  - Added "All Block 3 Tests" link to each page
+- **Audit findings documented** (not fixed this session):
+  - 44 of 49 content pages have fewer than 5 practice questions (standard is 5) - backfill task for future
+  - Source cross-reference not performed (do incrementally per subject in future sessions)
+- Version bump: v1.20
+
 ---
 
-*Last updated: February 2026 - Session 24*
+*Last updated: February 2026 - Session 25*
