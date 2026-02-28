@@ -3,8 +3,8 @@
 ## Project Overview
 A static HTML/CSS/JavaScript website for IGCSE homeschool study materials with theme switching (Undertale/Minecraft/Clean), hosted on GitHub and deployed via Vercel.
 
-**Current Status: v1.20 - Comprehensive Audit & Fixes**
-51 content pages, 191 quick tests, 3 themes, search, formula reference, SVG diagrams, user authentication with progress tracking via Supabase, password reset, and answer explanations (Physics Block 3 pilot).
+**Current Status: v1.21 - Four New Blocks (B4, C4, P4, SB2)**
+55 content pages, 191 quick tests, 3 themes, search, formula reference, SVG diagrams, user authentication with progress tracking via Supabase, password reset, and answer explanations (Physics Block 3 pilot).
 
 ## Location
 ```
@@ -46,10 +46,10 @@ igcse-study-hub/
 ├── assets/
 │   └── images/                    # (empty - add images if needed)
 ├── subjects/
-│   ├── biology/                   # 16 topic pages (Block 1-3 + extra learning)
-│   ├── chemistry/                 # 15 topic pages (Block 1-3)
-│   ├── physics/                   # 13 topic pages (Block 1-3)
-│   └── separate-biology/          # 6 topic pages (5 + extra learning)
+│   ├── biology/                   # 17 topic pages (Block 1-4 + extra learning)
+│   ├── chemistry/                 # 16 topic pages (Block 1-4)
+│   ├── physics/                   # 14 topic pages (Block 1-4)
+│   └── separate-biology/          # 7 topic pages (Block 1-2 + extra learning)
 └── tests/
     ├── index.html                 # Tests hub page
     ├── biology/block-1/           # 23 tests + index
@@ -69,13 +69,17 @@ igcse-study-hub/
 **Biology Block 1:** 01-cells, 02-specialised-cells, 03-magnification, 04-living-organisms, 05-prokaryotic-cells
 **Biology Block 2:** 01-size-of-cells, 02-diffusion, 03-osmosis, 04-osmosis-practical, 05-active-transport, extra-learning
 **Biology Block 3:** 01-biological-molecules, 02-digestive-system, 03-enzymes, 04-enzymes-continued, 05-balanced-diet
+**Biology Block 4:** 01-photosynthesis
 **Chemistry Block 1:** 01-atoms-elements-compounds, 02-states-of-matter, 03-atomic-structure, 04-electron-shells, 05-ions-isotopes
 **Chemistry Block 2:** 01-state-changes, 02-ionic-bonding, 03-covalent-bonding, 04-metallic-bonding, 05-giant-covalent
 **Chemistry Block 3:** 01-conservation-of-mass, 02-conservation-calculations, 03-representing-reactions, 04-balancing-equations, 05-ram-rfm
+**Chemistry Block 4:** 01-exothermic-endothermic
 **Physics Block 1:** 01-speed-distance-time, 02-distance-time-graphs, 03-velocity-time-graphs, 04-gravitational-force, 05-work-done
 **Physics Block 2:** 01-density, 02-forces, 03-resultant-forces, 04-moments, 05-newtons-second-law
 **Physics Block 3:** 01-energy-stores, 02-calculating-efficiency, 03-energy-resources, 04-energy-calculations
+**Physics Block 4:** 01-particle-model
 **Separate Biology Block 1:** 01-features-of-organisms, 02-species-binomial, 03-evolutionary-trees, 04-dichotomous-keys, 05-plant-classification, extra-learning
+**Separate Biology Block 2:** 01-teeth
 
 ### Source-to-Page Mapping
 
@@ -109,6 +113,11 @@ Each content page's source file in `website-resources/`. Use this to verify cont
 | 04-enzymes-continued | `session 4 Enzymes continued block 3.pptx` |
 | 05-balanced-diet | `session 5 Balanced diet block 3.pdf` |
 
+**Biology Block 4:**
+| Page | Source File |
+|------|------------|
+| 01-photosynthesis | `session 1 Photosynthesis introduction block 4.pptx` |
+
 **Chemistry Block 1:**
 | Page | Source File |
 |------|------------|
@@ -136,6 +145,11 @@ Each content page's source file in `website-resources/`. Use this to verify cont
 | 04-balancing-equations | `session 4 Balancing symbol equations block 3.pptx` |
 | 05-ram-rfm | `session 5 RAM and RFM block 3.pptx` |
 
+**Chemistry Block 4:**
+| Page | Source File |
+|------|------------|
+| 01-exothermic-endothermic | `session 1 Exothermic and endothermic reactions block 4.pptx` |
+
 **Physics Block 1:**
 | Page | Source File |
 |------|------------|
@@ -162,6 +176,11 @@ Each content page's source file in `website-resources/`. Use this to verify cont
 | 03-energy-resources | `session 3 energy resources block 3.pptx` + `session 4 renewable energy block 3.pdf` |
 | 04-energy-calculations | `session 5 energy summary block 3.pdf` |
 
+**Physics Block 4:**
+| Page | Source File |
+|------|------------|
+| 01-particle-model | `session 1 The Particle Model block 4.pptx` |
+
 **Separate Biology Block 1:**
 | Page | Source File |
 |------|------------|
@@ -171,6 +190,11 @@ Each content page's source file in `website-resources/`. Use this to verify cont
 | 04-dichotomous-keys | `separate session 4 Dichotomous keys block 2.pptx` + `Whiteboard.fi 2025-11-27.pdf` |
 | 05-plant-classification | `separate session 5 plant classification block 2.pptx` + `whiteboard IGCSE Biology plant classification.pdf` |
 | extra-learning | Supplementary content preserved from page rewrites (Session 21) |
+
+**Separate Biology Block 2:**
+| Page | Source File |
+|------|------------|
+| 01-teeth | `separate session 1 Teeth block 4.pptx` |
 
 ### Quick Tests (191 total)
 
@@ -431,6 +455,19 @@ Open in browser: C:\Users\jbenw\homeschool\igcse-study-hub\index.html
   - 44 of 49 content pages have fewer than 5 practice questions (standard is 5) - backfill task for future
   - Source cross-reference not performed (do incrementally per subject in future sessions)
 - Version bump: v1.20
+- **Refresh website block: 4 new blocks added**
+  - **Biology Block 4:** `01-photosynthesis.html` - Photosynthesis introduction (reactants/products, role of light, producers, uses of glucose/biomass)
+  - **Chemistry Block 4:** `01-exothermic-endothermic.html` - Exothermic & endothermic reactions (definitions, examples, everyday uses, energy dissipation, calorimetry)
+  - **Physics Block 4:** `01-particle-model.html` - The particle model (three states of matter, particle arrangement/movement/forces, shape, compression)
+  - **Separate Biology Block 2:** `01-teeth.html` - Mechanical digestion & teeth (tooth types, structure, dental decay, prevention)
+- All 4 pages have 5 IGCSE practice questions each, SVG diagrams (3 of 4 pages), and confidence ratings
+- Updated: 4 subject index pages, homepage block counts (3→4 for Bio/Chem/Phys, 1→2 for Sep Bio)
+- Search index: 51 → 55 entries
+- Formula sheet: added photosynthesis word equation (Biology) and calorimetry temperature change (Chemistry)
+- Source mapping table updated with all 4 new pages
+- Total content pages: 51 → 55
+- verify.js: ALL 7 CHECKS PASSED
+- Version bump: v1.21
 
 ---
 

@@ -482,5 +482,49 @@ const SEARCH_INDEX = [
         url: "subjects/separate-biology/block-1/extra-learning.html",
         keywords: ["kingdom features", "binomial advantages", "phylogenetic tree", "dichotomous key example", "conifers", "gymnosperms", "vascular tissue", "monocot", "dicot"],
         excerpt: "Additional content beyond the slides: kingdom details, binomial system advantages, evolutionary tree reading, dichotomous key examples, and plant classification detail."
+    },
+
+    // Biology Block 4
+    {
+        title: "Photosynthesis Introduction",
+        subject: "biology",
+        block: 4,
+        code: "B4.1.1",
+        url: "subjects/biology/block-4/01-photosynthesis.html",
+        keywords: ["photosynthesis", "producers", "glucose", "oxygen", "carbon dioxide", "water", "light energy", "biomass", "starch", "cellulose", "amino acids"],
+        excerpt: "Photosynthesis is how producers make food using light energy. Water + carbon dioxide produces glucose + oxygen."
+    },
+
+    // Chemistry Block 4
+    {
+        title: "Exothermic and Endothermic Reactions",
+        subject: "chemistry",
+        block: 4,
+        code: "C4.1.1",
+        url: "subjects/chemistry/block-4/01-exothermic-endothermic.html",
+        keywords: ["exothermic", "endothermic", "energy transfer", "surroundings", "combustion", "neutralisation", "displacement", "thermal decomposition", "calorimetry", "temperature change"],
+        excerpt: "Exothermic reactions transfer energy to the surroundings; endothermic reactions absorb energy. Measured using calorimetry."
+    },
+
+    // Physics Block 4
+    {
+        title: "The Particle Model",
+        subject: "physics",
+        block: 4,
+        code: "P4.1.1",
+        url: "subjects/physics/block-4/01-particle-model.html",
+        keywords: ["particle model", "states of matter", "solid", "liquid", "gas", "forces of attraction", "compression", "arrangement", "movement"],
+        excerpt: "The particle model represents matter in solid, liquid, and gas states with different arrangements, spacing, and movement."
+    },
+
+    // Separate Biology Block 2
+    {
+        title: "Mechanical Digestion - Teeth",
+        subject: "separate-biology",
+        block: 2,
+        code: "SB2.1.1",
+        url: "subjects/separate-biology/block-2/01-teeth.html",
+        keywords: ["teeth", "incisors", "canines", "premolars", "molars", "enamel", "dentine", "pulp cavity", "dental decay", "plaque", "mechanical digestion", "mastication"],
+        excerpt: "Types of human teeth, tooth structure (enamel, dentine, pulp), dental decay causes, and prevention of tooth decay."
     }
 ];
