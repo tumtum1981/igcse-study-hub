@@ -3,8 +3,8 @@
 ## Project Overview
 A static HTML/CSS/JavaScript website for IGCSE homeschool study materials with theme switching (Undertale/Minecraft/Clean), hosted on GitHub and deployed via Vercel.
 
-**Current Status: v1.21 - Four New Blocks (B4, C4, P4, SB2)**
-55 content pages, 191 quick tests, 3 themes, search, formula reference, SVG diagrams, user authentication with progress tracking via Supabase, password reset, and answer explanations (Physics Block 3 pilot).
+**Current Status: v1.22 - Tests for New Blocks**
+55 content pages, 199 quick tests, 3 themes, search, formula reference, SVG diagrams, user authentication with progress tracking via Supabase, password reset, and answer explanations (Physics Block 3 pilot + all Block 4/SB2 tests).
 
 ## Location
 ```
@@ -55,13 +55,17 @@ igcse-study-hub/
     ├── biology/block-1/           # 23 tests + index
     ├── biology/block-2/           # 17 tests + index
     ├── biology/block-3/           # 18 tests + index
+    ├── biology/block-4/           # 2 tests + index
     ├── chemistry/block-1/         # 19 tests + index
     ├── chemistry/block-2/         # 17 tests + index
     ├── chemistry/block-3/         # 20 tests + index
+    ├── chemistry/block-4/         # 2 tests + index
     ├── physics/block-1/           # 21 tests + index
     ├── physics/block-2/           # 20 tests + index
     ├── physics/block-3/           # 11 tests + index
-    └── separate-biology/block-1/  # 25 tests + index
+    ├── physics/block-4/           # 2 tests + index
+    ├── separate-biology/block-1/  # 25 tests + index
+    └── separate-biology/block-2/  # 2 tests + index
 ```
 
 ### Content Pages (51 total)
@@ -196,18 +200,22 @@ Each content page's source file in `website-resources/`. Use this to verify cont
 |------|------------|
 | 01-teeth | `separate session 1 Teeth block 4.pptx` |
 
-### Quick Tests (191 total)
+### Quick Tests (199 total)
 
 **Biology Block 1 (23):** cells-1/2/3, specialised-1/2/3, magnification-1/2/3, organisms-1/2/3, prokaryotic-1/2/3, exam-cells, exam-magnification, exam-specialised, summary-1/2/3/4/5
 **Biology Block 2 (17):** size-1/2/3, diffusion-1/2/3, osmosis-1/2/3, osmosis-practical-1/2/3, summary-1/2/3/4/5
 **Biology Block 3 (18):** molecules-1/2/3, digestion-1/2/3, enzymes-1/2/3, enzymes-contd-1/2/3, diet-1, summary-1/2/3/4/5
+**Biology Block 4 (2):** photosynthesis-1/2
 **Chemistry Block 1 (19):** atoms-1/2/3, states-1/2/3, atomic-structure-1/2/3, electron-shells-1/2/3, ions-isotopes-1/2, summary-1/2/3/4/5
 **Chemistry Block 2 (17):** state-changes-1/2/3, ionic-1/2/3, covalent-1/2/3, metallic-1, giant-covalent-1/2, summary-1/2/3/4/5
 **Chemistry Block 3 (20):** conservation-1/2/3, conservation-calc-1/2/3, representing-1/2/3, balancing-1/2/3, ram-rfm-1/2/3, summary-1/2/3/4/5
+**Chemistry Block 4 (2):** exothermic-1/2
 **Physics Block 1 (21):** speed-1/2/3, dt-graphs-1/2/3, vt-graphs-1/2/3, gravity-1/2/3, work-1, exam-speed, exam-dt-graphs, exam-vt-graphs, summary-1/2/3/4/5
 **Physics Block 2 (20):** density-1/2/3, forces-1/2/3, resultant-1/2/3, moments-1/2/3, newtons-1/2/3, summary-1/2/3/4/5
 **Physics Block 3 (11):** energy-stores-1/2, efficiency-1/2, energy-resources-1/2, energy-calculations-1/2, summary-1/2/3
+**Physics Block 4 (2):** particle-model-1/2
 **Separate Bio Block 1 (25):** features-1/2/3, species-1/2/3, evolution-1/2/3, keys-1/2/3, plant-1/2/3, exam-features, exam-species, exam-evolution, exam-keys, exam-plant, summary-1/2/3/4/5
+**Separate Bio Block 2 (2):** teeth-1/2
 
 ---
 
@@ -469,6 +477,21 @@ Open in browser: C:\Users\jbenw\homeschool\igcse-study-hub\index.html
 - verify.js: ALL 7 CHECKS PASSED
 - Version bump: v1.21
 
+### Session 26 (Tests for New Block 4 / SB2 Pages)
+- **Added 8 MCQ tests** (2 per block) for the 4 new content pages created in Session 25:
+  - Biology Block 4: `photosynthesis-test-1.html`, `photosynthesis-test-2.html`
+  - Chemistry Block 4: `exothermic-test-1.html`, `exothermic-test-2.html`
+  - Physics Block 4: `particle-model-test-1.html`, `particle-model-test-2.html`
+  - Separate Biology Block 2: `teeth-test-1.html`, `teeth-test-2.html`
+- All 8 tests have `data-explanation` on every question (mandatory for new tests)
+- **Created 4 block test indexes** (test-list style): `tests/biology/block-4/`, `tests/chemistry/block-4/`, `tests/physics/block-4/`, `tests/separate-biology/block-2/`
+- **Updated tests hub** (`tests/index.html`) with 4 new cards (2 tests each)
+- **Added test-links sections** to all 4 content pages (between confidence rating and nav)
+- All tests balanced 5A/5B/5C/5D, nav chains verified
+- Total tests: 191 → 199
+- verify.js: ALL 7 CHECKS PASSED (0 errors, 0 warnings)
+- Version bump: v1.22
+
 ---
 
-*Last updated: February 2026 - Session 25*
+*Last updated: March 2026 - Session 26*
