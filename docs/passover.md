@@ -3,8 +3,8 @@
 ## Project Overview
 A static HTML/CSS/JavaScript website for IGCSE homeschool study materials with theme switching (Undertale/Minecraft/Clean), hosted on GitHub and deployed via Vercel.
 
-**Current Status: v1.22 - Tests for New Blocks**
-55 content pages, 199 quick tests, 3 themes, search, formula reference, SVG diagrams, user authentication with progress tracking via Supabase, password reset, and answer explanations (Physics Block 3 pilot + all Block 4/SB2 tests).
+**Current Status: v1.23 - Session 27 - New Lesson Pages**
+58 content pages, 199 quick tests, 3 themes, search, formula reference, SVG diagrams, user authentication with progress tracking via Supabase, password reset, and answer explanations (Physics Block 3 pilot + all Block 4/SB2 tests).
 
 ## Location
 ```
@@ -46,10 +46,10 @@ igcse-study-hub/
 ├── assets/
 │   └── images/                    # (empty - add images if needed)
 ├── subjects/
-│   ├── biology/                   # 17 topic pages (Block 1-4 + extra learning)
-│   ├── chemistry/                 # 16 topic pages (Block 1-4)
+│   ├── biology/                   # 18 topic pages (Block 1-4 + extra learning)
+│   ├── chemistry/                 # 17 topic pages (Block 1-4)
 │   ├── physics/                   # 14 topic pages (Block 1-4)
-│   └── separate-biology/          # 7 topic pages (Block 1-2 + extra learning)
+│   └── separate-biology/          # 8 topic pages (Block 1-2 + extra learning)
 └── tests/
     ├── index.html                 # Tests hub page
     ├── biology/block-1/           # 23 tests + index
@@ -73,17 +73,17 @@ igcse-study-hub/
 **Biology Block 1:** 01-cells, 02-specialised-cells, 03-magnification, 04-living-organisms, 05-prokaryotic-cells
 **Biology Block 2:** 01-size-of-cells, 02-diffusion, 03-osmosis, 04-osmosis-practical, 05-active-transport, extra-learning
 **Biology Block 3:** 01-biological-molecules, 02-digestive-system, 03-enzymes, 04-enzymes-continued, 05-balanced-diet
-**Biology Block 4:** 01-photosynthesis
+**Biology Block 4:** 01-photosynthesis, 02-photosynthesis-part-2
 **Chemistry Block 1:** 01-atoms-elements-compounds, 02-states-of-matter, 03-atomic-structure, 04-electron-shells, 05-ions-isotopes
 **Chemistry Block 2:** 01-state-changes, 02-ionic-bonding, 03-covalent-bonding, 04-metallic-bonding, 05-giant-covalent
 **Chemistry Block 3:** 01-conservation-of-mass, 02-conservation-calculations, 03-representing-reactions, 04-balancing-equations, 05-ram-rfm
-**Chemistry Block 4:** 01-exothermic-endothermic
+**Chemistry Block 4:** 01-exothermic-endothermic, 02-collision-theory
 **Physics Block 1:** 01-speed-distance-time, 02-distance-time-graphs, 03-velocity-time-graphs, 04-gravitational-force, 05-work-done
 **Physics Block 2:** 01-density, 02-forces, 03-resultant-forces, 04-moments, 05-newtons-second-law
 **Physics Block 3:** 01-energy-stores, 02-calculating-efficiency, 03-energy-resources, 04-energy-calculations
 **Physics Block 4:** 01-particle-model
 **Separate Biology Block 1:** 01-features-of-organisms, 02-species-binomial, 03-evolutionary-trees, 04-dichotomous-keys, 05-plant-classification, extra-learning
-**Separate Biology Block 2:** 01-teeth
+**Separate Biology Block 2:** 01-teeth, 02-absorption-transport
 
 ### Source-to-Page Mapping
 
@@ -121,6 +121,7 @@ Each content page's source file in `website-resources/`. Use this to verify cont
 | Page | Source File |
 |------|------------|
 | 01-photosynthesis | `session 1 Photosynthesis introduction block 4.pptx` |
+| 02-photosynthesis-part-2 | `session 2 Photosynthesis part 2 block 10.pptx` |
 
 **Chemistry Block 1:**
 | Page | Source File |
@@ -153,6 +154,7 @@ Each content page's source file in `website-resources/`. Use this to verify cont
 | Page | Source File |
 |------|------------|
 | 01-exothermic-endothermic | `session 1 Exothermic and endothermic reactions block 4.pptx` |
+| 02-collision-theory | `session 2 Collision theory block 4.pptx` |
 
 **Physics Block 1:**
 | Page | Source File |
@@ -199,6 +201,7 @@ Each content page's source file in `website-resources/`. Use this to verify cont
 | Page | Source File |
 |------|------------|
 | 01-teeth | `separate session 1 Teeth block 4.pptx` |
+| 02-absorption-transport | `separate session 2 Absorption and transport of nutrients in humans block 4.pptx` |
 
 ### Quick Tests (199 total)
 
@@ -477,6 +480,32 @@ Open in browser: C:\Users\jbenw\homeschool\igcse-study-hub\index.html
 - verify.js: ALL 7 CHECKS PASSED
 - Version bump: v1.21
 
+### Session 27 (New Lesson Pages - Block 4 Expansion)
+- **3 new content pages** added from latest source slides:
+  - **Biology Block 4 Page 2** (`02-photosynthesis-part-2.html`, B4.2.1): Photosynthesis Part 2 - Limiting Factors
+    - Chloroplasts and chlorophyll, symbol equation (6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂)
+    - Factors affecting rate: light intensity, CO₂ concentration, temperature
+    - Inverse square law for light intensity, investigating with Elodea and algal balls/hydrogen carbonate indicator
+    - SVG diagram: rate vs light intensity graph with limiting factor plateau
+  - **Chemistry Block 4 Page 2** (`02-collision-theory.html`, C4.2.1): Collision Theory and Rates of Reaction
+    - Collision theory: activation energy, effective collisions
+    - Five factors: concentration, pressure, surface area, temperature, catalysts
+    - Collision theory explanations for each factor
+    - SVG diagram: large cube vs many small cubes (surface area)
+  - **Separate Biology Block 2 Page 2** (`02-absorption-transport.html`, SB2.2.1): Absorption and Transport of Nutrients
+    - Small intestine adaptations, villi and microvilli structure
+    - Absorption mechanisms: active transport (glucose/amino acids), diffusion (fats)
+    - Transport routes: hepatic portal vein (glucose/amino acids), lacteal → lymph → thoracic duct (fats), osmosis (water)
+    - SVG diagram: villus cross-section with capillaries and lacteal
+- **All 3 pages** have 5 IGCSE practice questions each, confidence ratings, SVG diagrams, topic navigation
+- **Block indexes updated:** biology/block-4, chemistry/block-4, separate-biology/block-2
+- **Previous pages updated with Next links:** 01-photosynthesis, 01-exothermic-endothermic, 01-teeth
+- **Search index:** 55 → 58 entries
+- **Formulas page:** added photosynthesis symbol equation, inverse square law (Biology), rate of reaction (Chemistry)
+- **Source mapping table updated** with all 3 new pages
+- Total content pages: 55 → 58
+- Version bump: v1.23
+
 ### Session 26 (Tests for New Block 4 / SB2 Pages)
 - **Added 8 MCQ tests** (2 per block) for the 4 new content pages created in Session 25:
   - Biology Block 4: `photosynthesis-test-1.html`, `photosynthesis-test-2.html`
@@ -494,4 +523,4 @@ Open in browser: C:\Users\jbenw\homeschool\igcse-study-hub\index.html
 
 ---
 
-*Last updated: March 2026 - Session 26*
+*Last updated: March 2026 - Session 27*

@@ -494,6 +494,15 @@ const SEARCH_INDEX = [
         keywords: ["photosynthesis", "producers", "glucose", "oxygen", "carbon dioxide", "water", "light energy", "biomass", "starch", "cellulose", "amino acids"],
         excerpt: "Photosynthesis is how producers make food using light energy. Water + carbon dioxide produces glucose + oxygen."
     },
+    {
+        title: "Photosynthesis Part 2 - Limiting Factors",
+        subject: "biology",
+        block: 4,
+        code: "B4.2.1",
+        url: "subjects/biology/block-4/02-photosynthesis-part-2.html",
+        keywords: ["limiting factor", "light intensity", "carbon dioxide concentration", "temperature", "chlorophyll", "chloroplast", "symbol equation", "rate of photosynthesis", "elodea", "algal balls", "hydrogen carbonate indicator", "inverse square law"],
+        excerpt: "Factors limiting photosynthesis: light intensity, CO2 concentration, and temperature. Investigating rate of photosynthesis using Elodea and algal balls."
+    },
 
     // Chemistry Block 4
     {
@@ -504,6 +513,15 @@ const SEARCH_INDEX = [
         url: "subjects/chemistry/block-4/01-exothermic-endothermic.html",
         keywords: ["exothermic", "endothermic", "energy transfer", "surroundings", "combustion", "neutralisation", "displacement", "thermal decomposition", "calorimetry", "temperature change"],
         excerpt: "Exothermic reactions transfer energy to the surroundings; endothermic reactions absorb energy. Measured using calorimetry."
+    },
+    {
+        title: "Collision Theory and Rates of Reaction",
+        subject: "chemistry",
+        block: 4,
+        code: "C4.2.1",
+        url: "subjects/chemistry/block-4/02-collision-theory.html",
+        keywords: ["collision theory", "activation energy", "rate of reaction", "concentration", "pressure", "surface area", "temperature", "catalyst", "effective collision", "frequency", "kinetic energy", "successful collision"],
+        excerpt: "Collision theory explains rates of reaction. Factors affecting rate: concentration, pressure, surface area, temperature, and catalysts."
     },
 
     // Physics Block 4
@@ -526,5 +544,14 @@ const SEARCH_INDEX = [
         url: "subjects/separate-biology/block-2/01-teeth.html",
         keywords: ["teeth", "incisors", "canines", "premolars", "molars", "enamel", "dentine", "pulp cavity", "dental decay", "plaque", "mechanical digestion", "mastication"],
         excerpt: "Types of human teeth, tooth structure (enamel, dentine, pulp), dental decay causes, and prevention of tooth decay."
+    },
+    {
+        title: "Absorption and Transport of Nutrients",
+        subject: "separate-biology",
+        block: 2,
+        code: "SB2.2.1",
+        url: "subjects/separate-biology/block-2/02-absorption-transport.html",
+        keywords: ["absorption", "villi", "microvilli", "small intestine", "capillary", "lacteal", "hepatic portal vein", "active transport", "diffusion", "fatty acids", "glycerol", "chylomicrons", "lymphatic system", "thoracic duct", "glucose", "amino acids"],
+        excerpt: "How the small intestine absorbs glucose, amino acids, and fats. Transport via blood capillaries, hepatic portal vein, and lacteals to the lymphatic system."
     }
 ];
