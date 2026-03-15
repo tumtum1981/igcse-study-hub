@@ -503,6 +503,15 @@ const SEARCH_INDEX = [
         keywords: ["limiting factor", "light intensity", "carbon dioxide concentration", "temperature", "chlorophyll", "chloroplast", "symbol equation", "rate of photosynthesis", "elodea", "algal balls", "hydrogen carbonate indicator", "inverse square law"],
         excerpt: "Factors limiting photosynthesis: light intensity, CO2 concentration, and temperature. Investigating rate of photosynthesis using Elodea and algal balls."
     },
+    {
+        title: "Structure of a Leaf",
+        subject: "biology",
+        block: 4,
+        code: "B4.3.1",
+        url: "subjects/biology/block-4/03-leaf-structure.html",
+        keywords: ["leaf structure", "palisade mesophyll", "spongy mesophyll", "epidermis", "stomata", "guard cells", "chloroplast", "cuticle", "vein", "xylem", "phloem", "transpiration", "gas exchange", "adaptation"],
+        excerpt: "The leaf is adapted for photosynthesis with palisade cells, stomata for gas exchange, and veins for transport of water and glucose."
+    },
 
     // Chemistry Block 4
     {
@@ -522,6 +531,15 @@ const SEARCH_INDEX = [
         url: "subjects/chemistry/block-4/02-collision-theory.html",
         keywords: ["collision theory", "activation energy", "rate of reaction", "concentration", "pressure", "surface area", "temperature", "catalyst", "effective collision", "frequency", "kinetic energy", "successful collision"],
         excerpt: "Collision theory explains rates of reaction. Factors affecting rate: concentration, pressure, surface area, temperature, and catalysts."
+    },
+    {
+        title: "Concentration and Rate of Reaction Practical",
+        subject: "chemistry",
+        block: 4,
+        code: "C4.3.1",
+        url: "subjects/chemistry/block-4/03-concentration-rate-practical.html",
+        keywords: ["sodium thiosulfate", "hydrochloric acid", "disappearing cross", "rate practical", "marble chips", "calcium carbonate", "gas syringe", "mass loss", "turbidity", "1/time", "independent variable", "dependent variable", "controlled variable"],
+        excerpt: "Measuring rate of reaction using sodium thiosulfate (disappearing cross) and marble chips with HCl. Investigating effect of concentration on rate."
     },
 
     // Physics Block 4
