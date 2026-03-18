@@ -73,3 +73,42 @@ Sessions archived from `passover.md`. See passover for recent sessions.
 - Added Biology Block 3 topic tests (12 tests, summary deferred)
 - Added Chemistry Block 3 tests (20 tests including 5 summary)
 - Total tests: 130
+
+### Session 14 (Test Consistency Audit & Fixes)
+- Comprehensive audit of all test pages, indexes, and navigation
+- Created 2 missing Newton's tests (newtons-test-2/3)
+- Updated all 7 block index pages with previously unlisted tests
+- Fixed test hub card counts (were all showing "8 tests")
+- Fixed broken nav links and CSS classes in Biology Block 3
+- Added Formulas nav link to tests hub
+- Total tests: 174
+
+### Session 15 (Biology Block 3 Expansion)
+- Added `05-balanced-diet.html` to Biology Block 3
+- Added diet-test-1 + 5 summary tests for Biology Block 3
+- Total content pages: 48, total tests: 180
+
+### Session 16 (Content Page Section Standardisation)
+- Standardised bottom section order across all 45 content pages with tests
+- Mandatory order: Quiz > Confidence Rating > Test Links > Navigation
+- Fixed Sep Bio plant-classification test links (plant-test-* not plants-test-*)
+
+### Session 17 (Physics Block 3 Content)
+- Added `04-energy-calculations.html` - conservation of energy calculations (GPE/KE)
+- Total content pages: 49
+
+### Session 18 (Physics Block 3 Tests)
+- Added 11 tests: energy-stores-1/2, efficiency-1/2, energy-resources-1/2, energy-calculations-1/2, summary-1/2/3
+- Created block test index, added hub card, added test links to all 4 content pages
+- Full nav chain verified, all tests balanced 5A/5B/5C/5D
+- Total tests: 191
+
+### Session 19 (Answer Explanations Feature)
+- New feature: answer explanations shown inline under wrong answers after test submission
+- Modified `js/test.js` to read `data-explanation` attributes and display explanations
+- Added `.test-explanation` and `.answer-explanation` CSS styles to `css/main.css`
+- Explanations also appear in the answers summary section at the bottom
+- Retry button correctly removes explanation divs when resetting
+- Pilot: added `data-explanation` attributes to all 220 questions across 11 Physics Block 3 tests
+- Graceful degradation: older tests without explanations continue to work unchanged
+- Version bump: v1.16

@@ -3,8 +3,8 @@
 ## Project Overview
 A static HTML/CSS/JavaScript website for IGCSE homeschool study materials with theme switching (Undertale/Minecraft/Clean), hosted on GitHub and deployed via Vercel.
 
-**Current Status: v1.24 - Session 28 - New Lesson Pages**
-60 content pages, 199 quick tests, 3 themes, search, formula reference, SVG diagrams, user authentication with progress tracking via Supabase, password reset, and answer explanations (Physics Block 3 pilot + all Block 4/SB2 tests).
+**Current Status: v1.25 - Session 29 - Tests for Block 4 Session 3**
+60 content pages, 203 quick tests, 3 themes, search, formula reference, SVG diagrams, user authentication with progress tracking via Supabase, password reset, and answer explanations (Physics Block 3 pilot + all Block 4/SB2 tests).
 
 ## Location
 ```
@@ -55,11 +55,11 @@ igcse-study-hub/
     ├── biology/block-1/           # 23 tests + index
     ├── biology/block-2/           # 17 tests + index
     ├── biology/block-3/           # 18 tests + index
-    ├── biology/block-4/           # 2 tests + index
+    ├── biology/block-4/           # 4 tests + index
     ├── chemistry/block-1/         # 19 tests + index
     ├── chemistry/block-2/         # 17 tests + index
     ├── chemistry/block-3/         # 20 tests + index
-    ├── chemistry/block-4/         # 2 tests + index
+    ├── chemistry/block-4/         # 4 tests + index
     ├── physics/block-1/           # 21 tests + index
     ├── physics/block-2/           # 20 tests + index
     ├── physics/block-3/           # 11 tests + index
@@ -210,11 +210,11 @@ Each content page's source file in `website-resources/`. Use this to verify cont
 **Biology Block 1 (23):** cells-1/2/3, specialised-1/2/3, magnification-1/2/3, organisms-1/2/3, prokaryotic-1/2/3, exam-cells, exam-magnification, exam-specialised, summary-1/2/3/4/5
 **Biology Block 2 (17):** size-1/2/3, diffusion-1/2/3, osmosis-1/2/3, osmosis-practical-1/2/3, summary-1/2/3/4/5
 **Biology Block 3 (18):** molecules-1/2/3, digestion-1/2/3, enzymes-1/2/3, enzymes-contd-1/2/3, diet-1, summary-1/2/3/4/5
-**Biology Block 4 (2):** photosynthesis-1/2
+**Biology Block 4 (4):** photosynthesis-1/2, leaf-structure-1/2
 **Chemistry Block 1 (19):** atoms-1/2/3, states-1/2/3, atomic-structure-1/2/3, electron-shells-1/2/3, ions-isotopes-1/2, summary-1/2/3/4/5
 **Chemistry Block 2 (17):** state-changes-1/2/3, ionic-1/2/3, covalent-1/2/3, metallic-1, giant-covalent-1/2, summary-1/2/3/4/5
 **Chemistry Block 3 (20):** conservation-1/2/3, conservation-calc-1/2/3, representing-1/2/3, balancing-1/2/3, ram-rfm-1/2/3, summary-1/2/3/4/5
-**Chemistry Block 4 (2):** exothermic-1/2
+**Chemistry Block 4 (4):** exothermic-1/2, concentration-rate-1/2
 **Physics Block 1 (21):** speed-1/2/3, dt-graphs-1/2/3, vt-graphs-1/2/3, gravity-1/2/3, work-1, exam-speed, exam-dt-graphs, exam-vt-graphs, summary-1/2/3/4/5
 **Physics Block 2 (20):** density-1/2/3, forces-1/2/3, resultant-1/2/3, moments-1/2/3, newtons-1/2/3, summary-1/2/3/4/5
 **Physics Block 3 (11):** energy-stores-1/2, efficiency-1/2, energy-resources-1/2, energy-calculations-1/2, summary-1/2/3
@@ -315,46 +315,7 @@ Open in browser: C:\Users\jbenw\homeschool\igcse-study-hub\index.html
 
 ## Development Log
 
-*Sessions 1-13 archived in `docs/changelog.md`*
-
-### Session 14 (Test Consistency Audit & Fixes)
-- Comprehensive audit of all test pages, indexes, and navigation
-- Created 2 missing Newton's tests (newtons-test-2/3)
-- Updated all 7 block index pages with previously unlisted tests
-- Fixed test hub card counts (were all showing "8 tests")
-- Fixed broken nav links and CSS classes in Biology Block 3
-- Added Formulas nav link to tests hub
-- Total tests: 174
-
-### Session 15 (Biology Block 3 Expansion)
-- Added `05-balanced-diet.html` to Biology Block 3
-- Added diet-test-1 + 5 summary tests for Biology Block 3
-- Total content pages: 48, total tests: 180
-
-### Session 16 (Content Page Section Standardisation)
-- Standardised bottom section order across all 45 content pages with tests
-- Mandatory order: Quiz > Confidence Rating > Test Links > Navigation
-- Fixed Sep Bio plant-classification test links (plant-test-* not plants-test-*)
-
-### Session 17 (Physics Block 3 Content)
-- Added `04-energy-calculations.html` - conservation of energy calculations (GPE/KE)
-- Total content pages: 49
-
-### Session 18 (Physics Block 3 Tests)
-- Added 11 tests: energy-stores-1/2, efficiency-1/2, energy-resources-1/2, energy-calculations-1/2, summary-1/2/3
-- Created block test index, added hub card, added test links to all 4 content pages
-- Full nav chain verified, all tests balanced 5A/5B/5C/5D
-- Total tests: 191
-
-### Session 19 (Answer Explanations Feature)
-- New feature: answer explanations shown inline under wrong answers after test submission
-- Modified `js/test.js` to read `data-explanation` attributes and display explanations
-- Added `.test-explanation` and `.answer-explanation` CSS styles to `css/main.css`
-- Explanations also appear in the answers summary section at the bottom
-- Retry button correctly removes explanation divs when resetting
-- Pilot: added `data-explanation` attributes to all 220 questions across 11 Physics Block 3 tests
-- Graceful degradation: older tests without explanations continue to work unchanged
-- Version bump: v1.16
+*Sessions 1-19 archived in `docs/changelog.md`*
 
 ### Session 20 (SVG Diagrams Expansion)
 - Added inline SVG diagrams to 10 high-priority content pages (was 14, now 24 pages with diagrams)
@@ -482,6 +443,20 @@ Open in browser: C:\Users\jbenw\homeschool\igcse-study-hub\index.html
 - verify.js: ALL 7 CHECKS PASSED
 - Version bump: v1.21
 
+### Session 29 (Tests for Block 4 Session 3 Pages)
+- **4 new MCQ tests** for the 2 content pages added in Session 28:
+  - Biology Block 4: `leaf-structure-test-1.html`, `leaf-structure-test-2.html` (B4.3.1)
+  - Chemistry Block 4: `concentration-rate-test-1.html`, `concentration-rate-test-2.html` (C4.3.1)
+- All 4 tests have `data-explanation` on every question, balanced 5A/5B/5C/5D
+- **Nav chains updated:** photosynthesis-test-2 → leaf-structure-test-1 (was back to index); exothermic-test-2 → concentration-rate-test-1 (was back to index)
+- **Block test indexes updated:** biology/block-4/index, chemistry/block-4/index — new test sections added
+- **Tests hub updated:** Bio Block 4 count 2→4, Chem Block 4 count 2→4 (title updated to "Energy Changes & Rates")
+- **Content pages updated:** test-links sections added to 03-leaf-structure.html and 03-concentration-rate-practical.html
+- **Dev log:** Sessions 14-19 archived to changelog.md (keeping last 10 sessions in passover)
+- Total tests: 199 → 203
+- verify.js: ALL 7 CHECKS PASSED
+- Version bump: v1.25
+
 ### Session 28 (New Lesson Pages - Block 4 Session 3)
 - **2 new content pages** added from latest source slides:
   - **Biology Block 4 Page 3** (`03-leaf-structure.html`, B4.3.1): Structure of a Leaf
@@ -546,4 +521,4 @@ Open in browser: C:\Users\jbenw\homeschool\igcse-study-hub\index.html
 
 ---
 
-*Last updated: March 2026 - Session 28*
+*Last updated: March 2026 - Session 29*
