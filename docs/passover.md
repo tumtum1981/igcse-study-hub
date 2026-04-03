@@ -3,8 +3,8 @@
 ## Project Overview
 A static HTML/CSS/JavaScript website for IGCSE homeschool study materials with theme switching (Undertale/Minecraft/Clean), hosted on GitHub and deployed via Vercel.
 
-**Current Status: v1.25 - Session 29 - Tests for Block 4 Session 3**
-60 content pages, 203 quick tests, 3 themes, search, formula reference, SVG diagrams, user authentication with progress tracking via Supabase, password reset, and answer explanations (Physics Block 3 pilot + all Block 4/SB2 tests).
+**Current Status: v1.26 - Session 30 - New Lesson Pages (Block 4 complete)**
+69 content pages, 203 quick tests, 3 themes, search, formula reference, SVG diagrams, user authentication with progress tracking via Supabase, password reset, and answer explanations (Physics Block 3 pilot + all Block 4/SB2 tests).
 
 ## Location
 ```
@@ -46,10 +46,10 @@ igcse-study-hub/
 ├── assets/
 │   └── images/                    # (empty - add images if needed)
 ├── subjects/
-│   ├── biology/                   # 19 topic pages (Block 1-4 + extra learning)
-│   ├── chemistry/                 # 18 topic pages (Block 1-4)
-│   ├── physics/                   # 14 topic pages (Block 1-4)
-│   └── separate-biology/          # 8 topic pages (Block 1-2 + extra learning)
+│   ├── biology/                   # 21 topic pages (Block 1-4 + extra learning)
+│   ├── chemistry/                 # 20 topic pages (Block 1-4)
+│   ├── physics/                   # 16 topic pages (Block 1-4)
+│   └── separate-biology/          # 12 topic pages (Block 1-2 + extra learning)
 └── tests/
     ├── index.html                 # Tests hub page
     ├── biology/block-1/           # 23 tests + index
@@ -68,22 +68,22 @@ igcse-study-hub/
     └── separate-biology/block-2/  # 2 tests + index
 ```
 
-### Content Pages (51 total)
+### Content Pages (69 total)
 
 **Biology Block 1:** 01-cells, 02-specialised-cells, 03-magnification, 04-living-organisms, 05-prokaryotic-cells
 **Biology Block 2:** 01-size-of-cells, 02-diffusion, 03-osmosis, 04-osmosis-practical, 05-active-transport, extra-learning
 **Biology Block 3:** 01-biological-molecules, 02-digestive-system, 03-enzymes, 04-enzymes-continued, 05-balanced-diet
-**Biology Block 4:** 01-photosynthesis, 02-photosynthesis-part-2, 03-leaf-structure
+**Biology Block 4:** 01-photosynthesis, 02-photosynthesis-part-2, 03-leaf-structure, 04-xylem-transpiration, 05-transpiration-factors
 **Chemistry Block 1:** 01-atoms-elements-compounds, 02-states-of-matter, 03-atomic-structure, 04-electron-shells, 05-ions-isotopes
 **Chemistry Block 2:** 01-state-changes, 02-ionic-bonding, 03-covalent-bonding, 04-metallic-bonding, 05-giant-covalent
 **Chemistry Block 3:** 01-conservation-of-mass, 02-conservation-calculations, 03-representing-reactions, 04-balancing-equations, 05-ram-rfm
-**Chemistry Block 4:** 01-exothermic-endothermic, 02-collision-theory, 03-concentration-rate-practical
+**Chemistry Block 4:** 01-exothermic-endothermic, 02-collision-theory, 03-concentration-rate-practical, 04-temperature-rate, 05-concentration-graphs
 **Physics Block 1:** 01-speed-distance-time, 02-distance-time-graphs, 03-velocity-time-graphs, 04-gravitational-force, 05-work-done
 **Physics Block 2:** 01-density, 02-forces, 03-resultant-forces, 04-moments, 05-newtons-second-law
 **Physics Block 3:** 01-energy-stores, 02-calculating-efficiency, 03-energy-resources, 04-energy-calculations
-**Physics Block 4:** 01-particle-model
+**Physics Block 4:** 01-particle-model, 02-thermal-conduction, 03-convection
 **Separate Biology Block 1:** 01-features-of-organisms, 02-species-binomial, 03-evolutionary-trees, 04-dichotomous-keys, 05-plant-classification, extra-learning
-**Separate Biology Block 2:** 01-teeth, 02-absorption-transport
+**Separate Biology Block 2:** 01-teeth, 02-absorption-transport, 03-phloem-translocation, 04-transpiration-extension, 05-transpiration-rate
 
 ### Source-to-Page Mapping
 
@@ -123,6 +123,8 @@ Each content page's source file in `website-resources/`. Use this to verify cont
 | 01-photosynthesis | `session 1 Photosynthesis introduction block 4.pptx` |
 | 02-photosynthesis-part-2 | `session 2 Photosynthesis part 2 block 10.pptx` |
 | 03-leaf-structure | `session 3 structure of a leaf block 4.pptx` |
+| 04-xylem-transpiration | `session 4 xylem and transpiration block 4.pptx` |
+| 05-transpiration-factors | `session 5 Factors that affect transpiration block 4.pptx` |
 
 **Chemistry Block 1:**
 | Page | Source File |
@@ -157,6 +159,8 @@ Each content page's source file in `website-resources/`. Use this to verify cont
 | 01-exothermic-endothermic | `session 1 Exothermic and endothermic reactions block 4.pptx` |
 | 02-collision-theory | `session 2 Collision theory block 4.pptx` |
 | 03-concentration-rate-practical | `session 3 Concentration and rate practical block 4.pptx` |
+| 04-temperature-rate | `session 4 Temperature and rate of reaction block 4.pptx` |
+| 05-concentration-graphs | `session 5 Concentration and analysis of graphs block 4.pptx` + `session 5 chemistry graph.pdf` |
 
 **Physics Block 1:**
 | Page | Source File |
@@ -188,6 +192,8 @@ Each content page's source file in `website-resources/`. Use this to verify cont
 | Page | Source File |
 |------|------------|
 | 01-particle-model | `session 1 The Particle Model block 4.pptx` |
+| 02-thermal-conduction | `session 2 Thermal conduction and insulation block 4.pptx` |
+| 03-convection | `session 3 Explaining convection block 4.pptx` |
 
 **Separate Biology Block 1:**
 | Page | Source File |
@@ -204,6 +210,9 @@ Each content page's source file in `website-resources/`. Use this to verify cont
 |------|------------|
 | 01-teeth | `separate session 1 Teeth block 4.pptx` |
 | 02-absorption-transport | `separate session 2 Absorption and transport of nutrients in humans block 4.pptx` |
+| 03-phloem-translocation | `separate session 3 phloem and translocation block 4.pptx` |
+| 04-transpiration-extension | `separate session 4 Transpiration extension block 4.pptx` |
+| 05-transpiration-rate | `separate session 5 investigating rate of transpiration block 4.pptx` |
 
 ### Quick Tests (199 total)
 
@@ -443,6 +452,83 @@ Open in browser: C:\Users\jbenw\homeschool\igcse-study-hub\index.html
 - verify.js: ALL 7 CHECKS PASSED
 - Version bump: v1.21
 
+### Session 30 (New Lesson Pages - Block 4 and Sep Bio B2 Complete)
+- **9 new content pages** added from latest source slides:
+  - **Biology Block 4 Page 4** (`04-xylem-transpiration.html`, B4.4.1): Xylem and Transpiration
+    - Xylem vessel structure: dead cells, hollow lumen, lignin reinforcement, pits
+    - Transpiration stream: osmosis in root hair cells → cohesion-tension up xylem → evaporation through stomata
+    - Root hair cell adaptations (long extension, large SA, thin wall, no chloroplasts)
+    - Importance of transpiration (mineral transport, cooling, support via turgor)
+    - SVG diagram: xylem vessel with lignin spirals, hollow lumen, pits labelled
+    - Nav: prev=03-leaf-structure, next=05-transpiration-factors
+  - **Biology Block 4 Page 5** (`05-transpiration-factors.html`, B4.5.1): Factors that Affect Transpiration
+    - 4 factors: temperature, light intensity, humidity, wind speed (table with mechanisms)
+    - Potometer setup and use (cut shoot underwater, equilibrate, measure air bubble distance)
+    - Potometer rate formula: Rate = distance ÷ time (mm/min)
+    - Xerophyte adaptations (sunken stomata, thick waxy cuticle, rolled leaves, few stomata, spines)
+    - SVG diagram: potometer with shoot, capillary tube, air bubble, scale
+    - Formula added to formulas.html: Potometer Rate (Rate of water uptake = distance ÷ time)
+    - Nav: prev=04-xylem-transpiration, next=Back to Block 4 index (completes Biology Block 4)
+  - **Chemistry Block 4 Page 4** (`04-temperature-rate.html`, C4.4.1): Temperature and Rate of Reaction
+    - Collision theory explanation for temperature: more frequent collisions + more particles above Ea
+    - Maxwell-Boltzmann distribution: bell curve, Ea threshold, shifted curve at higher temperature
+    - 10°C doubling rule for reaction rate
+    - Investigating temperature using sodium thiosulfate + HCl disappearing cross
+    - Graph interpretation: steeper gradient early, same final product amount
+    - SVG diagram: Maxwell-Boltzmann distribution curves at two temperatures with Ea line
+    - Nav: prev=03-concentration-rate-practical, next=05-concentration-graphs
+  - **Chemistry Block 4 Page 5** (`05-concentration-graphs.html`, C4.5.1): Concentration and Analysis of Graphs
+    - Reading rate graphs: steeper gradient = faster rate, same final volume = same limiting reagent amount
+    - Calculating rate from tangent gradient (Δvolume ÷ Δtime in cm³/s)
+    - Effect of concentration vs total amount distinction
+    - Summary table for all 5 factors (concentration, temperature, surface area, pressure, catalysts)
+    - SVG diagram: 3 rate curves (high/medium/low concentration) with tangent line showing initial rate
+    - Formula: Rate = Δvolume ÷ Δtime (cm³/s) — no new formula sheet entry (rate formula already present)
+    - Nav: prev=04-temperature-rate, next=Back to Block 4 index (completes Chemistry Block 4)
+  - **Physics Block 4 Page 2** (`02-thermal-conduction.html`, P4.2.1): Thermal Conduction and Insulation
+    - Conduction mechanism: vibrating particles pass energy to neighbours; free electrons in metals
+    - Conductors vs insulators comparison table
+    - Factors affecting conduction rate (temperature difference, material, length, cross-section)
+    - Practical insulation examples (loft insulation, cavity wall, double glazing, vacuum flask)
+    - SVG diagram: metal rod with particles showing decreasing vibration from hot to cold end
+    - Nav: prev=01-particle-model, next=03-convection
+  - **Physics Block 4 Page 3** (`03-convection.html`, P4.3.1): Explaining Convection
+    - Convection mechanism: heating → expansion → lower density → rises; cooler fluid sinks
+    - Why convection doesn't occur in solids (particles fixed in place)
+    - Real-world examples table (radiator/room, sea breeze, refrigerator, kettle)
+    - Comparison table: conduction vs convection vs radiation
+    - SVG diagram: convection current arrows in beaker heated from below
+    - Nav: prev=02-thermal-conduction, next=Back to Block 4 index
+  - **Separate Biology Block 2 Page 3** (`03-phloem-translocation.html`, SB2.3.1): Phloem and Translocation
+    - Phloem structure: sieve tube elements (sieve plates, no nucleus) + companion cells (mitochondria)
+    - Translocation: source to sink, transports sucrose and amino acids, can be bidirectional
+    - Ringing experiment as evidence for phloem translocation
+    - Xylem vs phloem comparison table (structure, direction, substances, living/dead)
+    - Nav: prev=02-absorption-transport, next=04-transpiration-extension
+  - **Separate Biology Block 2 Page 4** (`04-transpiration-extension.html`, SB2.4.1): Transpiration Extension
+    - Water potential concept (pure water = 0, more solutes = more negative)
+    - Turgor/flaccid/plasmolysis table with conditions and consequences
+    - Wilting definition; stomata control mechanism (light → turgid guard cells → open)
+    - ABA (abscisic acid) role in drought response (closes stomata)
+    - Xerophyte adaptations table (adaptation + benefit for 6 adaptations)
+    - Nav: prev=03-phloem-translocation, next=05-transpiration-rate
+  - **Separate Biology Block 2 Page 5** (`05-transpiration-rate.html`, SB2.5.1): Investigating Rate of Transpiration
+    - Potometer setup procedure (cut shoot underwater, no air bubbles, equilibrate first)
+    - Investigating 4 environmental factors table (variable, expected result, reason)
+    - Limitations table (what is measured vs actual transpiration; water used for photosynthesis/turgor)
+    - Example results table with distance moved and calculated rate
+    - Volume formula: Volume = cross-sectional area × distance moved
+    - Nav: prev=04-transpiration-extension, next=Back to Block 2 index (completes Separate Biology Block 2)
+- **Block indexes updated:** biology/block-4, chemistry/block-4, physics/block-4, separate-biology/block-2
+- **Prev page nav chains updated:** 03-leaf-structure (next→04), 03-concentration-rate-practical (next→04), 01-particle-model (next→02)
+- **Search index:** 60 → 69 entries (9 new entries added)
+- **Formulas page:** potometer rate formula added to Biology section
+- **Source mapping table updated:** Physics B4 (rows 2-3), Sep Bio B2 (rows 3-5) added
+- **Biology Block 4 complete (5 lessons)**, **Chemistry Block 4 complete (5 lessons)**, **Separate Biology Block 2 complete (5 lessons)**
+- Physics Block 4 at 3 lessons (not yet complete)
+- Total content pages: 60 → 69
+- Version bump: v1.26
+
 ### Session 29 (Tests for Block 4 Session 3 Pages)
 - **4 new MCQ tests** for the 2 content pages added in Session 28:
   - Biology Block 4: `leaf-structure-test-1.html`, `leaf-structure-test-2.html` (B4.3.1)
@@ -521,4 +607,4 @@ Open in browser: C:\Users\jbenw\homeschool\igcse-study-hub\index.html
 
 ---
 
-*Last updated: March 2026 - Session 29*
+*Last updated: April 2026 - Session 30*

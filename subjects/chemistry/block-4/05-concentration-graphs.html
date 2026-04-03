@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>html{visibility:hidden;opacity:0}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C4.5.1 Concentration and Analysis of Graphs | Chemistry | IGCSE Study Hub</title>
+    <link rel="preload" href="../../../css/main.css" as="style">
+    <link rel="preload" href="../../../css/themes/undertale.css" as="style">
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/themes/undertale.css" data-theme="true">
+    <script src="../../../js/theme-preload.js"></script>
+</head>
+<body data-subject="chemistry">
+    <nav class="nav-main">
+        <div class="container nav-container">
+            <a href="../../../index.html" class="nav-brand">* IGCSE STUDY HUB</a>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+            <ul class="nav-links">
+                <li><a href="../../biology/index.html" class="nav-link" data-subject="biology">Biology</a></li>
+                <li><a href="../../chemistry/index.html" class="nav-link active" data-subject="chemistry">Chemistry</a></li>
+                <li><a href="../../physics/index.html" class="nav-link" data-subject="physics">Physics</a></li>
+                <li><a href="../../separate-biology/index.html" class="nav-link" data-subject="separate-bio">Separate Bio</a></li>
+                <li><a href="../../../tests/index.html" class="nav-link">Tests</a></li>
+                <li><a href="../../../formulas.html" class="nav-link">Formulas</a></li>
+                <li class="nav-auth">
+                    <a href="../../../login.html" class="nav-link auth-login">Login</a>
+                    <a href="../../../dashboard.html" class="nav-link auth-dashboard" style="display:none;">Dashboard</a>
+                </li>
+                <li class="theme-switcher">
+                    <label class="theme-switcher__label" for="theme-select">Theme:</label>
+                    <select class="theme-switcher__select" id="theme-select">
+                        <option value="undertale">Undertale</option>
+                        <option value="minecraft">Minecraft</option>
+                        <option value="clean">Clean</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="../../../index.html">Home</a> /
+            <a href="../index.html">Chemistry</a> /
+            <a href="index.html">Block 4</a> /
+            <span>Concentration and Analysis of Graphs</span>
+        </div>
+    </div>
+
+    <header class="topic-header topic-header--chemistry">
+        <div class="container">
+            <span class="topic-code">C4.5.1</span>
+            <h1>Concentration and Analysis of Graphs</h1>
+        </div>
+    </header>
+
+    <main class="container topic-content">
+
+        <section class="content-section">
+            <h2>Reading Rate of Reaction Graphs</h2>
+            <p>Graphs of <strong>volume of gas produced (cm³) against time (s)</strong> are commonly used to show the progress of a reaction. Being able to read and interpret these graphs is an essential exam skill.</p>
+
+            <figure class="diagram">
+                <svg viewBox="0 0 460 230" class="diagram-svg" aria-labelledby="rate-graph-title">
+                    <title id="rate-graph-title">Rate of reaction graph showing three curves for high, medium, and low concentration</title>
+                    <!-- Axes -->
+                    <line x1="50" y1="190" x2="420" y2="190" stroke="currentColor" stroke-width="2"/>
+                    <line x1="50" y1="20" x2="50" y2="190" stroke="currentColor" stroke-width="2"/>
+                    <!-- Axis labels -->
+                    <text x="235" y="210" class="diagram-label" font-size="10" text-anchor="middle">Time (s)</text>
+                    <text x="20" y="110" class="diagram-label" font-size="10" text-anchor="middle" transform="rotate(-90, 20, 110)">Volume of gas (cm³)</text>
+                    <!-- Final volume line -->
+                    <line x1="50" y1="60" x2="420" y2="60" stroke="currentColor" stroke-width="1" stroke-dasharray="5,4" opacity="0.5"/>
+                    <text x="425" y="63" class="diagram-label" font-size="9">Max vol</text>
+                    <!-- Curve A: high concentration (steep, reaches max early) -->
+                    <path d="M50,190 Q90,140 130,90 Q170,65 210,61 Q260,60 420,60" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                    <text x="100" y="120" class="diagram-label" font-size="10">A: High [conc]</text>
+                    <!-- Curve B: medium concentration -->
+                    <path d="M50,190 Q100,155 160,110 Q210,80 270,63 Q330,60 420,60" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="8,3"/>
+                    <text x="200" y="85" class="diagram-label" font-size="10">B: Medium [conc]</text>
+                    <!-- Curve C: low concentration (gradual, reaches max late) -->
+                    <path d="M50,190 Q120,168 200,135 Q280,105 360,68 Q400,61 420,60" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="3,3"/>
+                    <text x="310" y="95" class="diagram-label" font-size="10">C: Low [conc]</text>
+                    <!-- Tangent line on Curve A -->
+                    <line x1="50" y1="190" x2="115" y2="95" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.7"/>
+                    <text x="55" y="145" class="diagram-label" font-size="9" opacity="0.9">Initial rate</text>
+                    <text x="55" y="156" class="diagram-label" font-size="9" opacity="0.9">= gradient</text>
+                </svg>
+                <figcaption>Three rate curves for the same reaction at different concentrations. All curves reach the same final volume (same limiting reagent) but the higher concentration reacts faster.</figcaption>
+            </figure>
+
+            <p>Key observations from rate graphs:</p>
+            <ul class="content-list">
+                <li><strong>Steeper initial gradient</strong> = faster initial rate of reaction</li>
+                <li><strong>All curves reach the same final volume</strong> = same amount of product (same limiting reagent used)</li>
+                <li><strong>Higher concentration curve reaches the plateau sooner</strong> = reaction finishes faster</li>
+                <li><strong>Gradient decreases over time</strong> = rate slows as reactants are used up</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Calculating Rate from a Graph</h2>
+            <p>The rate at any point on a volume-time graph equals the <strong>gradient of the tangent</strong> at that point.</p>
+
+            <div class="formula-box">
+                <span class="formula-label">FORMULA</span>
+                <p><strong>Rate = Δ volume ÷ Δ time</strong> (gradient of tangent)<br>
+                Units: cm³/s or cm³/min<br><br>
+                For <strong>initial rate</strong>: draw a tangent at t = 0 (the start of the curve) and calculate its gradient.</p>
+            </div>
+
+            <p><strong>Worked example:</strong> A tangent drawn at t = 0 on a rate curve goes from (0, 0) to (20 s, 40 cm³).</p>
+            <p>Initial rate = 40 cm³ ÷ 20 s = <strong>2 cm³/s</strong></p>
+        </section>
+
+        <section class="content-section">
+            <h2>Effect of Concentration on Rate vs Total Amount</h2>
+            <p>An important distinction for exams:</p>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Change</th>
+                        <th>Effect on Rate</th>
+                        <th>Effect on Total Amount of Product</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Higher concentration (same volume, more concentrated)</td>
+                        <td>Faster rate (steeper gradient)</td>
+                        <td>More product (more reactant available)</td>
+                    </tr>
+                    <tr>
+                        <td>More dilute concentration (same volume, less concentrated)</td>
+                        <td>Slower rate (gentler gradient)</td>
+                        <td>Less product (less reactant available)</td>
+                    </tr>
+                    <tr>
+                        <td>Same concentration, same volume (repeat)</td>
+                        <td>Same rate</td>
+                        <td>Same total product — curves should overlap</td>
+                    </tr>
+                    <tr>
+                        <td>Smaller marble chips (same mass, same concentration)</td>
+                        <td>Faster rate (more surface area)</td>
+                        <td>Same total product (same mass of marble)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>Summary: All Five Factors on One Graph</h2>
+            <p>The table below summarises how changing each factor affects rate graphs:</p>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Factor Increased</th>
+                        <th>Initial Gradient</th>
+                        <th>Final Volume</th>
+                        <th>Time to Finish</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Concentration</td><td>Steeper</td><td>Higher (more reactant)</td><td>Shorter</td></tr>
+                    <tr><td>Temperature</td><td>Steeper</td><td>Same</td><td>Shorter</td></tr>
+                    <tr><td>Surface area</td><td>Steeper</td><td>Same</td><td>Shorter</td></tr>
+                    <tr><td>Catalyst added</td><td>Steeper</td><td>Same</td><td>Shorter</td></tr>
+                    <tr><td>Pressure (gases only)</td><td>Steeper</td><td>Same</td><td>Shorter</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="quiz-section">
+            <h2 class="quiz-section__title">* IGCSE Practice Questions</h2>
+
+            <article class="quiz-question">
+                <div class="quiz-question__header">
+                    <span class="quiz-question__number">Question 1</span>
+                    <span class="quiz-question__marks">[2 marks]</span>
+                </div>
+                <p class="quiz-question__text">On a graph of volume of CO₂ against time, a tangent drawn at t = 0 passes through the points (0, 0) and (30 s, 60 cm³). Calculate the initial rate of reaction.</p>
+                <div class="quiz-answer">
+                    <div class="quiz-answer__prompt">* CLICK TO REVEAL ANSWER</div>
+                    <div class="quiz-answer__content">
+                        <ul>
+                            <li>Rate = Δ volume ÷ Δ time = 60 ÷ 30 = <strong>2 cm³/s</strong> (1 mark for correct method, 1 mark for answer with units)</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="quiz-question">
+                <div class="quiz-question__header">
+                    <span class="quiz-question__number">Question 2</span>
+                    <span class="quiz-question__marks">[3 marks]</span>
+                </div>
+                <p class="quiz-question__text">Two experiments use the same mass of marble chips with hydrochloric acid. In Experiment A, small chips are used; in Experiment B, large chips are used. The same concentration and volume of acid is used in both. Describe the expected differences between the two curves on a volume–time graph.</p>
+                <div class="quiz-answer">
+                    <div class="quiz-answer__prompt">* CLICK TO REVEAL ANSWER</div>
+                    <div class="quiz-answer__content">
+                        <ul>
+                            <li>Experiment A (small chips) has a steeper initial gradient — faster rate due to greater surface area (1 mark)</li>
+                            <li>Both curves reach the same final volume of CO₂ because the same mass of marble (same moles of CaCO₃) is used (1 mark)</li>
+                            <li>Experiment A reaches the final volume sooner (shorter reaction time) (1 mark)</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="quiz-question">
+                <div class="quiz-question__header">
+                    <span class="quiz-question__number">Question 3</span>
+                    <span class="quiz-question__marks">[2 marks]</span>
+                </div>
+                <p class="quiz-question__text">A student repeats an experiment with twice the volume of hydrochloric acid at the same concentration. Describe how the graph would differ from the original.</p>
+                <div class="quiz-answer">
+                    <div class="quiz-answer__prompt">* CLICK TO REVEAL ANSWER</div>
+                    <div class="quiz-answer__content">
+                        <ul>
+                            <li>The final volume of CO₂ would be higher (double) because twice as many moles of HCl are available (1 mark)</li>
+                            <li>The initial gradient (rate) would be similar to the original — concentration is the same, so collision frequency is the same (1 mark)</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="quiz-question">
+                <div class="quiz-question__header">
+                    <span class="quiz-question__number">Question 4</span>
+                    <span class="quiz-question__marks">[2 marks]</span>
+                </div>
+                <p class="quiz-question__text">Explain why the gradient of a volume–time rate graph decreases as the reaction proceeds.</p>
+                <div class="quiz-answer">
+                    <div class="quiz-answer__prompt">* CLICK TO REVEAL ANSWER</div>
+                    <div class="quiz-answer__content">
+                        <ul>
+                            <li>As the reaction proceeds, reactants are used up, so their concentration decreases (1 mark)</li>
+                            <li>Fewer collisions occur per second, so the rate (and therefore the gradient) decreases over time (1 mark)</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="quiz-question">
+                <div class="quiz-question__header">
+                    <span class="quiz-question__number">Question 5</span>
+                    <span class="quiz-question__marks">[4 marks]</span>
+                </div>
+                <p class="quiz-question__text">A catalyst is added to an experiment with marble chips and hydrochloric acid. Predict and explain the effect on: (a) the initial rate of reaction, and (b) the total volume of CO₂ produced.</p>
+                <div class="quiz-answer">
+                    <div class="quiz-answer__prompt">* CLICK TO REVEAL ANSWER</div>
+                    <div class="quiz-answer__content">
+                        <ul>
+                            <li>(a) Initial rate increases (steeper gradient) (1 mark) because the catalyst provides an alternative reaction pathway with lower activation energy, so more collisions are successful (1 mark)</li>
+                            <li>(b) Total volume of CO₂ stays the same (1 mark) because a catalyst does not change the amount of reactants — the same mass of CaCO₃ and volume of HCl still react (1 mark)</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <div class="confidence-rating" data-topic-id="c4-5-1">
+            <p>How confident are you with this topic?</p>
+            <div class="confidence-btns">
+                <button class="confidence-btn" data-level="need-practice">Need Practice</button>
+                <button class="confidence-btn" data-level="learning">Learning</button>
+                <button class="confidence-btn" data-level="confident">Confident</button>
+            </div>
+        </div>
+
+        <nav class="topic-navigation">
+            <a href="04-temperature-rate.html" class="topic-nav-link topic-nav-link--prev">
+                <span class="topic-nav-label">Previous</span>
+                <span class="topic-nav-title">Temperature and Rate of Reaction</span>
+            </a>
+            <a href="index.html" class="topic-nav-link topic-nav-link--next">
+                <span class="topic-nav-label">Back to</span>
+                <span class="topic-nav-title">Block 4 Topics</span>
+            </a>
+        </nav>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>* Reactions are heating up...</p>
+        </div>
+    </footer>
+
+    <script src="../../../js/main.js"></script>
+    <script src="../../../js/quiz.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../../../js/supabase-config.js"></script>
+    <script src="../../../js/auth.js"></script>
+    <script src="../../../js/progress.js"></script>
+</body>
+</html>

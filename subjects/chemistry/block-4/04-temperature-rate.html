@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>html{visibility:hidden;opacity:0}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C4.4.1 Temperature and Rate of Reaction | Chemistry | IGCSE Study Hub</title>
+    <link rel="preload" href="../../../css/main.css" as="style">
+    <link rel="preload" href="../../../css/themes/undertale.css" as="style">
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/themes/undertale.css" data-theme="true">
+    <script src="../../../js/theme-preload.js"></script>
+</head>
+<body data-subject="chemistry">
+    <nav class="nav-main">
+        <div class="container nav-container">
+            <a href="../../../index.html" class="nav-brand">* IGCSE STUDY HUB</a>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+            <ul class="nav-links">
+                <li><a href="../../biology/index.html" class="nav-link" data-subject="biology">Biology</a></li>
+                <li><a href="../../chemistry/index.html" class="nav-link active" data-subject="chemistry">Chemistry</a></li>
+                <li><a href="../../physics/index.html" class="nav-link" data-subject="physics">Physics</a></li>
+                <li><a href="../../separate-biology/index.html" class="nav-link" data-subject="separate-bio">Separate Bio</a></li>
+                <li><a href="../../../tests/index.html" class="nav-link">Tests</a></li>
+                <li><a href="../../../formulas.html" class="nav-link">Formulas</a></li>
+                <li class="nav-auth">
+                    <a href="../../../login.html" class="nav-link auth-login">Login</a>
+                    <a href="../../../dashboard.html" class="nav-link auth-dashboard" style="display:none;">Dashboard</a>
+                </li>
+                <li class="theme-switcher">
+                    <label class="theme-switcher__label" for="theme-select">Theme:</label>
+                    <select class="theme-switcher__select" id="theme-select">
+                        <option value="undertale">Undertale</option>
+                        <option value="minecraft">Minecraft</option>
+                        <option value="clean">Clean</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="../../../index.html">Home</a> /
+            <a href="../index.html">Chemistry</a> /
+            <a href="index.html">Block 4</a> /
+            <span>Temperature and Rate of Reaction</span>
+        </div>
+    </div>
+
+    <header class="topic-header topic-header--chemistry">
+        <div class="container">
+            <span class="topic-code">C4.4.1</span>
+            <h1>Temperature and Rate of Reaction</h1>
+        </div>
+    </header>
+
+    <main class="container topic-content">
+
+        <section class="content-section">
+            <h2>How Temperature Affects Rate</h2>
+            <p>Temperature has a significant effect on the rate of chemical reactions. Increasing the temperature <strong>increases</strong> the rate of reaction.</p>
+
+            <p>Using <span class="key-term">collision theory</span>:</p>
+            <ul class="content-list">
+                <li><strong>More kinetic energy:</strong> particles move faster at higher temperatures</li>
+                <li><strong>More frequent collisions:</strong> faster-moving particles collide more often per second</li>
+                <li><strong>More energetic collisions:</strong> a higher proportion of collisions have energy equal to or greater than the <span class="key-term">activation energy</span></li>
+                <li>Both effects together mean many more <strong>successful collisions</strong> per second → faster rate</li>
+            </ul>
+
+            <div class="formula-box">
+                <span class="formula-label">KEY RULE</span>
+                <p>As a rough guide, for many reactions: <strong>rate approximately doubles for every 10°C rise in temperature.</strong></p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Activation Energy and Maxwell-Boltzmann Distribution</h2>
+            <p>Not all particles in a sample have the same energy. The <span class="key-term">Maxwell-Boltzmann distribution</span> shows the spread of energies among particles at a given temperature.</p>
+
+            <figure class="diagram">
+                <svg viewBox="0 0 460 220" class="diagram-svg" aria-labelledby="maxwell-title">
+                    <title id="maxwell-title">Maxwell-Boltzmann energy distribution curves at two temperatures showing activation energy threshold</title>
+                    <!-- Axes -->
+                    <line x1="50" y1="180" x2="430" y2="180" stroke="currentColor" stroke-width="2"/>
+                    <line x1="50" y1="20" x2="50" y2="180" stroke="currentColor" stroke-width="2"/>
+                    <!-- Axis labels -->
+                    <text x="240" y="200" class="diagram-label" font-size="10" text-anchor="middle">Kinetic energy →</text>
+                    <text x="20" y="110" class="diagram-label" font-size="10" text-anchor="middle" transform="rotate(-90, 20, 110)">Number of particles →</text>
+                    <!-- Lower temperature curve (taller, narrower) -->
+                    <path d="M50,180 Q90,160 130,80 Q160,30 190,60 Q230,110 280,170 Q330,180 430,180" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                    <text x="155" y="25" class="diagram-label" font-size="10">Lower T</text>
+                    <!-- Higher temperature curve (lower, broader) -->
+                    <path d="M50,180 Q100,165 150,100 Q190,55 230,65 Q280,85 340,155 Q390,178 430,180" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="6,3"/>
+                    <text x="265" y="55" class="diagram-label" font-size="10">Higher T</text>
+                    <!-- Activation energy line -->
+                    <line x1="280" y1="20" x2="280" y2="180" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4,3"/>
+                    <text x="283" y="15" class="diagram-label" font-size="10">Activation energy (Ea)</text>
+                    <!-- Shaded area above Ea for lower T -->
+                    <text x="330" y="110" class="diagram-label" font-size="9" text-anchor="middle">More particles</text>
+                    <text x="330" y="122" class="diagram-label" font-size="9" text-anchor="middle">exceed Ea</text>
+                    <text x="330" y="134" class="diagram-label" font-size="9" text-anchor="middle">at higher T</text>
+                </svg>
+                <figcaption>At higher temperature, the distribution curve shifts right — more particles have energy ≥ activation energy, so more collisions are successful</figcaption>
+            </figure>
+
+            <ul class="content-list">
+                <li>The <span class="key-term">activation energy (Ea)</span> is the minimum energy needed for a collision to result in a reaction</li>
+                <li>At low temperature, few particles have energy ≥ Ea → slow reaction</li>
+                <li>At high temperature, many more particles have energy ≥ Ea → fast reaction</li>
+                <li>The area under the curve to the right of the Ea line represents the fraction of successful collisions</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Investigating the Effect of Temperature</h2>
+            <p>The sodium thiosulfate and hydrochloric acid disappearing cross experiment can be used to investigate temperature:</p>
+
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Variable</th>
+                        <th>Detail</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Independent</td>
+                        <td>Temperature of sodium thiosulfate solution (e.g. 20, 30, 40, 50, 60°C)</td>
+                    </tr>
+                    <tr>
+                        <td>Dependent</td>
+                        <td>Time for cross to disappear (then calculate rate = 1/time)</td>
+                    </tr>
+                    <tr>
+                        <td>Controlled</td>
+                        <td>Concentration of both reactants, volume of solutions, size of cross, observer</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><strong>Method:</strong> Heat sodium thiosulfate to the required temperature in a water bath. Add HCl and start timing. Stop when the cross is no longer visible. Calculate rate = 1/time. Plot rate vs temperature.</p>
+
+            <p><strong>Expected results:</strong> as temperature increases, time decreases and rate (1/time) increases. A graph of rate vs temperature should show an upward curve.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Temperature and Rate: Graph Interpretation</h2>
+            <p>On a graph of <strong>rate (1/time) against temperature</strong>:</p>
+            <ul class="content-list">
+                <li>The line curves <strong>upward</strong> — rate increases more steeply as temperature rises</li>
+                <li>This reflects the exponential relationship between temperature and the number of particles exceeding activation energy</li>
+                <li>Unlike concentration (roughly linear), the relationship with temperature is non-linear</li>
+            </ul>
+            <p>On a graph of <strong>volume of gas against time</strong> at different temperatures:</p>
+            <ul class="content-list">
+                <li>Higher temperature → steeper initial gradient (faster rate) but the same final volume (same amount of product if limiting reagent is unchanged)</li>
+                <li>The curve at higher temperature reaches the plateau earlier</li>
+            </ul>
+        </section>
+
+        <section class="quiz-section">
+            <h2 class="quiz-section__title">* IGCSE Practice Questions</h2>
+
+            <article class="quiz-question">
+                <div class="quiz-question__header">
+                    <span class="quiz-question__number">Question 1</span>
+                    <span class="quiz-question__marks">[3 marks]</span>
+                </div>
+                <p class="quiz-question__text">Explain, using collision theory, why increasing temperature increases the rate of reaction.</p>
+                <div class="quiz-answer">
+                    <div class="quiz-answer__prompt">* CLICK TO REVEAL ANSWER</div>
+                    <div class="quiz-answer__content">
+                        <ul>
+                            <li>Particles have more kinetic energy at higher temperatures, so they move faster (1 mark)</li>
+                            <li>Collisions are more frequent (1 mark)</li>
+                            <li>A greater proportion of collisions have energy equal to or greater than the activation energy, so more collisions are successful (1 mark)</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="quiz-question">
+                <div class="quiz-question__header">
+                    <span class="quiz-question__number">Question 2</span>
+                    <span class="quiz-question__marks">[2 marks]</span>
+                </div>
+                <p class="quiz-question__text">Define activation energy and state how raising the temperature affects the proportion of particles that exceed it.</p>
+                <div class="quiz-answer">
+                    <div class="quiz-answer__prompt">* CLICK TO REVEAL ANSWER</div>
+                    <div class="quiz-answer__content">
+                        <ul>
+                            <li>Activation energy is the minimum energy required for a collision to result in a reaction (1 mark)</li>
+                            <li>Raising the temperature increases the proportion of particles with energy equal to or greater than the activation energy (1 mark)</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="quiz-question">
+                <div class="quiz-question__header">
+                    <span class="quiz-question__number">Question 3</span>
+                    <span class="quiz-question__marks">[2 marks]</span>
+                </div>
+                <p class="quiz-question__text">A reaction takes 80 seconds at 20°C. Using the rule that rate doubles per 10°C rise, estimate the time for the reaction at 40°C.</p>
+                <div class="quiz-answer">
+                    <div class="quiz-answer__prompt">* CLICK TO REVEAL ANSWER</div>
+                    <div class="quiz-answer__content">
+                        <ul>
+                            <li>Rate doubles for each 10°C rise; 20°C → 40°C is a 20°C increase, so rate doubles twice (×4) (1 mark)</li>
+                            <li>If rate is 4× faster, time = 80 ÷ 4 = <strong>20 seconds</strong> (1 mark)</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="quiz-question">
+                <div class="quiz-question__header">
+                    <span class="quiz-question__number">Question 4</span>
+                    <span class="quiz-question__marks">[3 marks]</span>
+                </div>
+                <p class="quiz-question__text">Describe how you would investigate the effect of temperature on the rate of the sodium thiosulfate and HCl reaction, stating the variables clearly.</p>
+                <div class="quiz-answer">
+                    <div class="quiz-answer__prompt">* CLICK TO REVEAL ANSWER</div>
+                    <div class="quiz-answer__content">
+                        <ul>
+                            <li>Independent variable: temperature of sodium thiosulfate (e.g. heat to different temperatures using a water bath) (1 mark)</li>
+                            <li>Dependent variable: time for cross to disappear / rate = 1/time (1 mark)</li>
+                            <li>Controlled variables: concentrations of both solutions, volumes, same cross, same observer — keep all constant to ensure a fair test (1 mark)</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="quiz-question">
+                <div class="quiz-question__header">
+                    <span class="quiz-question__number">Question 5</span>
+                    <span class="quiz-question__marks">[3 marks]</span>
+                </div>
+                <p class="quiz-question__text">Two curves are drawn on a graph of volume of CO₂ (cm³) against time for marble chips + HCl. Curve A is at 20°C and Curve B is at 40°C. Describe the differences between the two curves and explain them.</p>
+                <div class="quiz-answer">
+                    <div class="quiz-answer__prompt">* CLICK TO REVEAL ANSWER</div>
+                    <div class="quiz-answer__content">
+                        <ul>
+                            <li>Curve B (40°C) has a steeper initial gradient than Curve A, meaning the reaction is faster at higher temperature (1 mark)</li>
+                            <li>Both curves reach the same final volume of CO₂ because the same amount of limiting reagent is used (1 mark)</li>
+                            <li>Curve B reaches the final volume in less time because more collisions have energy ≥ activation energy at higher temperature (1 mark)</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <div class="confidence-rating" data-topic-id="c4-4-1">
+            <p>How confident are you with this topic?</p>
+            <div class="confidence-btns">
+                <button class="confidence-btn" data-level="need-practice">Need Practice</button>
+                <button class="confidence-btn" data-level="learning">Learning</button>
+                <button class="confidence-btn" data-level="confident">Confident</button>
+            </div>
+        </div>
+
+        <nav class="topic-navigation">
+            <a href="03-concentration-rate-practical.html" class="topic-nav-link topic-nav-link--prev">
+                <span class="topic-nav-label">Previous</span>
+                <span class="topic-nav-title">Concentration and Rate Practical</span>
+            </a>
+            <a href="05-concentration-graphs.html" class="topic-nav-link topic-nav-link--next">
+                <span class="topic-nav-label">Next</span>
+                <span class="topic-nav-title">Concentration and Analysis of Graphs</span>
+            </a>
+        </nav>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>* Reactions are heating up...</p>
+        </div>
+    </footer>
+
+    <script src="../../../js/main.js"></script>
+    <script src="../../../js/quiz.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../../../js/supabase-config.js"></script>
+    <script src="../../../js/auth.js"></script>
+    <script src="../../../js/progress.js"></script>
+</body>
+</html>

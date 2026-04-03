@@ -571,5 +571,94 @@ const SEARCH_INDEX = [
         url: "subjects/separate-biology/block-2/02-absorption-transport.html",
         keywords: ["absorption", "villi", "microvilli", "small intestine", "capillary", "lacteal", "hepatic portal vein", "active transport", "diffusion", "fatty acids", "glycerol", "chylomicrons", "lymphatic system", "thoracic duct", "glucose", "amino acids"],
         excerpt: "How the small intestine absorbs glucose, amino acids, and fats. Transport via blood capillaries, hepatic portal vein, and lacteals to the lymphatic system."
+    },
+
+    // Biology Block 4 (new)
+    {
+        title: "Xylem and Transpiration",
+        subject: "biology",
+        block: 4,
+        code: "B4.4.1",
+        url: "subjects/biology/block-4/04-xylem-transpiration.html",
+        keywords: ["xylem", "transpiration", "transpiration stream", "cohesion tension", "lignin", "root hair cells", "osmosis", "water potential", "dead cells", "hollow", "sieve plate", "water uptake"],
+        excerpt: "Structure of xylem vessels, the transpiration stream from roots to leaves, root hair cell adaptations, and the importance of transpiration."
+    },
+    {
+        title: "Factors that Affect Transpiration",
+        subject: "biology",
+        block: 4,
+        code: "B4.5.1",
+        url: "subjects/biology/block-4/05-transpiration-factors.html",
+        keywords: ["transpiration rate", "temperature", "light intensity", "humidity", "wind speed", "potometer", "water uptake", "xerophyte", "stomata", "concentration gradient", "waxy cuticle", "sunken stomata"],
+        excerpt: "How temperature, light intensity, humidity, and wind speed affect the rate of transpiration. Using a potometer to measure water uptake. Xerophyte adaptations."
+    },
+
+    // Chemistry Block 4 (new)
+    {
+        title: "Temperature and Rate of Reaction",
+        subject: "chemistry",
+        block: 4,
+        code: "C4.4.1",
+        url: "subjects/chemistry/block-4/04-temperature-rate.html",
+        keywords: ["temperature", "rate of reaction", "collision theory", "activation energy", "kinetic energy", "Maxwell-Boltzmann", "successful collisions", "frequency of collisions", "exothermic", "10 degrees rule"],
+        excerpt: "How temperature affects rate of reaction using collision theory and Maxwell-Boltzmann distribution. Activation energy, investigating temperature with sodium thiosulfate."
+    },
+    {
+        title: "Concentration and Analysis of Graphs",
+        subject: "chemistry",
+        block: 4,
+        code: "C4.5.1",
+        url: "subjects/chemistry/block-4/05-concentration-graphs.html",
+        keywords: ["rate graphs", "volume time graph", "gradient", "tangent", "initial rate", "concentration", "marble chips", "limiting reagent", "steepness", "plateau", "reading graphs", "calculating rate"],
+        excerpt: "Reading and interpreting rate of reaction graphs. Calculating rate from gradient of tangent. Comparing curves at different concentrations, temperatures, and surface areas."
+    },
+
+    // Physics Block 4 (new)
+    {
+        title: "Thermal Conduction and Insulation",
+        subject: "physics",
+        block: 4,
+        code: "P4.2.1",
+        url: "subjects/physics/block-4/02-thermal-conduction.html",
+        keywords: ["conduction", "thermal energy", "heat transfer", "free electrons", "vibration", "conductors", "insulators", "metals", "loft insulation", "cavity wall", "double glazing", "vacuum flask"],
+        excerpt: "Thermal conduction through solids by particle vibrations and free electrons. Good conductors vs insulators. Factors affecting conduction rate and practical insulation examples."
+    },
+    {
+        title: "Explaining Convection",
+        subject: "physics",
+        block: 4,
+        code: "P4.3.1",
+        url: "subjects/physics/block-4/03-convection.html",
+        keywords: ["convection", "convection current", "density", "fluid", "hot air rises", "cool air sinks", "sea breeze", "radiator", "refrigerator", "thermal energy transfer", "liquids gases"],
+        excerpt: "How convection currents form in fluids by density changes. Why convection cannot occur in solids. Examples: sea breeze, room heating, refrigerator."
+    },
+
+    // Separate Biology Block 2 (new)
+    {
+        title: "Phloem and Translocation",
+        subject: "separate-biology",
+        block: 2,
+        code: "SB2.3.1",
+        url: "subjects/separate-biology/block-2/03-phloem-translocation.html",
+        keywords: ["phloem", "translocation", "sieve tube", "companion cells", "source", "sink", "sucrose", "amino acids", "bidirectional", "ringing experiment", "bark ringing", "loading unloading"],
+        excerpt: "Structure of phloem (sieve tube elements and companion cells). Translocation of sucrose from source to sink. Evidence from the ringing experiment. Comparison with xylem."
+    },
+    {
+        title: "Transpiration Extension",
+        subject: "separate-biology",
+        block: 2,
+        code: "SB2.4.1",
+        url: "subjects/separate-biology/block-2/04-transpiration-extension.html",
+        keywords: ["water potential", "turgor", "wilting", "flaccid", "plasmolysis", "stomata control", "guard cells", "abscisic acid", "ABA", "xerophyte", "drought", "osmosis"],
+        excerpt: "Water potential, turgor and wilting, detailed stomata control mechanism including ABA. Adaptations of xerophytes to reduce water loss."
+    },
+    {
+        title: "Investigating Rate of Transpiration",
+        subject: "separate-biology",
+        block: 2,
+        code: "SB2.5.1",
+        url: "subjects/separate-biology/block-2/05-transpiration-rate.html",
+        keywords: ["potometer", "water uptake", "transpiration rate", "air bubble", "capillary tube", "wind speed", "temperature", "humidity", "light intensity", "limitations", "overestimate"],
+        excerpt: "Using a potometer to investigate transpiration rate. Calculating rate from bubble movement. Effect of environmental factors. Limitations of the potometer."
     }
 ];
