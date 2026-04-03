@@ -10,14 +10,16 @@ jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      - name: Ping Supabase project
+      - name: Query Supabase database
         run: |
           STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
-            "https://gqbsmabwuvutronbszur.supabase.co/rest/v1/")
+            "https://gqbsmabwuvutronbszur.supabase.co/rest/v1/profiles?select=count" \
+            -H "apikey: ${{ secrets.SUPABASE_ANON_KEY }}" \
+            -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}")
           echo "Supabase responded with HTTP $STATUS"
           if [ "$STATUS" -ge 200 ] && [ "$STATUS" -lt 500 ]; then
-            echo "Keep-alive ping successful"
+            echo "Keep-alive query successful"
           else
-            echo "Unexpected response: $STATUS"
+            echo "Unexpected response: $STATUS — project may be paused"
             exit 1
           fi
