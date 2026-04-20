@@ -12,14 +12,17 @@ jobs:
     steps:
       - name: Query Supabase database
         run: |
-          STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 \
             "https://gqbsmabwuvutronbszur.supabase.co/rest/v1/profiles?select=count" \
             -H "apikey: ${{ secrets.SUPABASE_ANON_KEY }}" \
-            -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}")
-          echo "Supabase responded with HTTP $STATUS"
-          if [ "$STATUS" -ge 200 ] && [ "$STATUS" -lt 500 ]; then
-            echo "Keep-alive query successful"
+            -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}") || STATUS="curl_failed"
+          echo "Supabase responded with: $STATUS"
+          if [ "$STATUS" = "curl_failed" ]; then
+            echo "ERROR: Could not reach Supabase — project may be paused or offline"
+            exit 1
+          elif [ "$STATUS" -ge 200 ] && [ "$STATUS" -lt 500 ]; then
+            echo "Keep-alive query successful (HTTP $STATUS)"
           else
-            echo "Unexpected response: $STATUS — project may be paused"
+            echo "Unexpected HTTP response: $STATUS — project may be paused"
             exit 1
           fi
